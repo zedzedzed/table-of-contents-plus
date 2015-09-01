@@ -1,0 +1,534 @@
+# Copyright (C) 2015 Table of Contents Plus
+# This file is distributed under the same license as the Table of Contents Plus package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Table of Contents Plus 1505\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/table-of-contents-plus\n"
+"POT-Creation-Date: 2015-08-24 12:52+0300\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-08-24 13:49+0300\n"
+"Language-Team: Ahrale | Atar4U.com <contact@atar4u.com>\n"
+"X-Generator: Poedit 1.8.3\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Last-Translator: Ahrale <contact@atar4u.com>\n"
+"Language: he_IL\n"
+
+#: toc.php:201
+msgid "Settings"
+msgstr "הגדרות"
+
+#: toc.php:482 toc.php:483
+msgid "TOC"
+msgstr "תוכן העניינים"
+
+#: toc.php:653
+msgid "Options saved."
+msgstr "האפשרויות נשמרו."
+
+#: toc.php:655
+msgid "Save failed."
+msgstr "השמירה נכשלה."
+
+#: toc.php:667
+msgid "Main Options"
+msgstr "אפשרויות עיקריות"
+
+#: toc.php:668
+msgid "Sitemap"
+msgstr "מפת אתר"
+
+#: toc.php:669
+msgid "Help"
+msgstr "עזרה"
+
+#: toc.php:677
+msgid "Position"
+msgstr "מיקום"
+
+#: toc.php:680
+msgid "Before first heading (default)"
+msgstr "לפני הכותרת הראשונה (ברירת המחדל)"
+
+#: toc.php:681
+msgid "After first heading"
+msgstr "אחרי הכותרת הראשונה"
+
+#: toc.php:682
+msgid "Top"
+msgstr "למעלה"
+
+#: toc.php:683
+msgid "Bottom"
+msgstr "למטה"
+
+#: toc.php:688
+msgid "Show when"
+msgstr "להציג כאשר"
+
+#. translators: text follows drop down list of numbers
+#: toc.php:700
+msgid "or more headings are present"
+msgstr "או יותר כותרות הוגדרו מראש"
+
+#: toc.php:704
+msgid "Auto insert for the following content types"
+msgstr "הוספה אוטומטית עבור סוגי התוכן הבאים"
+
+#. translators: this is the title of the table of contents
+#: toc.php:719
+msgid "Heading text"
+msgstr "טקסט הכותרת"
+
+#: toc.php:721
+msgid "Show title on top of the table of contents"
+msgstr "להציג את הכותרת בראש תוכן העניינים"
+
+#: toc.php:724
+msgid "Eg: Contents, Table of Contents, Page Contents"
+msgstr "לדוגמה: תוכן, תוכן העניינים, תוכן העמוד"
+
+#: toc.php:726
+msgid "Allow the user to toggle the visibility of the table of contents"
+msgstr "לאפשר למשתמש למתג את הנראות של תוכן העניינים"
+
+#: toc.php:731
+msgid "Show text"
+msgstr "להציג את הטקסט"
+
+#. translators: example text to display when you want to expand the table of
+#. contents
+#: toc.php:735
+msgid "Eg: show"
+msgstr "למשל: הצג"
+
+#: toc.php:738
+msgid "Hide text"
+msgstr "להסתיר את הטקסט"
+
+#. translators: example text to display when you want to collapse the table of
+#. contents
+#: toc.php:742
+msgid "Eg: hide"
+msgstr "למשל: הסתר"
+
+#: toc.php:746
+msgid "Hide the table of contents initially"
+msgstr "להסתיר בהתחלה את תוכן העניינים"
+
+#: toc.php:752
+msgid "Show hierarchy"
+msgstr "להציג היררכיה"
+
+#: toc.php:756
+msgid "Number list items"
+msgstr "להציג את מספר הפריטים"
+
+#: toc.php:760
+msgid "Enable smooth scroll effect"
+msgstr "הפעלת אפקט גלילה חלקה"
+
+#: toc.php:761
+msgid "Scroll rather than jump to the anchor link"
+msgstr "העדפת גלילה על קפיצה לעוגן הקישור"
+
+#: toc.php:766
+msgid "Appearance"
+msgstr "עיצוב"
+
+#: toc.php:770
+msgid "Width"
+msgstr "רוחב"
+
+#: toc.php:773
+msgid "Fixed width"
+msgstr "רוחב קבוע"
+
+#: toc.php:784
+msgid "Relative"
+msgstr "יחסי"
+
+#: toc.php:785
+msgid "Auto (default)"
+msgstr "אוטומטי (ברירת המחדל)"
+
+#. translators: other width
+#: toc.php:795
+msgid "Other"
+msgstr "אחר"
+
+#: toc.php:796
+msgid "User defined"
+msgstr "הגדרת המשתמש"
+
+#. translators: ignore %s as it's some HTML label tags
+#: toc.php:802
+msgid "Please enter a number and %s select its units, eg: 100px, 10em"
+msgstr "נא להזין מספר ו %s לבחור את היחידות שלו, למשל: 100px, 10em"
+
+#: toc.php:813
+msgid "Wrapping"
+msgstr "מעטפת"
+
+#: toc.php:816
+msgid "None (default)"
+msgstr "ללא (ברירת המחדל)"
+
+#: toc.php:817
+msgid "Left"
+msgstr "שמאל"
+
+#: toc.php:818
+msgid "Right"
+msgstr "ימין"
+
+#: toc.php:823
+msgid "Font size"
+msgstr "גודל הגופן"
+
+#. translators: appearance / colour / look and feel options
+#: toc.php:836
+msgid "Presentation"
+msgstr "מצגת"
+
+#: toc.php:839
+msgid "Grey (default)"
+msgstr "אפור (ברירת המחדל)"
+
+#: toc.php:844
+msgid "Light blue"
+msgstr "תכלת"
+
+#: toc.php:849
+msgid "White"
+msgstr "לבן"
+
+#: toc.php:854
+msgid "Black"
+msgstr "שחור"
+
+#: toc.php:859
+msgid "Transparent"
+msgstr "שקוף"
+
+#: toc.php:864
+msgid "Custom"
+msgstr "עיצוב אישי"
+
+#: toc.php:874
+msgid "Background"
+msgstr "רקע"
+
+#: toc.php:878
+msgid "Border"
+msgstr "מסגרת"
+
+#: toc.php:882 toc.php:1658
+msgid "Title"
+msgstr "כותרת "
+
+#: toc.php:886
+msgid "Links"
+msgstr "קישורים"
+
+#: toc.php:890
+msgid "Links (hover)"
+msgstr "קישורים (בריחוף עכבר)"
+
+#: toc.php:894
+msgid "Links (visited)"
+msgstr "קישורים (נלחץ)"
+
+#: toc.php:901
+msgid "Leaving the value as %s will inherit your theme's styles"
+msgstr "השארת הערך כ %s תירש את עיצוב ערכת הנושא שלך"
+
+#: toc.php:908
+msgid "Advanced"
+msgstr "הגדרות מתקדמות"
+
+#: toc.php:908 toc.php:1045
+msgid "show"
+msgstr "הצג"
+
+#: toc.php:910
+msgid "Power options"
+msgstr "אפשרויות עצמתיות"
+
+#: toc.php:914
+msgid "Lowercase"
+msgstr "אותיות קטנות"
+
+#: toc.php:915
+msgid "Ensure anchors are in lowercase"
+msgstr "לוודא שהעוגנים כתובים באותיות קטנות"
+
+#: toc.php:918
+msgid "Hyphenate"
+msgstr "מקף"
+
+#: toc.php:919
+msgid "Use - rather than _ in anchors"
+msgstr "העדפת שימוש ב - (מקף אמצעי) על פני _ (קו תחתון) בעוגנים"
+
+#: toc.php:922
+msgid "Include homepage"
+msgstr "לכלול את עמוד הבית"
+
+#: toc.php:923
+msgid "Show the table of contents for qualifying items on the homepage"
+msgstr "להציג את תוכן העניינים עבור פריטים מתאימים בעמוד הבית"
+
+#: toc.php:926
+msgid "Exclude CSS file"
+msgstr "לא לכלול קובץ CSS"
+
+#: toc.php:927
+msgid ""
+"Prevent the loading of this plugin's CSS styles. When selected, the appearance "
+"options from above will also be ignored."
+msgstr ""
+"למנוע טעינת עיצובי CSS של התוסף. אם מסומן, אז תהיה התעלמות גם ממאפשרויות העיצוב לעיל."
+
+#: toc.php:930
+msgid "Preserve theme bullets"
+msgstr "לשמור על כדורי התבנית"
+
+#: toc.php:931
+msgid ""
+"If your theme includes background images for unordered list elements, enable this to "
+"support them"
+msgstr ""
+"אם התבנית שלך כוללת תמונות רקע לררכיבי שימה לא מסודרת, להפעיל זאת כדי לתמוך בזה."
+
+#: toc.php:934
+msgid "Heading levels"
+msgstr "רמות כותרת"
+
+#: toc.php:936
+msgid "Include the following heading levels. Deselecting a heading will exclude it."
+msgstr "לכלול את רמות הכותרת שלהלן. ביטול סימון אחת הרמות יוציא אותה מן הכלל."
+
+#: toc.php:942
+msgid "heading "
+msgstr "כותרת"
+
+#: toc.php:948
+msgid "Exclude headings"
+msgstr "ביטול הכללת כותרות"
+
+#: toc.php:951
+msgid ""
+"Specify headings to be excluded from appearing in the table of contents.  Separate "
+"multiple headings with a pipe <code>|</code>.  Use an asterisk <code>*</code> as a "
+"wildcard to match other text.  Note that this is not case sensitive. Some examples:"
+msgstr ""
+"ציון כותרות שלא תיכללנה בתצוגת תוכן העניינים. נא להפריד כותרות מרובות עם | <code>|</"
+"code>. להשתמש במרכאות <code>*</code> ככרטיס להתאמה לטקסט אחר. שימו לב שזה לא רגיש "
+"לאותיות גדולות. כמה דוגמאות:"
+
+#: toc.php:953
+msgid "<code>Fruit*</code> ignore headings starting with \"Fruit\""
+msgstr "הקוד <code>פירות</code> יתעלם מכותרות שמתחילות ב \"פירות\""
+
+#: toc.php:954
+msgid ""
+"<code>*Fruit Diet*</code> ignore headings with \"Fruit Diet\" somewhere in the heading"
+msgstr ""
+"הקוד <code> \"דיאטת פירות\"/code> תתעלם מכותרת המכילה \"דיאטת פירות\" במקום כלשהו "
+"בכותרת"
+
+#: toc.php:955
+msgid ""
+"<code>Apple Tree|Oranges|Yellow Bananas</code> ignore headings that are exactly "
+"\"Apple Tree\", \"Oranges\" or \"Yellow Bananas\""
+msgstr ""
+"הקוד <code>עץ תפוח|תפוזים|בננות צהובות</code> יתעלם מכותרות שהן במדויק \"עץ תפוח\", "
+"\"תפוזים\" או \"בננות צהובות\""
+
+#: toc.php:960
+msgid "Smooth scroll top offset"
+msgstr "קיזוז מלמעלה של גלילה חלקה"
+
+#: toc.php:963
+msgid ""
+"If you have a consistent menu across the top of your site, you can adjust the top "
+"offset to stop the headings from appearing underneath the top menu. A setting of 30 "
+"accommodates the WordPress admin bar. This setting appears after you have enabled "
+"smooth scrolling from above."
+msgstr ""
+"במקרה של תפריט עקבי בראש האתר, ניתן להתאים את הקיזוז כדי למנוע מהכותרות מלהופיע מתחת "
+"לתפריט העליון. הגדרה של 30 מקזזת את תפריט הניהול העליון של וורדפרס. ההגדרה בשימוש רק "
+"לאחר הפעלת גלילה חלקה לעיל."
+
+#: toc.php:967
+msgid "Restrict path"
+msgstr "הגבלת נתיב"
+
+#: toc.php:970
+msgid ""
+"Restrict generation of the table of contents to pages that match the required path. "
+"This path is from the root of your site and always begins with a forward slash."
+msgstr ""
+"הגבלת מחולל תוכן העניינים מלפעול בנתיבי עמודים מסוימים. הנתיב הוא משורש האתר ותמיד "
+"מתחיל עם קו נטוי."
+
+#. translators: example URL path restriction
+#: toc.php:973
+msgid "Eg: /wiki/, /corporate/annual-reports/"
+msgstr "למשל: /wiki/, /corporate/annual-reports/"
+
+#: toc.php:977
+msgid "Default anchor prefix"
+msgstr "קידומת ברירת המחדל של עוגן"
+
+#: toc.php:980
+msgid ""
+"Anchor targets are restricted to alphanumeric characters as per HTML specification "
+"(see readme for more detail). The default anchor prefix will be used when no "
+"characters qualify. When left blank, a number will be used instead."
+msgstr ""
+"יעדי עוגן מוגבלים לתווי אותיות ומספרים בהתאם להגדרות HTML (ראו קובץ readme לפרטים "
+"נוספים). קידומת ברירת המחדל לעוגנים  תהיה בשימוש כאשר אין תווים מתאימים. אם נשאר ריק "
+"יהי במקום זה שימוש במספר."
+
+#: toc.php:981
+msgid ""
+"This option normally applies to content written in character sets other than ASCII."
+msgstr "אפשרות זו בדרך-כלל חלה לתוכן הנכתב בסט תווים שונה מ ASCII."
+
+#. translators: example anchor prefixes when no ascii characters match
+#: toc.php:984
+msgid "Eg: i, toc_index, index, _"
+msgstr "למשל:  i, toc_index, index, _"
+
+#. translators: advanced usage
+#: toc.php:992
+msgid "Usage"
+msgstr "שימוש"
+
+#: toc.php:993
+msgid ""
+"If you would like to fully customise the position of the table of contents, you can "
+"use the %s shortcode by placing it at the desired position of your post, page or "
+"custom post type. This method allows you to generate the table of contents despite "
+"having auto insertion disabled for its content type. Please visit the help tab for "
+"further information about this shortcode."
+msgstr ""
+"כדי לקבוע באופן עצמאי את מיקום תוכן העניינים, אפשר להשתמש בקיצור הקוד %s על-ידי "
+"מיקומו במקום הרצוי בפוסט או עמוד או סוג פוסט. זה מאפשר לחולל תוכן עניינים למרות כיבוי "
+"ההוספה האוטומטית של תוכן עניינים. למידע נוסף על קיצור הקוד בקרו בלשונית העזרה."
+
+#: toc.php:1001
+msgid ""
+"At its simplest, placing %s into a page will automatically create a sitemap of all "
+"pages and categories. This also works in a text widget."
+msgstr ""
+"בפשטות, מיקום %s בעמוד תיצור אוטומטית מפת אתר של כל העמודים והקטגוריות. זה פועל גם "
+"בוידג'ט טקסט."
+
+#: toc.php:1005
+msgid "Show page listing"
+msgstr "הצגת רשימת עמודים"
+
+#: toc.php:1009
+msgid "Show category listing"
+msgstr "הצגת רשימת קטגוריות"
+
+#: toc.php:1013
+msgid "Heading type"
+msgstr "סוג הכותרת"
+
+#. translators: the full line is supposed to read - Use [1-6 drop down list] to
+#. print out the titles
+#: toc.php:1016
+msgid "Use"
+msgstr "להשתמש ב"
+
+#. translators: the full line is supposed to read - Use [h1-h6 drop down list]
+#. to print out the titles
+#: toc.php:1027
+msgid "to print out the titles"
+msgstr "להדפסת הכותרות"
+
+#: toc.php:1031
+msgid "Pages label"
+msgstr "תווית העמודים"
+
+#: toc.php:1033
+msgid "Eg: Pages, Page List"
+msgstr "למשל: עמודים, רשימת העמודים"
+
+#: toc.php:1037
+msgid "Categories label"
+msgstr "תווית הקטגוריות"
+
+#: toc.php:1039
+msgid "Eg: Categories, Category List"
+msgstr "למשל: קטגוריות, רשימת הקטגוריות"
+
+#: toc.php:1045
+msgid "Advanced usage"
+msgstr "שימוש מתקדם"
+
+#: toc.php:1047
+msgid ""
+"lets you print out a listing of only pages. Similarly %s can be used to print out a "
+"category listing. They both can accept a number of attributes so visit the help tab "
+"for more information."
+msgstr ""
+"מאפשר להדפיס רשימה של עמודים בלבד. בדומה %s יכול לשמש גם להדפסת רשימת קטגוריות. שניהם "
+"יכולים לקבל שימוש במספר תכונות, אז נא לבקר בלשונית העזרה למידע נוסף."
+
+#: toc.php:1048
+msgid "Examples"
+msgstr "דוגמאות"
+
+#: toc.php:1050
+msgid "hides the heading from a category listing"
+msgstr "מסתיר את הכותרת מרשימת הקטגוריות"
+
+#: toc.php:1051
+msgid "Uses h6 to display %s on a page listing excluding pages with IDs 1 and 15"
+msgstr "השתמש בכותרת רמה 6 להצגת %s ברשימת עמודים ולא לכלול עמודים עם המזהים 1 ו 15"
+
+#: toc.php:1060
+msgid "Update Options"
+msgstr "עדכון האפשרויות"
+
+#: toc.php:1563
+msgid "Display the table of contents in the sidebar with this widget"
+msgstr "הצגת תוכן העניינים בסרגל הצד עם וידג'ט זה"
+
+#: toc.php:1664
+msgid "Show the table of contents only in the sidebar"
+msgstr "הצגת תוכן העניינים רק בסרגל הצדדי"
+
+#: toc.php:1668
+msgid "For the following content types:"
+msgstr "עבור סוגי התוכן שלהלן:"
+
+#. Plugin Name of the plugin/theme
+msgid "Table of Contents Plus"
+msgstr "Table of Contents Plus"
+
+#. Plugin URI of the plugin/theme
+msgid "http://dublue.com/plugins/toc/"
+msgstr "http://dublue.com/plugins/toc/"
+
+#. Description of the plugin/theme
+msgid ""
+"A powerful yet user friendly plugin that automatically creates a table of contents. "
+"Can also output a sitemap listing all pages and categories."
+msgstr ""
+"תוסף עצמתי וידידותי למשתמש אשר מוסיף אוטומטית תוכן עניינים. יכול לגם לשמש ליצירת מפת "
+"אתר רשימת עמודים ורשימת קטגוריות."
+
+#. Author of the plugin/theme
+msgid "Michael Tran"
+msgstr "מיכאל טראן  Michael Tran"
+
+#. Author URI of the plugin/theme
+msgid "http://dublue.com/"
+msgstr "http://dublue.com/"

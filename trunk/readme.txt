@@ -2,8 +2,8 @@
 Contributors: conjur3r
 Tags: table of contents, indexes, toc, sitemap, cms, options, list, page listing, category listing
 Requires at least: 3.2
-Tested up to: 4.2.2
-Stable tag: 1507
+Tested up to: 4.3
+Stable tag: 1509
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -30,6 +30,8 @@ Custom post types are supported, however, auto insertion works only when the_con
 * Dutch - [Renee](http://101themes.com/)
 * French - Jean-Michel Duriez
 * German - [Ben](http://blog.bmarwell.de/)
+* Hebrew - [Ahrale](http://atar4u.com/)
+* Japanese - 二宮大地
 * Polish - [Jakub](http://notatki.4use.pl/)
 * Simplified Chinese - Jason
 * Slovak - Boris Gereg
@@ -112,6 +114,11 @@ I will never ask for any form of reward or compensation.  Helping others achieve
 
 
 == Changelog ==
+= 1509 =
+* Released: xx September 2015
+* Added Hebrew translation thanks to [Ahrale](http://atar4u.com/)
+* Added Japaense translation thanks to 二宮大地
+* Plugin has moved to [GitHub](https://github.com/zedzedzed/table-of-contents-plus/) for better collaboration.
 
 = 1507 =
 * Released: 5 July 2015
