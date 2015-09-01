@@ -1,0 +1,910 @@
+# Copyright (C) 2014 
+# This file is distributed under the same license as the package.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/table-of-contents-plus\n"
+"POT-Creation-Date: 2014-02-18 12:58:50+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2014-05-22 13:30+0200\n"
+"Last-Translator: Michael Yunat <Michael.Yunat@gmail.com>\n"
+"Language-Team: http://getvoip.com/\n"
+"Language: uk_UA\n"
+"X-Generator: Poedit 1.6.5\n"
+
+#: toc.php:200
+msgid "Settings"
+msgstr "Налаштування"
+
+#: toc.php:464 toc.php:465
+msgid "TOC"
+msgstr "ТОС"
+
+#: toc.php:635
+msgid "Options saved."
+msgstr "Налаштування збережені."
+
+#: toc.php:637
+msgid "Save failed."
+msgstr "Зберегти не вдалося."
+
+#: toc.php:649
+msgid "Main Options"
+msgstr "Основні параметри"
+
+#: toc.php:650
+msgid "Sitemap"
+msgstr "Карта сайту"
+
+#: toc.php:651
+msgid "Help"
+msgstr "Допоможіть"
+
+#: toc.php:659
+msgid "Position"
+msgstr "Положення"
+
+#: toc.php:662
+msgid "Before first heading (default)"
+msgstr "Перед першим заголовком (за замовчуванням)"
+
+#: toc.php:663
+msgid "After first heading"
+msgstr "Після першого заголовка"
+
+#: toc.php:664
+msgid "Top"
+msgstr "Топ"
+
+#: toc.php:665
+msgid "Bottom"
+msgstr "Дно"
+
+#: toc.php:670
+msgid "Show when"
+msgstr "Показати, коли"
+
+#: toc.php:682
+msgid "or more headings are present"
+msgstr "або більше заголовки присутні"
+
+#: toc.php:686
+msgid "Auto insert for the following content types"
+msgstr "Авто вставка для наступних типів контенту"
+
+#: toc.php:701
+msgid "Heading text"
+msgstr "Тема тексту"
+
+#: toc.php:703
+msgid "Show title on top of the table of contents"
+msgstr "Показати назву у верхній частині змісту"
+
+#: toc.php:706
+msgid "Eg: Contents, Table of Contents, Page Contents"
+msgstr "Наприклад: Зміст, зміст, Page Зміст"
+
+#: toc.php:708
+msgid "Allow the user to toggle the visibility of the table of contents"
+msgstr "Дозволити користувачеві перемикати видимість змісті"
+
+#: toc.php:713
+msgid "Show text"
+msgstr "Показати текст"
+
+#: toc.php:717
+msgid "Eg: show"
+msgstr "Наприклад: показати"
+
+#: toc.php:720
+msgid "Hide text"
+msgstr "Приховати текст"
+
+#: toc.php:724
+msgid "Eg: hide"
+msgstr "Наприклад: приховати"
+
+#: toc.php:728
+msgid "Hide the table of contents initially"
+msgstr "Приховати зміст спочатку"
+
+#: toc.php:734
+msgid "Show hierarchy"
+msgstr "Показати ієрархія"
+
+#: toc.php:738
+msgid "Number list items"
+msgstr "Елементи списку Кількість"
+
+#: toc.php:742
+msgid "Enable smooth scroll effect"
+msgstr "Включити плавний ефект прокрутки"
+
+#: toc.php:743
+msgid "Scroll rather than jump to the anchor link"
+msgstr "Виділіть, а не стрибати за посиланням якірний"
+
+#: toc.php:748
+msgid "Appearance"
+msgstr "Поява"
+
+#: toc.php:752
+msgid "Width"
+msgstr "Ширина"
+
+#: toc.php:755
+msgid "Fixed width"
+msgstr "Фіксована ширина"
+
+#: toc.php:766
+msgid "Relative"
+msgstr "Відносний"
+
+#: toc.php:767
+msgid "Auto (default)"
+msgstr "Авто (за замовчуванням)"
+
+#: toc.php:777
+msgid "Other"
+msgstr "Інший"
+
+#: toc.php:778
+msgid "User defined"
+msgstr "Користувальницький"
+
+#: toc.php:784
+msgid "Please enter a number and %s select its units, eg: 100px, 10em"
+msgstr ""
+"Будь ласка, введіть номер і %s вибору своїх підрозділів, наприклад: 100px, "
+"10em"
+
+#: toc.php:795
+msgid "Wrapping"
+msgstr "Упаковка"
+
+#: toc.php:798
+msgid "None (default)"
+msgstr "Відсутня (за замовчуванням)"
+
+#: toc.php:799
+msgid "Left"
+msgstr "Зліва"
+
+#: toc.php:800
+msgid "Right"
+msgstr "Право"
+
+#: toc.php:805
+msgid "Font size"
+msgstr "Розмір шрифту"
+
+#: toc.php:818
+msgid "Presentation"
+msgstr "Презентація"
+
+#: toc.php:821
+msgid "Grey (default)"
+msgstr "Сірий (за замовчуванням)"
+
+#: toc.php:826
+msgid "Light blue"
+msgstr "Світло-синій"
+
+#: toc.php:831
+msgid "White"
+msgstr "Білий"
+
+#: toc.php:836
+msgid "Black"
+msgstr "Чорний"
+
+#: toc.php:841
+msgid "Transparent"
+msgstr "Прозорий"
+
+#: toc.php:846
+msgid "Custom"
+msgstr "Звичай"
+
+#: toc.php:856
+msgid "Background"
+msgstr "Фон"
+
+#: toc.php:860
+msgid "Border"
+msgstr "Кордон"
+
+#: toc.php:864 toc.php:1784
+msgid "Title"
+msgstr "Назва"
+
+#: toc.php:868
+msgid "Links"
+msgstr "Зв'язки"
+
+#: toc.php:872
+msgid "Links (hover)"
+msgstr "Посилання (наведіть)"
+
+#: toc.php:876
+msgid "Links (visited)"
+msgstr "Посилання (відвідали)"
+
+#: toc.php:883
+msgid "Leaving the value as %s will inherit your theme's styles"
+msgstr "Залишивши значення як %s успадкує стилі вашої теми"
+
+#: toc.php:890
+msgid "Advanced"
+msgstr "Просунутий"
+
+#: toc.php:890 toc.php:1027 toc.php:1144
+msgid "show"
+msgstr "шоу"
+
+#: toc.php:892
+msgid "Power options"
+msgstr "Електроживлення"
+
+#: toc.php:896
+msgid "Lowercase"
+msgstr "Нижній регістр"
+
+#: toc.php:897
+msgid "Ensure anchors are in lowercase"
+msgstr "Переконайтеся, якоря в нижньому регістрі"
+
+#: toc.php:900
+msgid "Hyphenate"
+msgstr "Американець іноземного походження"
+
+#: toc.php:901
+msgid "Use - rather than _ in anchors"
+msgstr "Використовуйте - замість _ в якорів"
+
+#: toc.php:904
+msgid "Include homepage"
+msgstr "Увімкніть домашню"
+
+#: toc.php:905
+msgid "Show the table of contents for qualifying items on the homepage"
+msgstr "Показати зміст для кваліфікації елементів на головній сторінці"
+
+#: toc.php:908
+msgid "Exclude CSS file"
+msgstr "Виключити CSS файл"
+
+#: toc.php:909
+msgid ""
+"Prevent the loading of this plugin's CSS styles. When selected, the "
+"appearance options from above will also be ignored."
+msgstr ""
+"Запобігти завантаження стилів CSS цього плагіна. Коли обраний, параметри "
+"оформлення зверху також будуть ігноруватися."
+
+#: toc.php:912
+msgid "Preserve theme bullets"
+msgstr "Заповідник тематичні кулі"
+
+#: toc.php:913
+msgid ""
+"If your theme includes background images for unordered list elements, enable "
+"this to support them"
+msgstr ""
+"Якщо ваша тема включає в себе фонові зображення для неупорядкованих "
+"елементів списку, дозволяють це, щоб підтримати їх"
+
+#: toc.php:916
+msgid "Heading levels"
+msgstr "Тема рівні"
+
+#: toc.php:918
+msgid ""
+"Include the following heading levels. Deselecting a heading will exclude it."
+msgstr ""
+"Включити такі рівні заголовків. Скасування вибору заголовок виключить його."
+
+#: toc.php:924
+msgid "heading "
+msgstr "заголовок"
+
+#: toc.php:930
+msgid "Exclude headings"
+msgstr "Виключити заголовки"
+
+#: toc.php:933
+msgid ""
+"Specify headings to be excluded from appearing in the table of contents. "
+"Separate multiple headings with a pipe <code>|</code>. Use an asterisk "
+"<code>*</code> as a wildcard to match other text. Note that this is not case "
+"sensitive. Some examples:"
+msgstr ""
+"Вкажіть заголовки, які необхідно виключити появу в змісті. Розділяйте "
+"заголовки з трубкою <code>|</code> . Використовуйте зірочку  <code>*</code> "
+"як шаблон, щоб відповідати інший текст Відзначимо, що це не так.  з "
+"урахуванням регістру Деякі приклади. : "
+
+#: toc.php:935
+msgid "<code>Fruit*</code> ignore headings starting with \"Fruit\""
+msgstr "<code>Fruit*</code> ігнорувати заголовки, починаючи з \"Fruit \""
+
+#: toc.php:936
+msgid ""
+"<code>*Fruit Diet*</code> ignore headings with \"Fruit Diet\" somewhere in "
+"the heading"
+msgstr ""
+" <code>*Fruit Diet*</code> ігнорувати заголовки з \"Фруктова дієта \" десь "
+"в  заголовком "
+
+#: toc.php:937
+msgid ""
+"<code>Apple Tree|Oranges|Yellow Bananas</code> ignore headings that are "
+"exactly \"Apple Tree\", \"Oranges\" or \"Yellow Bananas\""
+msgstr ""
+" <code>Apple Tree|Oranges|Yellow Bananas</code> ігнорувати заголовки, які є  "
+"точно \"Яблуня \", \"Апельсини \" або \"Жовтий Банани \""
+
+#: toc.php:942
+msgid "Smooth scroll top offset"
+msgstr "Плавне прокручування кращих зміщення"
+
+#: toc.php:945
+msgid ""
+"If you have a consistent menu across the top of your site, you can adjust "
+"the top offset to stop the headings from appearing underneath the top menu. "
+"A setting of 30 accommodates the WordPress admin bar. This setting appears "
+"after you have enabled smooth scrolling from above."
+msgstr ""
+"Якщо у вас є послідовне меню у верхній частині вашого сайту, ви можете "
+"налаштувати верх зміщення, щоб зупинити заголовки з'являтися під верхньому "
+"меню. Значення 30 вміщує WordPress адмін-панелі. З'являється Цей параметр  "
+"після включення плавну прокрутку згори ."
+
+#: toc.php:949
+msgid "Restrict path"
+msgstr "Обмежити шлях"
+
+#: toc.php:952
+msgid ""
+"Restrict generation of the table of contents to pages that match the "
+"required path. This path is from the root of your site and always begins "
+"with a forward slash."
+msgstr ""
+"Обмежити покоління змісті на сторінки, які відповідають необхідний хід. Цей "
+"шлях від кореня вашого сайту і завжди починається з косою риси."
+
+#: toc.php:955
+msgid "Eg: /wiki/, /corporate/annual-reports/"
+msgstr "Наприклад:/вікі /,/корпоративна/щорічні-звіти /"
+
+#: toc.php:959
+msgid "Default anchor prefix"
+msgstr "За замовчуванням якір префікс"
+
+#: toc.php:962
+msgid ""
+"Anchor targets are restricted to alphanumeric characters as per HTML "
+"specification (see readme for more detail). The default anchor prefix will "
+"be used when no characters qualify. When left blank, a number will be used "
+"instead."
+msgstr ""
+"Цілі Якірні обмежені буквено-цифрових символів відповідно до HTML "
+"специфікація (див. ридми для більш детально). Прив'язки за замовчуванням "
+"префікс буде використовуватися при ніякі символи не претендувати. Коли "
+"порожнім, номер буде використовуватися замість."
+
+#: toc.php:963
+msgid ""
+"This option normally applies to content written in character sets other than "
+"ASCII."
+msgstr ""
+"Ця опція зазвичай відноситься до змісту написаної в набором символів, "
+"відмінним ASCII."
+
+#: toc.php:966
+msgid "Eg: i, toc_index, index, _"
+msgstr "Наприклад: я, toc_index, індекс, _"
+
+#: toc.php:974
+msgid "Usage"
+msgstr "Використання"
+
+#: toc.php:975
+msgid ""
+"If you would like to fully customise the position of the table of contents, "
+"you can use the %s shortcode by placing it at the desired position of your "
+"post, page or custom post type. This method allows you to generate the table "
+"of contents despite having auto insertion disabled for its content type. "
+"Please visit the help tab for further information about this shortcode."
+msgstr ""
+"Якщо ви хочете, щоб повністю налаштувати положення змісті, Ви можете "
+"використовувати %s шорткод, помістивши його в потрібному місці вашого "
+"повідомленням, сторінки або користувальницького типу повідомленням. Цей "
+"метод дозволяє генерувати таблиця  вмісту, незважаючи на наявність вставки "
+"авто відключена для його типу контенту.  Будь ласка, перейдіть на вкладку "
+"довідки для отримання додаткової інформації про цю короткий номер ."
+
+#: toc.php:983
+msgid ""
+"At its simplest, placing %s into a page will automatically create a sitemap "
+"of all pages and categories. This also works in a text widget."
+msgstr ""
+"У самому простому розміщенні %s на сторінку автоматично створити карту сайту "
+"всіх сторінок і категорій. Це також працює в текстовому віджеті."
+
+#: toc.php:987
+msgid "Show page listing"
+msgstr "Показати сторінку зі списком"
+
+#: toc.php:991
+msgid "Show category listing"
+msgstr "Показати котирувальний лист"
+
+#: toc.php:995
+msgid "Heading type"
+msgstr "Тема тип"
+
+#: toc.php:998
+msgid "Use"
+msgstr "Використання"
+
+#: toc.php:1009
+msgid "to print out the titles"
+msgstr "роздрукувати назви"
+
+#: toc.php:1013
+msgid "Pages label"
+msgstr "Сторінки етикетки"
+
+#: toc.php:1015
+msgid "Eg: Pages, Page List"
+msgstr "Наприклад: Сторінки, Список Сторінка"
+
+#: toc.php:1019
+msgid "Categories label"
+msgstr "Категорії етикетки"
+
+#: toc.php:1021
+msgid "Eg: Categories, Category List"
+msgstr "Наприклад: Категорії, Список категорій"
+
+#: toc.php:1027
+msgid "Advanced usage"
+msgstr "Розширене використання"
+
+#: toc.php:1029
+msgid ""
+"lets you print out a listing of only pages. Similarly %s can be used to "
+"print out a category listing. They both can accept a number of attributes so "
+"visit the help tab for more information."
+msgstr ""
+"Дозволяє роздрукувати список тільки сторінок. Аналогічно %s може бути "
+"використаний для роздрукувати категорію лістингу. Вони обидва можуть "
+"прийняти ряд атрибутів так перейдіть на вкладку, щоб отримати більше "
+"інформації."
+
+#: toc.php:1030
+msgid "Examples"
+msgstr "Приклади"
+
+#: toc.php:1032
+msgid "hides the heading from a category listing"
+msgstr "приховує заголовок з категорії лістингу"
+
+#: toc.php:1033
+msgid ""
+"Uses h6 to display %s on a page listing excluding pages with IDs 1 and 15"
+msgstr ""
+"Використання h6 для відображення %s на лістинг сторінку за винятком сторінок "
+"з ідентифікаторами 1 і 15"
+
+#: toc.php:1041
+msgid "Where's my table of contents?"
+msgstr "Де мій зміст?"
+
+#: toc.php:1042
+msgid ""
+"If you're reading this, then chances are you have successfully installed and "
+"enabled the plugin and you're just wondering why the index isn't appearing "
+"right? Try the following:"
+msgstr ""
+"Якщо ви читаєте цю статтю, то швидше за все, ви успішно встановили та "
+"включений плагін і ви просто цікаво, чому індекс не з'являтися  право "
+"Спробуйте зробити наступне:? "
+
+#: toc.php:1044
+msgid ""
+"In most cases, the post, page or custom post type has less than the minimum "
+"number of headings. By default, this is set to four so make sure you have at "
+"least four headings within your content. If you want to change this value, "
+"you can find it under 'Main Options' &gt; 'Show when'."
+msgstr ""
+"У більшості випадків, після, або митний пост тип має менше мінімуму "
+"кількість товарних позицій. За умовчанням цей параметр встановлений на "
+"чотирьох тому переконайтеся, що у вас є на найменш чотирьох заголовків у "
+"змісті. Якщо ви хочете змінити це значення,  ви можете знайти його в розділі "
+"'Основні параметри'> 'Показати, коли'."
+
+#: toc.php:1045
+msgid ""
+"Is auto insertion enabled for your content type? By default, only pages are "
+"enabled."
+msgstr ""
+"Чи є авто вставки включена для вашого типу контенту? За замовчуванням тільки "
+"сторінки включений."
+
+#: toc.php:1046
+msgid ""
+"Have you got <code>[no_toc]</code> somewhere within the content? This will "
+"disable the index for the current post, page or custom post type."
+msgstr ""
+"У вас є <code>[no_toc]</code> десь у змісті? Це  відключити індекс до "
+"поточного повідомленням, сторінки або користувальницького типу "
+"повідомленням ."
+
+#: toc.php:1047
+msgid ""
+"If you are using the TOC+ widget, check if you have the <em>\"Show the table "
+"of contents only in the sidebar\"</em> enabled as this will limit its "
+"display to only the sidebar. You can check by going into Appearance &gt; "
+"Widgets."
+msgstr ""
+"Якщо ви використовуєте змісту + віджет, перевірити, якщо у вас є <em>\" "
+"Показати таблицю  вмісту тільки в бічній панелі \"включений,</em> так як це "
+"обмежить дисплей тільки на бічній панелі. Ви можете перевірити, зайшовши в "
+"Зовнішній вигляд >  Віджети ."
+
+#: toc.php:1048
+msgid ""
+"You may have restricted generation to a URL path match. The setting can be "
+"found in the advanced section under Main Options."
+msgstr ""
+"Ви, можливо, обмежений покоління до матчу URL шлях. Налаштування може бути "
+"знаходиться в розширеному розділі під основні варіанти."
+
+#: toc.php:1051
+msgid "How do I stop the table of contents from appearing on a single page?"
+msgstr "Як зупинити зміст від появи на одній сторінці?"
+
+#: toc.php:1052
+msgid ""
+"Place the following <code>[no_toc]</code> anywhere on the page to suppress "
+"the table of contents. This is known as a shortcode and works for posts, "
+"pages and custom post types that make use of the_content()"
+msgstr ""
+"Помістіть наступне <code>[no_toc]</code> в будь-якому місці сторінки, щоб "
+"придушити  зміст. Це відомо як короткий номер і працює на посаді  сторінки і "
+"призначені для користувача поштові типи, які використовують the_content () "
+
+#: toc.php:1054
+msgid ""
+"I've set wrapping to left or right but the headings don't wrap around the "
+"table of contents"
+msgstr ""
+"Я встановив обгортання вліво або вправо, але заголовки НЕ обернути навколо "
+"зміст"
+
+#: toc.php:1055
+msgid ""
+"This normally occurs when there is a CSS clear directive in or around the "
+"heading originating from the theme (Twenty Eleven and Twenty Twelve are two "
+"themes which do this). This directive tells the user agent to reset the "
+"previous wrapping specifications."
+msgstr ""
+"Як правило, це відбувається, коли є CSS ясно директива в або навколо "
+"заголовок походить з тієї теми (Двадцять Одинадцять і двадцять Дванадцять "
+"два теми, які роблять це). Ця директива повідомляє ПА, щоб скинути попередня "
+"упаковка специфікації ."
+
+#: toc.php:1056
+msgid ""
+"You can adjust your theme's CSS or try moving the table of contents position "
+"to the top of the page. If you didn't build your theme, I'd highly suggest "
+"you try the %s if you wish to make CSS changes."
+msgstr ""
+"Ви можете налаштувати CSS вашої теми або спробуйте перемістити таблицю "
+"положенні вмісту у верхній частині сторінки. Якщо ви не будували свою тему, "
+"я б настійно рекомендую спробі %s, якщо ви хочете зробити CSS зміни ."
+
+#: toc.php:1059
+msgid ""
+"Try adding the following CSS to allow the wrapping to occur around the table "
+"of contents:"
+msgstr ""
+"Спробуйте додати наступну CSS, щоб дозволити упаковка відбуватися навколо "
+"столу Зміст:"
+
+#: toc.php:1064
+msgid "How do I include the name of the page in the table of contents title?"
+msgstr "Як включити ім'я сторінки в Зміст Назва?"
+
+#: toc.php:1065
+msgid ""
+"As the title of the page changes depending on the page you're viewing, you "
+"can use the following special variable to automatically insert the title of "
+"the page into the table of contents heading:"
+msgstr ""
+"Як виявляється з назви сторінки зміниться залежно від сторінки, що "
+"переглядається, ви можете використовувати наступну спеціальну змінну "
+"автоматично включити назву сторінки в змісті заголовок:"
+
+#: toc.php:1067
+msgid "You can use it as is or place text either side of the variable."
+msgstr ""
+"Ви можете використовувати його як є або місце текст обидві сторони від "
+"змінної."
+
+#: toc.php:1068
+msgid ""
+"As an example: if your page is named <em>Great Expectations</em> and your "
+"table of contents title is set to <em>Contents for %PAGE_NAME%</em>, the "
+"final title would read <em>Contents for Great Expectations</em>"
+msgstr ""
+"Як приклад: якщо ваша сторінка називається <em>Великі надії</em> і свій "
+"зміст назва встановлений в <em>Зміст для%page_name%, "
+
+#: toc.php:1070
+msgid "The sitemap uses a strange font dissimilar to the rest of the site"
+msgstr ""
+"Карта сайту використовує дивну шрифт різнорідних до іншої частини сайту"
+
+#: toc.php:1071
+msgid ""
+"No extra styles are created for the sitemap, instead it inherits any styles "
+"you used when adding the shortcode. If you copy and pasted, you probably "
+"also copied the 'code' tags surrounding it so remove them if this is the "
+"case."
+msgstr ""
+"Встановлення додаткових стилів не створюються для карти сайту, замість цього "
+"він успадковує всі стилі ви використовували при додаванні короткий код. При "
+"копіюванні і вставці, ви, ймовірно, також копіюються теги 'Кодекс' оточуючі "
+"це так видалити їх, якщо це  справа ."
+
+#: toc.php:1072
+msgid ""
+"In most cases, try to have the shortcode on its own line with nothing before "
+"or after the square brackets."
+msgstr ""
+"У більшості випадків, намагаються мати короткий код на окремому рядку з чим "
+"перед або після квадратних дужок."
+
+#: toc.php:1074
+msgid "What were those shortcodes and attributes again?"
+msgstr "Що це були за короткі номери і атрибути знову?"
+
+#: toc.php:1075
+msgid ""
+"When attributes are left out for the shortcodes below, they will fallback to "
+"the settings you defined under Settings &gt; TOC+."
+msgstr ""
+"Коли атрибути опущені для нижче короткі номери, вони будуть Відкинути до "
+"налаштуваннях, визначених у розділі Установки> TOC +."
+
+#: toc.php:1079
+msgid "Shortcode"
+msgstr "Короткий"
+
+#: toc.php:1080
+msgid "Description"
+msgstr "Опис"
+
+#: toc.php:1081
+msgid "Attributes"
+msgstr "Атрибути"
+
+#: toc.php:1087
+msgid ""
+"Lets you generate the table of contents at the preferred position. Also "
+"useful for sites that only require a TOC on a small handful of pages."
+msgstr ""
+"Дозволяє створити зміст в обраній позиції. Крім того, корисно для сайтів, "
+"які вимагають тільки зміст на невеликої жменьки сторінок."
+
+#: toc.php:1090
+msgid "text, title of the table of contents"
+msgstr "Текст, назва змісті"
+
+#: toc.php:1091
+msgid "true/false, shows or hides the title"
+msgstr "істина/брехня, показує або приховує назву"
+
+#: toc.php:1092
+msgid "text, either \"left\" or \"right\""
+msgstr "Текст, або \"лівий\" або \"прямо\""
+
+#: toc.php:1093
+msgid ""
+"numbers, this lets you select the heading levels you want included in the "
+"table of contents. Separate multiple levels with a comma. Example: include "
+"headings 3, 4 and 5 but exclude the others with"
+msgstr ""
+"Цифри, це дозволяє вибрати рівні заголовків, які необхідно включити в змісту "
+"Розділіть декілька рівнів з комою Приклад: .. Включають заголовки 3, 4 і 5, "
+"але не включають інші з"
+
+#: toc.php:1094
+msgid ""
+"text, enter headings to be excluded. Separate multiple headings with a pipe "
+"<code>|</code>. Use an asterisk <code>*</code> as a wildcard to match other "
+"text. You could also use regular expressions for more advanced matching."
+msgstr ""
+"Текст, введіть заголовки, які необхідно виключити Розділіть декілька "
+"заголовків з труби.  <code>|</code> . Використовуйте зірочку <code>*</code> "
+"як шаблон, щоб відповідати інший "
+
+#: toc.php:1100
+msgid ""
+"Allows you to disable the table of contents for the current post, page, or "
+"custom post type."
+msgstr ""
+"Дозволяє відключати зміст для поточного повідомленням, сторінки або "
+"користувача тип запису."
+
+#: toc.php:1105
+msgid ""
+"Produces a listing of all pages and categories for your site. You can use "
+"this on any post, page or even in a text widget."
+msgstr ""
+"Виробляє список всіх сторінок і категорій для вашого сайту. Ви можете "
+"використовувати це на будь-якому поштовому, сторінку або навіть в текстовий "
+"віджет."
+
+#: toc.php:1110
+msgid "Lets you print out a listing of only pages."
+msgstr "Дозволяє роздруковувати список тільки сторінок."
+
+#: toc.php:1113
+msgid "number between 1 and 6, defines which html heading to use"
+msgstr "число від 1 до 6, визначає, які HTML заголовок використовувати"
+
+#: toc.php:1114
+msgid "text, title of the list"
+msgstr "Текст, назва списку"
+
+#: toc.php:1115
+msgid "true/false, shows or hides the list heading"
+msgstr "істина/брехня, показує або приховує заголовок список"
+
+#: toc.php:1116
+msgid "IDs of the pages or categories you wish to exclude"
+msgstr "Ідентифікатори сторінок або категорій, які ви хочете виключити"
+
+#: toc.php:1117
+msgid ""
+"ID of the page or category you wish to exclude including its all descendants"
+msgstr ""
+"Ідентифікатор сторінки або категорії ви хочете виключити включаючи всі його "
+"нащадків"
+
+#: toc.php:1123
+msgid "Similar to [sitemap_pages] but for categories."
+msgstr "Подібно [sitemap_pages], а й для категорій."
+
+#: toc.php:1128
+msgid ""
+"This lets you print out an index of all published posts on your site. By "
+"default, posts are listed in alphabetical order grouped by their first "
+"letters. There are CSS classes for each section, letter and list allowing "
+"you to customise the appearance."
+msgstr ""
+"Це дозволяє роздрукувати індекс всіх опублікованих повідомлень на вашому "
+"сайті. По замовчуванням повідомлень перераховані в алфавітному порядку, "
+"згруповані за їх перший листи. Є CSS класи для кожної секції, листи і "
+"список, що дозволяє ви для налаштування зовнішнього вигляду ."
+
+#: toc.php:1131
+msgid "text, either ASC or DESC"
+msgstr "Текст, або ASC або DESC"
+
+#: toc.php:1132
+msgid ""
+"text, popular options include \"title\", \"date\", \"ID\", and \"rand\". See "
+"%1$sWP_Query%2$s for a list."
+msgstr ""
+"Текст, популярні варіанти включають \"назва\", \"дата\", \"ID\", і \"рандів"
+"\". Див  %1$sWP_Query %2$s для списку."
+
+#: toc.php:1133
+msgid ""
+"true/false (defaults to true), does not separate the lists by first letter "
+"when set to false."
+msgstr ""
+"Істина/брехня (за замовчуванням True), не розділяє списки за першою літерою "
+"при установці на брехню."
+
+#: toc.php:1141
+msgid "I have another question..."
+msgstr "У мене інше питання ..."
+
+#: toc.php:1142
+msgid ""
+"Visit the %1$splugin homepage%2$s to ask your question - who knows, maybe "
+"your question has already been answered. I'd really like to hear your "
+"suggestions if you have any."
+msgstr ""
+"Відвідайте %1$splugin стартовою %2$s задати своє питання - хто знає, може "
+"бути,. Ваше питання вже є відповідь, я б дуже хотів почути ваші пропозиції, "
+"якщо у вас є."
+
+#: toc.php:1144
+msgid "For developers"
+msgstr "Для розробників"
+
+#: toc.php:1146
+msgid "How do I customise my anchors?"
+msgstr "Як налаштувати мої якоря?"
+
+#: toc.php:1147
+msgid ""
+"If you're still not happy with the anchors, you can modify them to suit your "
+"needs through a custom function hooked into the <code>toc_url_anchor_target</"
+"code> filter. As an example, place the below code snippet into your "
+"functions.php file to convert all anchors to uppercase."
+msgstr ""
+"Якщо ви все ще не задоволені якорів, ви можете змінити їх відповідно до "
+"ваших потреби через користувача функції підключили в "
+"<code>toc_url_anchor_target</code> фыльтр. Як, наприклад, розмістити на "
+"нижче фрагмент коду в файл functions. php, конвертувати всі якорів у верхній "
+"регістр. "
+
+#: toc.php:1157
+msgid ""
+"Returns a HTML formatted string of the table of contents without the "
+"surrounding UL or OL tags to allow the theme editor to supply their own ID "
+"and/or classes to the outer list."
+msgstr ""
+"Повертає HTML відформатований рядок змісту без навколишнього UL або OL "
+"коментарями, що дозволяє редактор тема поставляти свій власний ID і/або "
+"класи в зовнішній списку."
+
+#: toc.php:1158
+msgid "Both parameters are optional:"
+msgstr "Обидва параметри є необов'язковими:"
+
+#: toc.php:1162
+msgid ""
+"is the entire content with headings. If blank, will default to the current "
+"content found in $post (eg within \"the loop\")."
+msgstr ""
+"Це все вміст з заголовками. Якщо порожньо, за замовчуванням буде поточний "
+"матеріал, знайдений на $post (наприклад, в рамках \" петлі \")."
+
+#: toc.php:1165
+msgid ""
+"is the URL to prefix the anchor with. If a string was provided, it will be "
+"used as is. If set to \"true\" then will try to obtain the permalink from "
+"the $post object."
+msgstr ""
+"Є URL префікс якір с. Якщо рядок була надана, то це буде використовуватися "
+"як є. Якщо встановлено в \" щире \"  а потім намагатиметься отримати "
+"постійне посилання від об'єкта $post."
+
+#: toc.php:1167
+msgid "These examples assume you are within \"the loop\":"
+msgstr "У цих прикладах передбачається ви знаходитесь в \"петлі \":"
+
+#: toc.php:1169
+msgid "Obtain the index for the current page"
+msgstr "Отримати індекс для поточної сторінки"
+
+#: toc.php:1172
+msgid "Create a listing of all children and their headings"
+msgstr "Створіть список всіх дітей та їх заголовків"
+
+#: toc.php:1197
+msgid "Update Options"
+msgstr "Параметри оновлення"
+
+#: toc.php:1689
+msgid "Display the table of contents in the sidebar with this widget"
+msgstr "Дисплей зміст у бічній панелі з цим віджетом"
+
+#: toc.php:1790
+msgid "Show the table of contents only in the sidebar"
+msgstr "Показати зміст тільки на бічній панелі"
+
+#: toc.php:1794
+msgid "For the following content types:"
+msgstr "Для наступних типів контенту:"

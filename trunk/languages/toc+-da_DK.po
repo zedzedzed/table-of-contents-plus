@@ -1,0 +1,560 @@
+# Copyright (C) 2015 Table of Contents Plus
+# This file is distributed under the same license as the Table of Contents Plus package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Table of Contents Plus 1505\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/table-of-contents-"
+"plus\n"
+"POT-Creation-Date: 2015-06-26 14:49+0100\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-06-26 14:57+0100\n"
+"Last-Translator: Kasper <kasper@toftbraun.dk>\n"
+"Language-Team: \n"
+"X-Generator: Poedit 1.8.1\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: da_DK\n"
+
+#: toc.php:201
+msgid "Settings"
+msgstr "Indstillinger"
+
+#: toc.php:482 toc.php:483
+msgid "TOC"
+msgstr "TOC"
+
+#: toc.php:653
+msgid "Options saved."
+msgstr "Ændringer gemt."
+
+#: toc.php:655
+msgid "Save failed."
+msgstr "Opdatering er mislykket"
+
+#: toc.php:667
+msgid "Main Options"
+msgstr "Primære indstillinger"
+
+#: toc.php:668
+msgid "Sitemap"
+msgstr "Sitemap"
+
+#: toc.php:669
+msgid "Help"
+msgstr "Hjælp"
+
+#: toc.php:677
+msgid "Position"
+msgstr "Position"
+
+#: toc.php:680
+msgid "Before first heading (default)"
+msgstr "Før første overskrift (standard)"
+
+#: toc.php:681
+msgid "After first heading"
+msgstr "Efter første overskrift"
+
+#: toc.php:682
+msgid "Top"
+msgstr "Top"
+
+#: toc.php:683
+msgid "Bottom"
+msgstr "Bund"
+
+#: toc.php:688
+msgid "Show when"
+msgstr "Vis når"
+
+#. translators: text follows drop down list of numbers
+#: toc.php:700
+msgid "or more headings are present"
+msgstr "eller flere overskrifter er vist"
+
+#: toc.php:704
+msgid "Auto insert for the following content types"
+msgstr "Indsæt automatisk for de følgende typer"
+
+#. translators: this is the title of the table of contents
+#: toc.php:719
+msgid "Heading text"
+msgstr "Boksens tekst"
+
+#: toc.php:721
+msgid "Show title on top of the table of contents"
+msgstr "Vis teksten som det øverste i indholdsfortegnelsen"
+
+#: toc.php:724
+msgid "Eg: Contents, Table of Contents, Page Contents"
+msgstr "For eksempel: Indhold, Indholdsfortegnelse, Sidens indhold"
+
+#: toc.php:726
+msgid "Allow the user to toggle the visibility of the table of contents"
+msgstr "Tillad læseren at gemme indholdsfortegnelsen"
+
+#: toc.php:731
+msgid "Show text"
+msgstr "Vis tekst"
+
+#. translators: example text to display when you want to expand the table of
+#. contents
+#: toc.php:735
+msgid "Eg: show"
+msgstr "Ex: vis"
+
+#: toc.php:738
+msgid "Hide text"
+msgstr "Gem tekst"
+
+#. translators: example text to display when you want to collapse the table of
+#. contents
+#: toc.php:742
+msgid "Eg: hide"
+msgstr "Ex: gem"
+
+#: toc.php:746
+msgid "Hide the table of contents initially"
+msgstr "Gem indholdsfortegnelsen som standard når en læser besøger siden."
+
+#: toc.php:752
+msgid "Show hierarchy"
+msgstr "Vis hierarki"
+
+#: toc.php:756
+msgid "Number list items"
+msgstr "Vis numre i indholdsfortegnelsen"
+
+#: toc.php:760
+msgid "Enable smooth scroll effect"
+msgstr "Aktiver en lækker scroll effekt"
+
+#: toc.php:761
+msgid "Scroll rather than jump to the anchor link"
+msgstr ""
+"Denne effekt betyder, at der laves en lækker stille og rolig scroll effekt. "
+"Alternativet er, at den hopper direkte ned til linket. Det kan virke lidt "
+"voldsomt."
+
+#: toc.php:766
+msgid "Appearance"
+msgstr "Design"
+
+#: toc.php:770
+msgid "Width"
+msgstr "Bredde"
+
+#: toc.php:773
+msgid "Fixed width"
+msgstr "Bestem selv bredde"
+
+#: toc.php:784
+msgid "Relative"
+msgstr "Relative værdier"
+
+#: toc.php:785
+msgid "Auto (default)"
+msgstr "Automatisk (standard)"
+
+#. translators: other width
+#: toc.php:795
+msgid "Other"
+msgstr "Andet"
+
+#: toc.php:796
+msgid "User defined"
+msgstr "Brugerdefineret"
+
+#. translators: ignore %s as it's some HTML label tags
+#: toc.php:802
+msgid "Please enter a number and %s select its units, eg: 100px, 10em"
+msgstr ""
+"Vær venlig at indtaste et nummer og %s vælg dens værdi. Ex: 100px, 10em"
+
+#: toc.php:813
+msgid "Wrapping"
+msgstr "Justering"
+
+#: toc.php:816
+msgid "None (default)"
+msgstr "Ingen (standard)"
+
+#: toc.php:817
+msgid "Left"
+msgstr "Venstre"
+
+#: toc.php:818
+msgid "Right"
+msgstr "Højre"
+
+#: toc.php:823
+msgid "Font size"
+msgstr "Fontens størrelse"
+
+#. translators: appearance / colour / look and feel options
+#: toc.php:836
+msgid "Presentation"
+msgstr "Udseende"
+
+#: toc.php:839
+msgid "Grey (default)"
+msgstr "Grå (standard)"
+
+#: toc.php:844
+msgid "Light blue"
+msgstr "Lyseblå"
+
+#: toc.php:849
+msgid "White"
+msgstr "Hvid"
+
+#: toc.php:854
+msgid "Black"
+msgstr "Sort"
+
+#: toc.php:859
+msgid "Transparent"
+msgstr "Gennemsigtig"
+
+#: toc.php:864
+msgid "Custom"
+msgstr "Brugerdefineret"
+
+#: toc.php:874
+msgid "Background"
+msgstr "Baggrund"
+
+#: toc.php:878
+msgid "Border"
+msgstr "Sider"
+
+#: toc.php:882 toc.php:1658
+msgid "Title"
+msgstr "Overskrifter"
+
+#: toc.php:886
+msgid "Links"
+msgstr "Links"
+
+#: toc.php:890
+msgid "Links (hover)"
+msgstr "Links (når musen køres henover linket)"
+
+#: toc.php:894
+msgid "Links (visited)"
+msgstr "Links (besøgte)"
+
+#: toc.php:901
+msgid "Leaving the value as %s will inherit your theme's styles"
+msgstr "At lade værdien stå som %s betyder, at temaets standard design bruges"
+
+#: toc.php:908
+msgid "Advanced"
+msgstr "Avanceret"
+
+#: toc.php:908 toc.php:1045
+msgid "show"
+msgstr "vis"
+
+#: toc.php:910
+msgid "Power options"
+msgstr "Ekstra indstillinger"
+
+#: toc.php:914
+msgid "Lowercase"
+msgstr "Små bogstaver"
+
+#: toc.php:915
+msgid "Ensure anchors are in lowercase"
+msgstr "Sørger for tekst med små bogstaver"
+
+#: toc.php:918
+msgid "Hyphenate"
+msgstr "Orddeling"
+
+#: toc.php:919
+msgid "Use - rather than _ in anchors"
+msgstr "Bruger - i stedet for _ i overskrifter"
+
+#: toc.php:922
+msgid "Include homepage"
+msgstr "Inkluder forside"
+
+#: toc.php:923
+msgid "Show the table of contents for qualifying items on the homepage"
+msgstr "Vis indholdsfortegnelse på forsiden"
+
+#: toc.php:926
+msgid "Exclude CSS file"
+msgstr "Ekskluder CSS fil"
+
+#: toc.php:927
+msgid ""
+"Prevent the loading of this plugin's CSS styles. When selected, the "
+"appearance options from above will also be ignored."
+msgstr ""
+"Fohindrer indlæsning af dettes plugins CSS styles. Når dette er valgt, vil "
+"dine egne design indstillinger blive ignoreret."
+
+#: toc.php:930
+msgid "Preserve theme bullets"
+msgstr "Bevar tema lister"
+
+#: toc.php:931
+msgid ""
+"If your theme includes background images for unordered list elements, enable "
+"this to support them"
+msgstr ""
+"Hvis dit tema inkluderer billeder i uordnet listeelementer, så aktiver dette "
+"for at bevare dem."
+
+#: toc.php:934
+msgid "Heading levels"
+msgstr "Overskrifter"
+
+#: toc.php:936
+msgid ""
+"Include the following heading levels. Deselecting a heading will exclude it."
+msgstr ""
+"Inkluder følgende overskrifter. Når du fravælger en overskrift, vil den "
+"blive ekskluderet i indholdsfortegnelsen."
+
+#: toc.php:942
+msgid "heading "
+msgstr "overskrift"
+
+#: toc.php:948
+msgid "Exclude headings"
+msgstr "Ekskluder overskrifter"
+
+#: toc.php:951
+msgid ""
+"Specify headings to be excluded from appearing in the table of contents.  "
+"Separate multiple headings with a pipe <code>|</code>.  Use an asterisk "
+"<code>*</code> as a wildcard to match other text.  Note that this is not "
+"case sensitive. Some examples:"
+msgstr ""
+"Specificer overskrifter med ord du vil have ekskluderet i din "
+"indholdsfortegnelse. Adskil flere overskrifter med <code>|</code>. Brug "
+"<code>*</code> til at matche en anden tekst. Husk at der ikke skelnes mellem "
+"store og små bogstacer. Eksempler:"
+
+#: toc.php:953
+msgid "<code>Fruit*</code> ignore headings starting with \"Fruit\""
+msgstr "<code>Frugt*</code> ignorerer overskrifter der starter med \"Frugt\""
+
+#: toc.php:954
+msgid ""
+"<code>*Fruit Diet*</code> ignore headings with \"Fruit Diet\" somewhere in "
+"the heading"
+msgstr ""
+"<code>*Frugt slankekur*</code> ignorerer overskrifter med \"Frugt slankekur\""
+
+#: toc.php:955
+msgid ""
+"<code>Apple Tree|Oranges|Yellow Bananas</code> ignore headings that are "
+"exactly \"Apple Tree\", \"Oranges\" or \"Yellow Bananas\""
+msgstr ""
+"<code>Æbletræ|Appelsiner|Gule Bananer</code> ignorerer overskrifter der "
+"præcis er \"Æbletræ\", \"Appelsiner\" eller \"Gule Bananer\""
+
+#: toc.php:960
+msgid "Smooth scroll top offset"
+msgstr "Mellemrum mellem overskrifter"
+
+#: toc.php:963
+msgid ""
+"If you have a consistent menu across the top of your site, you can adjust "
+"the top offset to stop the headings from appearing underneath the top menu. "
+"A setting of 30 accommodates the WordPress admin bar. This setting appears "
+"after you have enabled smooth scrolling from above."
+msgstr ""
+"Den værdi du indsætter ovenfor har betydning for, hvor stort et mellemrum "
+"der er til den overskrift, man scroller ned til. Hvis du vælger at sætte den "
+"til 30 pixels, så svarer det til WordPress admin barens højde. Denne "
+"indstilling vises efter, at du har aktiveret scroll effekten længere oppe."
+
+#: toc.php:967
+msgid "Restrict path"
+msgstr "Begræns sti"
+
+#: toc.php:970
+msgid ""
+"Restrict generation of the table of contents to pages that match the "
+"required path. This path is from the root of your site and always begins "
+"with a forward slash."
+msgstr ""
+"Her kan du begrænse indholdsfortegnelsen til sider, der matcher din ønskede "
+"sti. Husk at det altid begynder med en skråstreg."
+
+#. translators: example URL path restriction
+#: toc.php:973
+msgid "Eg: /wiki/, /corporate/annual-reports/"
+msgstr "Ex: /wiki/, /virksomhed/rapporter/"
+
+#: toc.php:977
+msgid "Default anchor prefix"
+msgstr "Standard anker præfiks"
+
+#: toc.php:980
+msgid ""
+"Anchor targets are restricted to alphanumeric characters as per HTML "
+"specification (see readme for more detail). The default anchor prefix will "
+"be used when no characters qualify. When left blank, a number will be used "
+"instead."
+msgstr ""
+"Ankrer er begrænset til alfanumeriske tegn som pr HTML specifikation (se "
+"readme for flere detaljer). En standard anker præfiks vil blive brugt, når "
+"der ikke vises nogle tegn. Hvis du lader dette stå blankt, vil et nummer i "
+"stedet blive brugt."
+
+#: toc.php:981
+msgid ""
+"This option normally applies to content written in character sets other than "
+"ASCII."
+msgstr ""
+"Denne indstilling gælder normalt indhold der er skrevet i andre tegnsæt end "
+"ASCII."
+
+#. translators: example anchor prefixes when no ascii characters match
+#: toc.php:984
+msgid "Eg: i, toc_index, index, _"
+msgstr "Ex: i, toc_index, index, _"
+
+#. translators: advanced usage
+#: toc.php:992
+msgid "Usage"
+msgstr "Brug/Shortcode"
+
+#: toc.php:993
+msgid ""
+"If you would like to fully customise the position of the table of contents, "
+"you can use the %s shortcode by placing it at the desired position of your "
+"post, page or custom post type. This method allows you to generate the table "
+"of contents despite having auto insertion disabled for its content type. "
+"Please visit the help tab for further information about this shortcode."
+msgstr ""
+"Hvis du gerne vil have fuld kontrol over indholdsfortegnelsen, så kan du "
+"bruge denne shortcode: %s Denne shortcode kan du placere hvor som helst på "
+"din side, og den fungerer både på sider, indlæg og custom post types. Så "
+"hvis du ikke gider at have en automatisk genereret indholdsfortegnelse, så "
+"har du fuld kontrol med denne shortcode."
+
+#: toc.php:1001
+msgid ""
+"At its simplest, placing %s into a page will automatically create a sitemap "
+"of all pages and categories. This also works in a text widget."
+msgstr ""
+"Placer %s og du vil automatisk få genereret et sitemap for alle dine sider "
+"og kategorier. Denne shortcode virker også i tekst widgets."
+
+#: toc.php:1005
+msgid "Show page listing"
+msgstr "Vis sider"
+
+#: toc.php:1009
+msgid "Show category listing"
+msgstr "Vis kategorier"
+
+#: toc.php:1013
+msgid "Heading type"
+msgstr "Overskrift type"
+
+#. translators: the full line is supposed to read - Use [1-6 drop down list] to
+#. print out the titles
+#: toc.php:1016
+msgid "Use"
+msgstr "Brug"
+
+#. translators: the full line is supposed to read - Use [h1-h6 drop down list]
+#. to print out the titles
+#: toc.php:1027
+msgid "to print out the titles"
+msgstr "overskrifter til dit sitemap"
+
+#: toc.php:1031
+msgid "Pages label"
+msgstr "Overskrift for sider"
+
+#: toc.php:1033
+msgid "Eg: Pages, Page List"
+msgstr "Ex: sider"
+
+#: toc.php:1037
+msgid "Categories label"
+msgstr "Overskrift for kategorier"
+
+#: toc.php:1039
+msgid "Eg: Categories, Category List"
+msgstr "Ex: kategorier"
+
+#: toc.php:1045
+msgid "Advanced usage"
+msgstr "Avanceret brug"
+
+#: toc.php:1047
+msgid ""
+"lets you print out a listing of only pages. Similarly %s can be used to "
+"print out a category listing. They both can accept a number of attributes so "
+"visit the help tab for more information."
+msgstr ""
+"laver en liste med sider. Og %s laver en liste med kategorier. Begge "
+"accepterer egenskaber. Hvis du vil høre mere om det, så besøg \"Hjælp\" "
+"fanen."
+
+#: toc.php:1048
+msgid "Examples"
+msgstr "Eksempler"
+
+#: toc.php:1050
+msgid "hides the heading from a category listing"
+msgstr "gemmer overskrifterne for en liste af kategorier"
+
+#: toc.php:1051
+msgid ""
+"Uses h6 to display %s on a page listing excluding pages with IDs 1 and 15"
+msgstr ""
+"Bruger h6 til at vise %s på liste med sider, men hvor der ekskluderes sider "
+"med ID 1 og 15"
+
+#: toc.php:1060
+msgid "Update Options"
+msgstr "Ændringer gemt."
+
+#: toc.php:1563
+msgid "Display the table of contents in the sidebar with this widget"
+msgstr "Vis indholdsfortegnelsen i sidebaren med den her widget"
+
+#: toc.php:1664
+msgid "Show the table of contents only in the sidebar"
+msgstr "Vis kun indholdsfortegnelsen i sidebaren"
+
+#: toc.php:1668
+msgid "For the following content types:"
+msgstr "For følgende typer"
+
+#. Plugin Name of the plugin/theme
+msgid "Table of Contents Plus"
+msgstr "Table of Contents Plus"
+
+#. Plugin URI of the plugin/theme
+msgid "http://dublue.com/plugins/toc/"
+msgstr "http://dublue.com/plugins/toc/"
+
+#. Description of the plugin/theme
+msgid ""
+"A powerful yet user friendly plugin that automatically creates a table of "
+"contents. Can also output a sitemap listing all pages and categories."
+msgstr ""
+"Et kraftigt og brugerventligt plugin der automatisk laver en "
+"indholdsfortegnelse. Den kan også lave et sitemap, hvor alle sider og "
+"kategorier listes."
+
+#. Author of the plugin/theme
+msgid "Michael Tran"
+msgstr "Michael Tran"
+
+#. Author URI of the plugin/theme
+msgid "http://dublue.com/"
+msgstr "http://dublue.com/"

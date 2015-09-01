@@ -1,0 +1,940 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Table of Contents Plus v1308\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-08-05 23:58+1000\n"
+"PO-Revision-Date: 2014-06-15 23:10+0100\n"
+"Last-Translator: JM <duriezjeanmichel@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: nl\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+#: toc.php:175
+msgid "Settings"
+msgstr "Réglages"
+
+#: toc.php:435 toc.php:436
+msgid "TOC"
+msgstr "TOC"
+
+#: toc.php:586
+msgid "Options saved."
+msgstr "Options enregistrées"
+
+#: toc.php:588
+msgid "Save failed."
+msgstr "Echec de l'enregistrement"
+
+#: toc.php:600
+msgid "Main Options"
+msgstr "Options principales"
+
+#: toc.php:601
+msgid "Sitemap"
+msgstr "Plan du site"
+
+#: toc.php:602
+msgid "Help"
+msgstr "Aide"
+
+#: toc.php:610
+msgid "Position"
+msgstr "Position"
+
+#: toc.php:613
+msgid "Before first heading (default)"
+msgstr "Avant le premier titre (par défaut)"
+
+#: toc.php:614
+msgid "After first heading"
+msgstr "Après le premier titre"
+
+#: toc.php:615
+msgid "Top"
+msgstr "En haut"
+
+#: toc.php:616
+msgid "Bottom"
+msgstr "En bas"
+
+#: toc.php:621
+msgid "Show when"
+msgstr "Montrer lorsque"
+
+#. translators: text follows drop down list of numbers
+#: toc.php:633
+msgid "or more headings are present"
+msgstr "ou plus de titres sont présents"
+
+#: toc.php:637
+msgid "Auto insert for the following content types"
+msgstr "Insertion automatique pour les types de contenu suivants"
+
+#. translators: this is the title of the table of contents
+#: toc.php:652
+msgid "Heading text"
+msgstr "Texte du titre"
+
+#: toc.php:654
+msgid "Show title on top of the table of contents"
+msgstr "Afficher le titre en haut du sommaire"
+
+#: toc.php:657
+msgid "Eg: Contents, Table of Contents, Page Contents"
+msgstr "Ex: Table des matières, Sommaire, Contenu"
+
+#: toc.php:659
+msgid "Allow the user to toggle the visibility of the table of contents"
+msgstr "Permettre à l'internaute de choisir l'affichage ou non du sommaire"
+
+#: toc.php:664
+msgid "Show text"
+msgstr "Afficher le texte"
+
+#. translators: example text to display when you want to expand the table of contents
+#: toc.php:668
+msgid "Eg: show"
+msgstr "Ex: afficher"
+
+#: toc.php:671
+msgid "Hide text"
+msgstr "Masquer le texte"
+
+#. translators: example text to display when you want to collapse the table of contents
+#: toc.php:675
+msgid "Eg: hide"
+msgstr "Ex: masquer"
+
+#: toc.php:679
+msgid "Hide the table of contents initially"
+msgstr "Masquer le sommaire lors de l'affichage initial de la page"
+
+#: toc.php:685
+msgid "Show hierarchy"
+msgstr "Afficher la hiérarchie"
+
+#: toc.php:689
+msgid "Number list items"
+msgstr "Nombre d'items dans la liste"
+
+#: toc.php:693
+msgid "Enable smooth scroll effect"
+msgstr "Activer l'effet de smoooth scroll"
+
+#: toc.php:694
+msgid "Scroll rather than jump to the anchor link"
+msgstr "Défiler au lieu de sauter vers un lien d'ancre"
+
+#: toc.php:699
+msgid "Appearance"
+msgstr "Aussehen"
+
+#: toc.php:703
+msgid "Width"
+msgstr "Largeur"
+
+#: toc.php:706
+msgid "Fixed width"
+msgstr "Largeur fixe"
+
+#: toc.php:717
+msgid "Relative"
+msgstr "Relatif"
+
+#: toc.php:718
+msgid "Auto (default)"
+msgstr "Auto (par défaut)"
+
+#. translators: other width
+#: toc.php:728
+msgid "Other"
+msgstr "Autre"
+
+#: toc.php:729
+msgid "User defined"
+msgstr "Utilisateur défini"
+
+#. translators: ignore %s as it's some HTML label tags
+#: toc.php:735
+#, php-format
+msgid "Please enter a number and %s select its units, eg: 100px, 10em"
+msgstr "Merci d'enter un nombre et %s de choisir son unité, ex: 100px, 10 em"
+
+#: toc.php:746
+msgid "Wrapping"
+msgstr "Insérer"
+
+#: toc.php:749
+msgid "None (default)"
+msgstr "Aucun (par défaut)"
+
+#: toc.php:750
+msgid "Left"
+msgstr "Gauche"
+
+#: toc.php:751
+msgid "Right"
+msgstr "Droite"
+
+#: toc.php:756
+msgid "Font size"
+msgstr "Taille de la police"
+
+#. translators: appearance / colour / look and feel options
+#: toc.php:769
+msgid "Presentation"
+msgstr "Présentation"
+
+#: toc.php:772
+msgid "Grey (default)"
+msgstr "Gris (par défaut)"
+
+#: toc.php:777
+msgid "Light blue"
+msgstr "Bleu ciel"
+
+#: toc.php:782
+msgid "White"
+msgstr "Blanc"
+
+#: toc.php:787
+msgid "Black"
+msgstr "Noir"
+
+#: toc.php:792
+msgid "Transparent"
+msgstr "Transparent"
+
+#: toc.php:797
+msgid "Custom"
+msgstr "Personnalisé"
+
+#: toc.php:807
+msgid "Background"
+msgstr "Arrière-plan"
+
+#: toc.php:811
+msgid "Border"
+msgstr "Bordure"
+
+#: toc.php:815 toc.php:1720
+msgid "Title"
+msgstr "Titre"
+
+#: toc.php:819
+msgid "Links"
+msgstr "Liens"
+
+#: toc.php:823
+msgid "Links (hover)"
+msgstr "Liens (survol)"
+
+#: toc.php:827
+msgid "Links (visited)"
+msgstr "Liens (visités)"
+
+#: toc.php:834
+#, php-format
+msgid "Leaving the value as %s will inherit your theme's styles"
+msgstr "Conserver la valeur à %s will inherit your theme's styles"
+
+#: toc.php:841
+msgid "Advanced"
+msgstr "Avancé"
+
+#: toc.php:841 toc.php:978 toc.php:1095
+msgid "show"
+msgstr "Montrer"
+
+#: toc.php:843
+msgid "Power options"
+msgstr "Options avancées"
+
+#: toc.php:847
+msgid "Lowercase"
+msgstr "Minuscule"
+
+#: toc.php:848
+msgid "Ensure anchors are in lowercase"
+msgstr "Vérifier que les ancres sont en minuscules"
+
+#: toc.php:851
+msgid "Hyphenate"
+msgstr "Hyphenation"
+
+#: toc.php:852
+msgid "Use - rather than _ in anchors"
+msgstr "Utiliser - plutôt que _ dans les ancres"
+
+#: toc.php:855
+msgid "Include homepage"
+msgstr "Inclure la page d'accueil"
+
+#: toc.php:856
+msgid "Show the table of contents for qualifying items on the homepage"
+msgstr "Afficher le sommaire pour qualifier les items sur la page d'accueil"
+
+#: toc.php:859
+msgid "Exclude CSS file"
+msgstr "Exclure le fichier CSS"
+
+#: toc.php:860
+msgid ""
+"Prevent the loading of this plugin's CSS styles. When selected, the "
+"appearance options from above will also be ignored."
+msgstr ""
+"Empêche le chargement des styles CSS de ce plugin. Si cette option est "
+"cochée, les choix pour l'apparence ci-dessus seront ignorés."
+
+#: toc.php:863
+msgid "Preserve theme bullets"
+msgstr "Empêche les bullets du thème"
+
+#: toc.php:864
+msgid ""
+"If your theme includes background images for unordered list elements, enable "
+"this to support them"
+msgstr ""
+"Si votre theme comprend des images de fond pour les éléments non ordonnés de "
+"liste, activer ceci pour les supporter"
+
+#: toc.php:867
+msgid "Heading levels"
+msgstr "Niveaux de titre"
+
+#: toc.php:869
+msgid ""
+"Include the following heading levels. Deselecting a heading will exclude it."
+msgstr ""
+"Inclure les niveaux de titre suivants. Déselectionner un niveau, l'excluera."
+
+#: toc.php:875
+msgid "heading "
+msgstr "titre"
+
+#: toc.php:881
+msgid "Exclude headings"
+msgstr "Exclure les titres"
+
+#: toc.php:884
+msgid ""
+"Specify headings to be excluded from appearing in the table of contents.  "
+"Separate multiple headings with a pipe <code>|</code>.  Use an asterisk "
+"<code>*</code> as a wildcard to match other text.  Note that this is not "
+"case sensitive. Some examples:"
+msgstr ""
+"Spécifie les titres qui n'apparaitront pas dans le sommaire. Séparez "
+"plusieurs titres avec un \"pipe\" : <code>|</code> . Utilisez une astérisque "
+"* <code>*</code> comme un caractère joker. Ceci n'est pas sensible à la "
+"casse. Quelques exemples :"
+
+#: toc.php:886
+msgid "<code>Fruit*</code> ignore headings starting with \"Fruit\""
+msgstr "<code>Fruit*</code> ignore les titres qui commencent par \"Fruit\""
+
+#: toc.php:887
+msgid ""
+"<code>*Fruit Diet*</code> ignore headings with \"Fruit Diet\" somewhere in "
+"the heading"
+msgstr "<code>*Fruit Diet*</code> ignore les titres comprenant \"Fruit Diet\" "
+
+#: toc.php:888
+msgid ""
+"<code>Apple Tree|Oranges|Yellow Bananas</code> ignore headings that are "
+"exactly \"Apple Tree\", \"Oranges\" or \"Yellow Bananas\""
+msgstr ""
+"<code>Apple Tree|Oranges|Yellow Bananas</code> ignorera exactement les "
+"titres \"Apple Tree\", \"Oranges\" ou \"Yellow Bananas\""
+
+#: toc.php:893
+msgid "Smooth scroll top offset"
+msgstr "Smooth scroll top offset"
+
+#: toc.php:896
+msgid ""
+"If you have a consistent menu across the top of your site, you can adjust "
+"the top offset to stop the headings from appearing underneath the top menu. "
+"A setting of 30 accommodates the WordPress admin bar. This setting appears "
+"after you have enabled smooth scrolling from above."
+msgstr ""
+"Si vous avez un menu consistant au top de votre site, vous avez la "
+"possibilité d'ajuster le top affset pour empécher les titres d'apparaître "
+"sous le menu du top. Un réglage de 30 s'accomode de la barre "
+"d'administration de Wordpress. Ce réglage intervient après que vous ayez "
+"activé le smooth scrolling ci-dessus."
+
+#: toc.php:900
+msgid "Restrict path"
+msgstr "Path restreint"
+
+#: toc.php:903
+msgid ""
+"Restrict generation of the table of contents to pages that match the "
+"required path. This path is from the root of your site and always begins "
+"with a forward slash."
+msgstr ""
+"Restreint la génération du sommaire aux pages qui correspondent au path "
+"exigé. Ce chemin est celui qui débute à la racine de votre site et commence "
+"toujours par un slash droit : /"
+
+#. translators: example URL path restriction
+#: toc.php:906
+msgid "Eg: /wiki/, /corporate/annual-reports/"
+msgstr "Ex: /wiki/, /corporate/annual-reports/"
+
+#: toc.php:910
+msgid "Default anchor prefix"
+msgstr "Préfixe par défaut pour les ancres"
+
+#: toc.php:913
+msgid ""
+"Anchor targets are restricted to alphanumeric characters as per HTML "
+"specification (see readme for more detail). The default anchor prefix will "
+"be used when no characters qualify. When left blank, a number will be used "
+"instead."
+msgstr ""
+"Les ancres cibles ne peuvent contenir que des caractères alphanumériques en "
+"accord avec les spécifications du language HTML (cf readme pour plus de "
+"détails). Le préfixe par défaut pour les ancres sera utilisé lorsqu'auncun "
+"caractère ne sera conforme. Si vide, un nombre sera utilisé en remplacement."
+
+#: toc.php:914
+msgid ""
+"This option normally applies to content written in character sets other than "
+"ASCII."
+msgstr ""
+"Cette option s'applique normalement aux contenus écrits dans des types de "
+"caractères autres que ASCII."
+
+#. translators: example anchor prefixes when no ascii characters match
+#: toc.php:917
+msgid "Eg: i, toc_index, index, _"
+msgstr "Ex: i, toc_index, index, _"
+
+#. translators: advanced usage
+#: toc.php:925
+msgid "Usage"
+msgstr "Utilisation"
+
+#: toc.php:926
+#, php-format
+msgid ""
+"If you would like to fully customise the position of the table of contents, "
+"you can use the %s shortcode by placing it at the desired position of your "
+"post, page or custom post type. This method allows you to generate the table "
+"of contents despite having auto insertion disabled for its content type. "
+"Please visit the help tab for further information about this shortcode."
+msgstr ""
+"Si vous souhaitez personnaliser complètement le sommaire, vous pouvez "
+"utiliser le %s shortcode en le plaçant à l'endroit que vous désirez dans "
+"votre article, page ou post type personnalisé. Cette méthode vous permet de "
+"générer le sommaire même si l'auto insertion est désactivée pour ce type de "
+"contenu. Merci de consulter l'aide pour d'autres informations sur ce "
+"shortcode."
+
+#: toc.php:934
+#, php-format
+msgid ""
+"At its simplest, placing %s into a page will automatically create a sitemap "
+"of all pages and categories. This also works in a text widget."
+msgstr ""
+"De la façon la plus simple, placer %s dans une page créera automatiquement "
+"un plan de site avec toutes les pages et les catégories. Ceci fonctionne "
+"également dans un widget de type texte."
+
+#: toc.php:938
+msgid "Show page listing"
+msgstr "Afficher la liste des pages"
+
+#: toc.php:942
+msgid "Show category listing"
+msgstr "Affiche la liste des catégories"
+
+#: toc.php:946
+msgid "Heading type"
+msgstr "Type de titre"
+
+#. translators: the full line is supposed to read - Use [1-6 drop down list] to print out the titles
+#: toc.php:949
+msgid "Use"
+msgstr "Utiliser"
+
+#. translators: the full line is supposed to read - Use [h1-h6 drop down list] to print out the titles
+#: toc.php:960
+msgid "to print out the titles"
+msgstr "pour imprimer les titres"
+
+#: toc.php:964
+msgid "Pages label"
+msgstr "Nom des pages"
+
+#: toc.php:966
+msgid "Eg: Pages, Page List"
+msgstr "Ex: Pages, Liste des Pages"
+
+#: toc.php:970
+msgid "Categories label"
+msgstr "Nom des catégories"
+
+#: toc.php:972
+msgid "Eg: Categories, Category List"
+msgstr "Ex: Catégories, Liste des Catégories"
+
+#: toc.php:978
+msgid "Advanced usage"
+msgstr "Utilisation avancée"
+
+#: toc.php:980
+#, php-format
+msgid ""
+"lets you print out a listing of only pages. Similarly %s can be used to "
+"print out a category listing. They both can accept a number of attributes so "
+"visit the help tab for more information."
+msgstr ""
+"vous permet d'afficher seulement la liste des pages. De façon similaire %s "
+"peut être utilisé pour afficher une liste des catégories. Ils peuvent tous "
+"les deux accepter un nombre d'attributs, pour cela consultez la page d'aide "
+"pour plus d'informations."
+
+#: toc.php:981
+msgid "Examples"
+msgstr "Exemples"
+
+#: toc.php:983
+msgid "hides the heading from a category listing"
+msgstr "masque le titre d'une liste de catégories"
+
+#: toc.php:984
+#, php-format
+msgid ""
+"Uses h6 to display %s on a page listing excluding pages with IDs 1 and 15"
+msgstr ""
+"Utilise h6 pour afficher %s sur une liste de pages excluant celles qui ont "
+"les IDs 1 et 15"
+
+#: toc.php:992
+msgid "Where's my table of contents?"
+msgstr "Où est mon sommaire?"
+
+#: toc.php:993
+msgid ""
+"If you're reading this, then chances are you have successfully installed and "
+"enabled the plugin and you're just wondering why the index isn't appearing "
+"right?  Try the following:"
+msgstr ""
+"Si vous lisez ceci, il y a des chances que vous ayez installé et activé "
+"l'extension  avec succès et que vous êtes en train de vous demander pourquoi "
+"l'index ne s'affiche pas correctement. Essayez ceci :"
+
+#: toc.php:995
+msgid ""
+"In most cases, the post, page or custom post type has less than the minimum "
+"number of headings. By default, this is set to four so make sure you have at "
+"least four headings within your content. If you want to change this value, "
+"you can find it under 'Main Options' &gt; 'Show when'."
+msgstr ""
+"Dans la plupart des cas, l'article, la page ou le type personnalisé (custom "
+"post type) n'a pas le nombre minimum de titres. Par défaut, ce nombre est "
+"fixé à 4, donc vérifiez bien que vous ayez au moins 4 titres dans votre "
+"contenu. Si vous voulez modifier ce nombre minimum, vous pouvez le faire "
+"dans 'Options principales' &gt; 'Montrer lorsque'"
+
+#: toc.php:996
+msgid ""
+"Is auto insertion enabled for your content type? By default, only pages are "
+"enabled."
+msgstr ""
+"Est-ce que l'insertion automatique est activée pour votre type de contenu? "
+"Par défaut, seules les pages sont activées."
+
+#: toc.php:997
+msgid ""
+"Have you got <code>[no_toc]</code> somewhere within the content? This will "
+"disable the index for the current post, page or custom post type."
+msgstr ""
+"Est-ce que <code>[no_toc]</code> figure bien quelque part dans votre "
+"contenu? Ceci désactivera l'index pour l'article, page ou type personnalisé "
+"de contenu, courant."
+
+#: toc.php:998
+msgid ""
+"If you are using the TOC+ widget, check if you have the <em>\"Show the table "
+"of contents only in the sidebar\"</em> enabled as this will limit its "
+"display to only the sidebar. You can check by going into Appearance &gt; "
+"Widgets."
+msgstr ""
+"Si vous utilisez le widget TOC+, vérifiez si l'option <em>\"Afficher le "
+"sommaire uniquement dans la barre latérale\"</em> est activée dans "
+"\"Apparence\" &gt; Widgets."
+
+#: toc.php:999
+msgid ""
+"You may have restricted generation to a URL path match. The setting can be "
+"found in the advanced section under Main Options."
+msgstr ""
+"Vous avez dû restreindre la génération à une URL précise. Le réglage se "
+"trouve dans la section avancée des Options Générales."
+
+#: toc.php:1002
+msgid "How do I stop the table of contents from appearing on a single page?"
+msgstr ""
+"Comment puis-je empécher le sommaire de s'afficher sur une page particulière?"
+
+#: toc.php:1003
+msgid ""
+"Place the following <code>[no_toc]</code> anywhere on the page to suppress "
+"the table of contents. This is known as a shortcode and works for posts, "
+"pages and custom post types that make use of the_content()"
+msgstr ""
+"Insérer le code suivant <code>[no_toc]</code> n'importe où dans la page où "
+"le sommaire ne doit pas s'afficher. Ceci fonctionne comme un shortcode et "
+"fonctionne pour les articles, les pages et les types personnalisés de "
+"contenu qui utilisent the_content()"
+
+#: toc.php:1005
+msgid ""
+"I've set wrapping to left or right but the headings don't wrap around the "
+"table of contents"
+msgstr ""
+"J'ai réglé l'intégration de gauche à droite mais les titres ne s'intègrent "
+"pas dans le sommaire"
+
+#: toc.php:1006
+msgid ""
+"This normally occurs when there is a CSS clear directive in or around the "
+"heading originating from the theme (Twenty Eleven and Twenty Twelve are two "
+"themes which do this). This directive tells the user agent to reset the "
+"previous wrapping specifications."
+msgstr ""
+"Ceci arrive normalement lorsqu'il y a une règle de CSS clear dans ou autour "
+"du titre dans le thème (Twenty Eleven et Twenty Twelve sont dans ce cas). "
+"Cette règle indique au navigateur de l'internaute de réinitialiser les "
+"spécifications précédentes d'intégration."
+
+#: toc.php:1007
+#, php-format
+msgid ""
+"You can adjust your theme's CSS or try moving the table of contents position "
+"to the top of the page. If you didn't build your theme, I'd highly suggest "
+"you try the %s if you wish to make CSS changes."
+msgstr ""
+"Vous pouvez ajuster le CSS de votre thème pour essayer de déplacer votre "
+"sommaire en haut de page. Si vous n'avez pas construit vous-même votre "
+"thème, je vous suggère vivement d'essayer le %s si vous désirez modifier le "
+"CSS."
+
+#. translators: CSS code follows after this line
+#: toc.php:1010
+msgid ""
+"Try adding the following CSS to allow the wrapping to occur around the table "
+"of contents:"
+msgstr ""
+"Essayez d'ajouter la règle CSS suivante pour permettre d'afficher le "
+"wrapping autour de votre sommaire:"
+
+#: toc.php:1015
+msgid "How do I include the name of the page in the table of contents title?"
+msgstr "Comment inclure le nom de la page dans le titre du sommaire?"
+
+#: toc.php:1016
+msgid ""
+"As the title of the page changes depending on the page you're viewing, you "
+"can use the following special variable to automatically insert the title of "
+"the page into the table of contents heading:"
+msgstr ""
+"Comme le titre de la page est différent selon chaque page, vous pouvez "
+"utiliser la variable spéciale suivante pour insérer automatiquement le titre "
+"de la page dans le sommaire:"
+
+#: toc.php:1018
+msgid "You can use it as is or place text either side of the variable."
+msgstr ""
+"Vous pouvez l'utiliser tel que ou ajouter du texte avant ou après la "
+"variable."
+
+#: toc.php:1019
+msgid ""
+"As an example: if your page is named <em>Great Expectations</em> and your "
+"table of contents title is set to <em>Contents for %PAGE_NAME%</em>, the "
+"final title would read <em>Contents for Great Expectations</em>"
+msgstr ""
+"Par exemple, si le nom de votre page est <em>Mes Profondes réflexions</em> "
+"et que le titre de votre sommaire est défini comme <em>Sommaire de %PAGE_NAME"
+"%</em>, le titre s'affichera ainsi : <em>Sommaire de Mes Grandes Réflexions</"
+"em>"
+
+#: toc.php:1021
+msgid "The sitemap uses a strange font dissimilar to the rest of the site"
+msgstr ""
+"Le plan du site utilise une police étrange qui ne ressemble pas au reste du "
+"site"
+
+#: toc.php:1022
+msgid ""
+"No extra styles are created for the sitemap, instead it inherits any styles "
+"you used when adding the shortcode. If you copy and pasted, you probably "
+"also copied the 'code' tags surrounding it so remove them if this is the "
+"case."
+msgstr ""
+"Aucun styles supplémentaires ne sont créés pour le plan du site, en fait il "
+"utilise en héritage les styles que vous utilisez lorsque vous ajoutez le "
+"shortcode. Si vous l'avez fait par copier/coller vous avez dû copier "
+"également les tags de 'code' qui l'entourait. Dans ce cas, il faut les "
+"supprimer."
+
+#: toc.php:1023
+msgid ""
+"In most cases, try to have the shortcode on its own line with nothing before "
+"or after the square brackets."
+msgstr ""
+"Dans la plupart des cas, essayer de placer le shortcode sur sa propre ligne "
+"avec rien avant et rien après les crochets."
+
+#: toc.php:1025
+msgid "What were those shortcodes and attributes again?"
+msgstr "0 quoi servent ces shortcodes et ces attributs?"
+
+#: toc.php:1026
+msgid ""
+"When attributes are left out for the shortcodes below, they will fallback to "
+"the settings you defined under Settings &gt; TOC+."
+msgstr ""
+"Lorsque les attributs ne sont pas pour les shortcodes ci-dessous, ils vont "
+"revenir aux réglages que vous avez définis dans Réglages &gt; TOC+."
+
+#: toc.php:1030
+msgid "Shortcode"
+msgstr "Shortcode"
+
+#: toc.php:1031
+msgid "Description"
+msgstr "Description"
+
+#: toc.php:1032
+msgid "Attributes"
+msgstr "Attributs"
+
+#: toc.php:1038
+msgid ""
+"Lets you generate the table of contents at the preferred position. Also "
+"useful for sites that only require a TOC on a small handful of pages."
+msgstr ""
+"Vous permet de générer le sommaire à votre position préférée. C'est aussi "
+"pratique pour les sites qui nécessitent seulement un TOC sur un petit nombre "
+"de pages."
+
+#: toc.php:1041
+msgid "text, title of the table of contents"
+msgstr "texte, titre du sommaire"
+
+#: toc.php:1042
+msgid "true/false, shows or hides the title"
+msgstr "true/false, affiche ou masque le titre"
+
+#: toc.php:1043
+msgid "text, either \"left\" or \"right\""
+msgstr "texte, soit \"left\" ou \"right\""
+
+#: toc.php:1044
+msgid ""
+"numbers, this lets you select the heading levels you want included in the "
+"table of contents. Separate multiple levels with a comma. Example: include "
+"headings 3, 4 and 5 but exclude the others with"
+msgstr ""
+"nombres, ceci vous permet de sélectionner les niveaux de titre que vous "
+"voulez inclure dans le sommaire. Séparez les niveaux par une virgule. "
+"Exemple : inclure les titres de niveau 3, 4 et 5 à l'exclusion des autres de "
+"niveau"
+
+#: toc.php:1045
+msgid ""
+"text, enter headings to be excluded.  Separate multiple headings with a pipe "
+"<code>|</code>. Use an asterisk <code>*</code> as a wildcard to match other "
+"text. You could also use regular expressions for more advanced matching."
+msgstr ""
+"texte, entrer les niveaux de titre à ne pas afficher. Séparer les niveaux "
+"avec un pipe <code>|</code>. Utiliser une astérisque <code>*</code> comme un "
+"joker. Vous pouvez également utiliser des expressions régulières."
+
+#: toc.php:1051
+msgid ""
+"Allows you to disable the table of contents for the current post, page, or "
+"custom post type."
+msgstr ""
+"Vous permet de désactiver le sommaire pour l'article, la page ou le contenu "
+"personnalisé courant."
+
+#: toc.php:1056
+msgid ""
+"Produces a listing of all pages and categories for your site. You can use "
+"this on any post, page or even in a text widget."
+msgstr ""
+"Affiche une liste de toutes les pages et catégories de votre site. Vous "
+"pouvez l'utiliser dans n'importe quel article, page ou même dans un widget."
+
+#: toc.php:1061
+msgid "Lets you print out a listing of only pages."
+msgstr "Vous permet d'afficher la liste des pages uniquement."
+
+#: toc.php:1064
+msgid "number between 1 and 6, defines which html heading to use"
+msgstr "nombre entre 1 et 6, définit le niveau de titre html à utiliser"
+
+#: toc.php:1065
+msgid "text, title of the list"
+msgstr "texte, titre de la liste"
+
+#: toc.php:1066
+msgid "true/false, shows or hides the list heading"
+msgstr "true/false, montre ou masque le titre de la liste"
+
+#: toc.php:1067
+msgid "IDs of the pages or categories you wish to exclude"
+msgstr "IDs des pages ou des catégories à exclure"
+
+#: toc.php:1068
+msgid ""
+"ID of the page or category you wish to exclude including its all descendants"
+msgstr ""
+"ID de la page ou de la catégorie à exclure incluant tous ses descendants"
+
+#: toc.php:1074
+msgid "Similar to [sitemap_pages] but for categories."
+msgstr "Semblable à [sitemap_pages] mais pour les catégories."
+
+#: toc.php:1079
+msgid ""
+"This lets you print out an index of all published posts on your site.  By "
+"default, posts are listed in alphabetical order grouped by their first "
+"letters. There are CSS classes for each section, letter and list allowing "
+"you to customise the appearance."
+msgstr ""
+"Ceci vous permet d'afficher un index de tous les posts publiés sur votre "
+"site. Par défaut, tous les articles sont listés par ordre alplhabétique "
+"groupés par leur premières lettres. Il existe des classes CSS pour chaque "
+"section, lettre et liste ce qui vous permet de personnaliser leur apparence."
+
+#: toc.php:1082
+msgid "text, either ASC or DESC"
+msgstr "texte, soit ASC ou DESC"
+
+#: toc.php:1083
+#, php-format
+msgid ""
+"text, popular options include \"title\", \"date\", \"ID\", and \"rand\". See "
+"%1$sWP_Query%2$s for a list."
+msgstr ""
+"texte, les options classiques sont  \"title\", \"date\", \"ID\", and \"rand"
+"\".  Consultez %1$sWP_Query%2$s pour une liste."
+
+#: toc.php:1084
+msgid ""
+"true/false (defaults to true), does not separate the lists by first letter "
+"when set to false."
+msgstr ""
+"true/false (true par défaut), ne sépare pas les listes par leur première "
+"lettre lorsque mis à false."
+
+#: toc.php:1092
+msgid "I have another question..."
+msgstr "J'ai une autre question..."
+
+#: toc.php:1093
+#, php-format
+msgid ""
+"Visit the %1$splugin homepage%2$s to ask your question - who knows, maybe "
+"your question has already been answered. I'd really like to hear your "
+"suggestions if you have any."
+msgstr ""
+"Consulter la %1$splugin homepage%2$s pour poser votre question. Qui sait, "
+"peut-être que votre question a déjâ été posée et a obtenu une réponse. Je "
+"suis vraiment intéressé par vos suggestions."
+
+#: toc.php:1095
+msgid "For developers"
+msgstr "Pour les développeurs"
+
+#: toc.php:1097
+msgid "How do I customise my anchors?"
+msgstr "Comment personnaliser mes ancres?"
+
+#: toc.php:1098
+msgid ""
+"If you're still not happy with the anchors, you can modify them to suit your "
+"needs through a custom function hooked into the <code>toc_url_anchor_target</"
+"code> filter.  As an example, place the below code snippet into your "
+"functions.php file to convert all anchors to uppercase."
+msgstr ""
+"Si vous n'êtes toujours pas satisfait de vos ancres, vous pouvez les "
+"modifier par une fonction personnalisée hookée dans le filtre "
+"<code>toc_url_anchor_target</code>. Par exemple, placez le bout de code "
+"suivant dans le fichier functions.php pour convertir toutes les ancres en "
+"majuscule."
+
+#: toc.php:1108
+msgid ""
+"Returns a HTML formatted string of the table of contents without the "
+"surrounding UL or OL tags to allow the theme editor to supply their own ID "
+"and/or classes to the outer list."
+msgstr ""
+"Retourne une chaîne formattée en HTML du sommaire sans les tags UL ou OL "
+"pour permettre à l'éditeur du thème d'utiliser ses propres ID et/ou classes "
+"sur la liste générée."
+
+#: toc.php:1109
+msgid "Both parameters are optional:"
+msgstr "Les deux paramètres sont optionnels:"
+
+#. translators: this explains the $content parameter
+#: toc.php:1113
+msgid ""
+"is the entire content with headings.  If blank, will default to the current "
+"content found in $post (eg within \"the loop\")."
+msgstr ""
+"est le contenu en entier avec les titres. S'il est vide, deviendra le "
+"contenu courant trouvé dans $post (ex dans \"the loop\")."
+
+#. translators: this explains the $prefix_url parameter
+#: toc.php:1116
+msgid ""
+"is the URL to prefix the anchor with.  If a string was provided, it will be "
+"used as is.  If set to \"true\" then will try to obtain the permalink from "
+"the $post object."
+msgstr ""
+"est l'URL de l'ancre. Si une chaîne est fournie, elle sera utilisée telle "
+"que. Si sélectionné à \"true\", alors on essaiera d'obtenir le permalien de "
+"l'objet $post."
+
+#: toc.php:1118
+msgid "These examples assume you are within \"the loop\":"
+msgstr "Ces exemples supposent que vous utilisez \"the loop\":"
+
+#: toc.php:1120
+msgid "Obtain the index for the current page"
+msgstr "Récupère l'index de la page courante"
+
+#: toc.php:1123
+msgid "Create a listing of all children and their headings"
+msgstr "Crée une liste de tous les enfants et leurs titres"
+
+#: toc.php:1148
+msgid "Update Options"
+msgstr "Mise à jour des Options"
+
+#: toc.php:1634
+msgid "Display the table of contents in the sidebar with this widget"
+msgstr "Affichez le sommaire dans la barre latérale avec ce widget"
+
+#: toc.php:1726
+msgid "Show the table of contents only in the sidebar"
+msgstr "Affiche le sommaire uniquement dans la barre latérale"

@@ -1,0 +1,902 @@
+# Copyright (C) 2013 
+# This file is distributed under the same license as the  package.
+msgid ""
+msgstr ""
+"Project-Id-Version: toc+-pl_PL\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/table-of-contents-plus\n"
+"POT-Creation-Date: 2013-03-21 21:24+0100\n"
+"PO-Revision-Date: 2013-03-21 21:24+0100\n"
+"Last-Translator: Jakub Strawa <jakub.strawa@gmail.com>\n"
+"Language-Team: Jakub Strawa <jakub.strawa@gmail.com>\n"
+"Language: PL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
+"X-Generator: Poedit 1.5.5\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_n_noop:1,2;_nx_noop:1,2;_nx:1,2\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../toc.php:175
+msgid "Settings"
+msgstr "Ustawienia"
+
+#: ../toc.php:424 ../toc.php:425
+msgid "TOC"
+msgstr "TOC"
+
+#: ../toc.php:575
+msgid "Options saved."
+msgstr "Opcje zapisane."
+
+#: ../toc.php:577
+msgid "Save failed."
+msgstr "Zapisywanie nie powiodło się."
+
+#: ../toc.php:589
+msgid "Main Options"
+msgstr "Główne opcje"
+
+#: ../toc.php:590
+msgid "Sitemap"
+msgstr "Mapa strony"
+
+#: ../toc.php:591
+msgid "Help"
+msgstr "Pomoc"
+
+#: ../toc.php:599
+msgid "Position"
+msgstr "Pozycja"
+
+#: ../toc.php:602
+msgid "Before first heading (default)"
+msgstr "Przed pierwszym nagłówkiem(domyślnie)"
+
+#: ../toc.php:603
+msgid "After first heading"
+msgstr "Po pierwszym nagłówku"
+
+#: ../toc.php:604
+msgid "Top"
+msgstr "Górny"
+
+#: ../toc.php:605
+msgid "Bottom"
+msgstr "Dolny"
+
+#: ../toc.php:610
+msgid "Show when"
+msgstr "Pokaż po"
+
+#: ../toc.php:622
+msgid "or more headings are present"
+msgstr "lub występuje więcej nagłówków"
+
+#: ../toc.php:626
+msgid "Auto insert for the following content types"
+msgstr "Automatyczne wstawianie dla następujących rodzajów treści"
+
+#: ../toc.php:641
+msgid "Heading text"
+msgstr "Nagłówek tekstowy"
+
+#: ../toc.php:643
+msgid "Show title on top of the table of contents"
+msgstr "Pokaż tytuł nad tabelą z zawartością"
+
+#: ../toc.php:646
+msgid "Eg: Contents, Table of Contents, Page Contents"
+msgstr "Np.: treści, spisu treści, zawartości strony"
+
+#: ../toc.php:648
+msgid "Allow the user to toggle the visibility of the table of contents"
+msgstr "Pozwalają użytkownikowi przełączać widoczność tabeli ze spisem treści"
+
+#: ../toc.php:653
+msgid "Show text"
+msgstr "Pokaż tekst"
+
+#: ../toc.php:657
+msgid "Eg: show"
+msgstr "Np.: pokaż"
+
+#: ../toc.php:660
+msgid "Hide text"
+msgstr "Schowaj tekst"
+
+#: ../toc.php:664
+msgid "Eg: hide"
+msgstr "Np.: schowaj"
+
+#: ../toc.php:668
+msgid "Hide the table of contents initially"
+msgstr "Na początku ukryj spis treści"
+
+#: ../toc.php:674
+msgid "Show hierarchy"
+msgstr "Pokaż hierarchię"
+
+#: ../toc.php:678
+msgid "Number list items"
+msgstr "Liczba elementów listy"
+
+#: ../toc.php:682
+msgid "Enable smooth scroll effect"
+msgstr "Włącz efekt płynnego przewijania"
+
+#: ../toc.php:683
+msgid "Scroll rather than jump to the anchor link"
+msgstr "Raczej przewijać niż przejść do linku odnośnika"
+
+#: ../toc.php:688
+msgid "Appearance"
+msgstr "Wygląd"
+
+#: ../toc.php:692
+msgid "Width"
+msgstr "Szerokość"
+
+#: ../toc.php:695
+msgid "Fixed width"
+msgstr "Stałą szerokość"
+
+#: ../toc.php:706
+msgid "Relative"
+msgstr "Względny"
+
+#: ../toc.php:707
+msgid "Auto (default)"
+msgstr "Automatyczny(domyślny)"
+
+#: ../toc.php:717
+msgid "Other"
+msgstr "Inne"
+
+#: ../toc.php:718
+msgid "User defined"
+msgstr "Zdefiniowane przez użytkownika"
+
+#: ../toc.php:724
+#, php-format
+msgid "Please enter a number and %s select its units, eg: 100px, 10em"
+msgstr "Proszę wpisać numer i %s wybierz swoje jednostki, np.: 100px, 10em"
+
+#: ../toc.php:735
+msgid "Wrapping"
+msgstr "Zawijanie"
+
+#: ../toc.php:738
+msgid "None (default)"
+msgstr "Brak (ustawienie domyślne)"
+
+#: ../toc.php:739
+msgid "Left"
+msgstr "Lewa"
+
+#: ../toc.php:740
+msgid "Right"
+msgstr "Prawa"
+
+#: ../toc.php:745
+msgid "Font size"
+msgstr "Rozmiar czcionki"
+
+#: ../toc.php:758
+msgid "Presentation"
+msgstr "Przedstawienie"
+
+#: ../toc.php:761
+msgid "Grey (default)"
+msgstr "Szary (domyśnie)"
+
+#: ../toc.php:766
+msgid "Light blue"
+msgstr "Jasno niebieski"
+
+#: ../toc.php:771
+msgid "White"
+msgstr "Biały"
+
+#: ../toc.php:776
+msgid "Black"
+msgstr "Czarny"
+
+#: ../toc.php:781
+msgid "Transparent"
+msgstr "Przejrzysty"
+
+#: ../toc.php:786
+msgid "Custom"
+msgstr "Zwykły"
+
+#: ../toc.php:796
+msgid "Background"
+msgstr "Tło"
+
+#: ../toc.php:800
+msgid "Border"
+msgstr "Obramowanie"
+
+#: ../toc.php:804 ../toc.php:1702
+msgid "Title"
+msgstr "tytuł"
+
+#: ../toc.php:808
+msgid "Links"
+msgstr "Linki"
+
+#: ../toc.php:812
+msgid "Links (hover)"
+msgstr "Linki (aktywowane)"
+
+#: ../toc.php:816
+msgid "Links (visited)"
+msgstr "Linki (odwiedzone)"
+
+#: ../toc.php:823
+#, php-format
+msgid "Leaving the value as %s will inherit your theme's styles"
+msgstr "Pozostawienie wartość jako %s dziedziczą swój temat w stylu"
+
+#: ../toc.php:830
+msgid "Advanced"
+msgstr "Zaawansowane"
+
+#: ../toc.php:830 ../toc.php:967 ../toc.php:1083
+msgid "show"
+msgstr "Pokaż"
+
+#: ../toc.php:832
+msgid "Power options"
+msgstr "Opcje wydajności"
+
+#: ../toc.php:836
+msgid "Lowercase"
+msgstr "Małe litery"
+
+#: ../toc.php:837
+msgid "Ensure anchors are in lowercase"
+msgstr "Zapewnić małymi literami odniesienia"
+
+#: ../toc.php:840
+msgid "Hyphenate"
+msgstr "Dzielenie wyrazów"
+
+#: ../toc.php:841
+msgid "Use - rather than _ in anchors"
+msgstr "Użyj - zamiast _ w zakotwiczeniach"
+
+#: ../toc.php:844
+msgid "Include homepage"
+msgstr "Uwzględnij stronę główną"
+
+#: ../toc.php:845
+msgid "Show the table of contents for qualifying items on the homepage"
+msgstr "Pokaż spis treści do zakwalifikowania elementów na stronie głównej"
+
+#: ../toc.php:848
+msgid "Exclude CSS file"
+msgstr "Wyklucz plik CSS"
+
+#: ../toc.php:849
+msgid ""
+"Prevent the loading of this plugin's CSS styles. When selected, the "
+"appearance options from above will also be ignored."
+msgstr ""
+"Zapobiegaj ładowaniu stylów CSS tej wtyczki. Po wybraniu opcji wygląd od "
+"góry będą również ignorowane."
+
+#: ../toc.php:852
+msgid "Preserve theme bullets"
+msgstr "Zachowaj przyciski motywu"
+
+#: ../toc.php:853
+msgid ""
+"If your theme includes background images for unordered list elements, enable "
+"this to support them"
+msgstr ""
+"Jeśli Twój motywu zawiera obrazy tła dla nieuporządkowanych elementów listy, "
+"umożliwia to ich wsparcie."
+
+#: ../toc.php:856
+msgid "Heading levels"
+msgstr "Poziomu nagłówków"
+
+#: ../toc.php:858
+msgid ""
+"Include the following heading levels. Deselecting a heading will exclude it."
+msgstr ""
+"Obejmuje następujące poziomy nagłówków. Odznaczenie nagłówka będzie go "
+"wykluczać."
+
+#: ../toc.php:864
+msgid "heading "
+msgstr "nagłówek"
+
+#: ../toc.php:870
+msgid "Exclude headings"
+msgstr "Wyklucz nagłówki"
+
+#: ../toc.php:873
+msgid ""
+"Specify headings to be excluded from appearing in the table of contents.  "
+"Separate multiple headings with a pipe <code>|</code>.  Use an asterisk "
+"<code>*</code> as a wildcard to match other text.  Note that this is not "
+"case sensitive. Some examples:"
+msgstr ""
+"Określone pozycje mają być wyłączone z pojawiających się w spisie treści. "
+"Poszczególne pozycje przedziel kreską <code> | </ code>. Użyj gwiazdki "
+"<code> * </ code> jako wieloznaczny pasujące do innego tekstu. Zauważ, że to "
+"nie rozróżniana wielkości liter. Oto kilka przykładów:"
+
+#: ../toc.php:875
+msgid "<code>Fruit*</code> ignore headings starting with \"Fruit\""
+msgstr "<code> Owoc * </code> ignoruj nagłówki zaczynające się od \"Owoce\""
+
+#: ../toc.php:876
+msgid ""
+"<code>*Fruit Diet*</code> ignore headings with \"Fruit Diet\" somewhere in "
+"the heading"
+msgstr ""
+"<code>*Dieta owocowa*</code> ignoruj nagłówki z \"Fruit Diet\" gdzieś w ich "
+"treści"
+
+#: ../toc.php:877
+msgid ""
+"<code>Apple Tree|Oranges|Yellow Bananas</code> ignore headings that are "
+"exactly \"Apple Tree\", \"Oranges\" or \"Yellow Bananas\""
+msgstr ""
+"<code> Jabłoń | Pomarańcze | Żółte banany </code> ignoruj nagłówki, które "
+"przmią dokładnie \"Jabłoń\", \"Pomarańcze\" lub \"Żółte banany\""
+
+#: ../toc.php:882
+msgid "Smooth scroll top offset"
+msgstr "Gładkie przewijania najwyższej punktu"
+
+#: ../toc.php:885
+msgid ""
+"If you have a consistent menu across the top of your site, you can adjust "
+"the top offset to stop the headings from appearing underneath the top menu. "
+"A setting of 30 accommodates the WordPress admin bar. This setting appears "
+"after you have enabled smooth scrolling from above."
+msgstr ""
+"Jeśli masz stałe menu w górnej części witryny, można wyregulować górne "
+"punkty zatrzymując  wyświetlanie nagłówków pod górnym menu.Ustawienie 30 "
+"miejsce na paseku administratora WordPress. To ustawienie pojawia się po "
+"włączeniu płynnego przewijania z góry."
+
+#: ../toc.php:889
+msgid "Restrict path"
+msgstr "Ogranicz ścieżkę"
+
+#: ../toc.php:892
+msgid ""
+"Restrict generation of the table of contents to pages that match the "
+"required path. This path is from the root of your site and always begins "
+"with a forward slash."
+msgstr ""
+"Ograniczyć generowanie spisu treści do stron z pasującą wymaganą ścieżką. Ta "
+"ścieżka jest zakorzeniona z witryny i zawsze rozpoczyna się ukośnikiem."
+
+#: ../toc.php:895
+msgid "Eg: /wiki/, /corporate/annual-reports/"
+msgstr "Np: /wiki/, /zespołowy/roczny-raport/"
+
+#: ../toc.php:899
+msgid "Default anchor prefix"
+msgstr "Domyślny prefix zakotwiczenia"
+
+#: ../toc.php:902
+msgid ""
+"Anchor targets are restricted to alphanumeric characters as per HTML "
+"specification (see readme for more detail). The default anchor prefix will "
+"be used when no characters qualify. When left blank, a number will be used "
+"instead."
+msgstr ""
+"Cele zakotwiczenia są ograniczone do znaków alfanumerycznych zgodnie ze "
+"specyfikacją HTML (patrz README dla uzyskania szczegółów). Prefix kotwicy "
+"domyślnie zostanie użyta, gdy nie ma żadnych zakwalifikowanych znaków. Gdy "
+"puste pole, numer zostanie również użyty."
+
+#: ../toc.php:903
+msgid ""
+"This option normally applies to content written in character sets other than "
+"ASCII."
+msgstr ""
+"Opcję tą stosuje się zwykle do treści napisanych w zestawie znaków innych "
+"niż ASCII."
+
+#: ../toc.php:906
+msgid "Eg: i, toc_index, index, _"
+msgstr "Np: i, toc_index, index, _"
+
+#: ../toc.php:914
+msgid "Usage"
+msgstr "Postępuj"
+
+#: ../toc.php:915
+#, php-format
+msgid ""
+"If you would like to fully customise the position of the table of contents, "
+"you can use the %s shortcode by placing it at the desired position of your "
+"post, page or custom post type. This method allows you to generate the table "
+"of contents despite having auto insertion disabled for its content type. "
+"Please visit the help tab for further information about this shortcode."
+msgstr ""
+"Jeśli chcesz, aby w pełni dostosować pozycję spisu treści, można użyć %s "
+"shortcode poprzez umieszczenie go w żądanym położeniu wpisu, na stronie lub "
+"niestandardowego typie wpisu. Metoda ta pozwala na generowanie spisu treści "
+"mimo iż wprowadzenie jej auto wstawianie jest wyłączone dla typu zawartości. "
+"Zapraszamy do odwiedzenia zakładki pomocy dla dalszych informacji na temat "
+"shortcode."
+
+#: ../toc.php:923
+#, php-format
+msgid ""
+"At its simplest, placing %s into a page will automatically create a sitemap "
+"of all pages and categories. This also works in a text widget."
+msgstr ""
+"Najprostszej, wprowadzanie %s na stronę automatycznie tworzy mapę strony "
+"wszystkich stron i kategorii. Działa to również w widgecie tekstowym."
+
+#: ../toc.php:927
+msgid "Show page listing"
+msgstr "v"
+
+#: ../toc.php:931
+msgid "Show category listing"
+msgstr "Pokaż listę kategorii"
+
+#: ../toc.php:935
+msgid "Heading type"
+msgstr "Typ nagłówka"
+
+#: ../toc.php:938
+msgid "Use"
+msgstr "Użyj"
+
+#: ../toc.php:949
+msgid "to print out the titles"
+msgstr "do wywołania tytułów"
+
+#: ../toc.php:953
+msgid "Pages label"
+msgstr "Etykieta stron"
+
+#: ../toc.php:955
+msgid "Eg: Pages, Page List"
+msgstr "Np.: Strony, Lista stron"
+
+#: ../toc.php:959
+msgid "Categories label"
+msgstr "Etykieta kategorii"
+
+#: ../toc.php:961
+msgid "Eg: Categories, Category List"
+msgstr "Np.: Kategoria, lista kategorii"
+
+#: ../toc.php:967
+msgid "Advanced usage"
+msgstr "Opcje zaawansowane"
+
+#: ../toc.php:969
+#, php-format
+msgid ""
+"lets you print out a listing of only pages. Similarly %s can be used to "
+"print out a category listing. They both can accept a number of attributes so "
+"visit the help tab for more information."
+msgstr ""
+"pozwala prezentować tylko listę stron. Podobnie %s można prezentować listę "
+"kategorii. Mogą przyjąć różne atrybuty więc odwiedź zakładkę pomocy, aby "
+"uzyskać więcej informacji."
+
+#: ../toc.php:970
+msgid "Examples"
+msgstr "Przykłady"
+
+#: ../toc.php:972
+msgid "hides the heading from a category listing"
+msgstr "ukrywa nagłówki z listy kategorii"
+
+#: ../toc.php:973
+#, php-format
+msgid ""
+"Uses h6 to display %s on a page listing excluding pages with IDs 1 and 15"
+msgstr "Używaj h6 do wyświetlania %s na liście stron z ID 1 i 15"
+
+#: ../toc.php:981
+msgid "Where's my table of contents?"
+msgstr "Gdzie jest mój spis treści?"
+
+#: ../toc.php:982
+msgid ""
+"If you're reading this, then chances are you have successfully installed and "
+"enabled the plugin and you're just wondering why the index isn't appearing "
+"right?  Try the following:"
+msgstr ""
+"Jeśli to czytasz, to są szanse że pomyślnie zainstalowana i włączona została "
+"wtyczka i jesteś po prostu zastanawiasz się, dlaczego indeks nie jest "
+"wyświetlana w porządku? Spróbuj wykonać następujące czynności:"
+
+#: ../toc.php:984
+msgid ""
+"In most cases, the post, page or custom post type has less than the minimum "
+"number of headings. By default, this is set to four so make sure you have at "
+"least four headings within your content. If you want to change this value, "
+"you can find it under 'Main Options' &gt; 'Show when'."
+msgstr ""
+"W większości przypadków, po typu post, stron lub niestandardowych ma mniej "
+"niż minimalnej liczby pozycji. Domyślnie ustawiony jest na cztery, więc "
+"upewnij się, że co najmniej cztery pozycje w obrębie treści. Jeśli chcesz "
+"zmienić tę wartość, można je znaleźć w \"Głównych Opcje\"> \"Pokaż kiedy\"."
+
+#: ../toc.php:985
+msgid ""
+"Is auto insertion enabled for your content type? By default, only pages are "
+"enabled."
+msgstr ""
+"Czy automatyczne wstawianie jest włączone dla danego typu zawartości? "
+"Domyślnie tylko dla stron są aktywne."
+
+#: ../toc.php:986
+msgid ""
+"Have you got <code>[no_toc]</code> somewhere within the content? This will "
+"disable the index for the current post, page or custom post type."
+msgstr ""
+"Masz <code> [no_toc] </ code> gdzieś w treści? Spowoduje to wyłączenie "
+"indeksu w bieżącym wątku, stronie lub niestandardowym typie wpisu."
+
+#: ../toc.php:987
+msgid ""
+"If you are using the TOC+ widget, check if you have the <em>\"Show the table "
+"of contents only in the sidebar\"</em> enabled as this will limit its "
+"display to only the sidebar. You can check by going into Appearance &gt; "
+"Widgets."
+msgstr ""
+"Jeśli używasz TOC + widget, sprawdź, czy <em> \"Pokaż spis treści tylko na "
+"pasku bocznym \" </em>masz  włączone tylko do wyświetlania na pasku bocznym. "
+"Można sprawdzić, przechodząc do widżetów> Wygląd &gt; Widgety."
+
+#: ../toc.php:988
+msgid ""
+"You may have restricted generation to a URL path match. The setting can be "
+"found in the advanced section under Main Options."
+msgstr ""
+"Może być ograniczony generowanie  ścieżki URL. Ustawienia można znaleźć w "
+"sekcji Zaawansowane pod Główne opcje."
+
+#: ../toc.php:991
+msgid "How do I stop the table of contents from appearing on a single page?"
+msgstr "Jak zatrzymać pojawianie się spisu treścisię na jednej stronie?"
+
+#: ../toc.php:992
+msgid ""
+"Place the following <code>[no_toc]</code> anywhere on the page to suppress "
+"the table of contents. This is known as a shortcode and works for posts, "
+"pages and custom post types that make use of the_content()"
+msgstr ""
+"Umieścić <code>[no_toc]</ code> w dowolnym miejscu na stronie. Jest to znane "
+"jako shortcode i pracuje dla postów, stron oraz niestandardowych typów "
+"wpisów wykorzystujących the_content ()"
+
+#: ../toc.php:994
+msgid ""
+"I've set wrapping to left or right but the headings don't wrap around the "
+"table of contents"
+msgstr ""
+"Jeśli ustawione jest owijanie w lewo lub w prawo, ale nagłówki nie otaczają "
+"spisu treści"
+
+#: ../toc.php:995
+msgid ""
+"This normally occurs when there is a CSS clear directive in or around the "
+"heading originating from the theme (Twenty Eleven and Twenty Twelve are two "
+"themes which do this). This directive tells the user agent to reset the "
+"previous wrapping specifications."
+msgstr ""
+"Zwykle występują w przypadku CSS jasne dyrektywy wokół pozycji pochodzącej z "
+"tematu (Twenty Eleven i Twenty Twelve to dwa tematy, które to zrobią). Ta "
+"dyrektywa mówi, aby przywrócić poprzednie specyfikacje owijania."
+
+#: ../toc.php:996
+#, php-format
+msgid ""
+"You can adjust your theme's CSS or try moving the table of contents position "
+"to the top of the page. If you didn't build your theme, I'd highly suggest "
+"you try the %s if you wish to make CSS changes."
+msgstr ""
+"Można dostosować do motywu przy użyciu CSS lub spróbuj przenieść spis treści "
+"na górę strony. Jeśli nie budowałeś swójego motywu, proponuję wypróbować %s, "
+"jeśli chcesz dokonać zmian CSS."
+
+#: ../toc.php:999
+msgid ""
+"Try adding the following CSS to allow the wrapping to occur around the table "
+"of contents:"
+msgstr ""
+"Spróbuj dodać następujący kod CSS, aby umożliwić owijanie występuje wokół "
+"spisu treści:"
+
+#: ../toc.php:1004
+msgid "How do I include the name of the page in the table of contents title?"
+msgstr "Jak dołączyć nazwę stron w spisie treści tytuł?"
+
+#: ../toc.php:1005
+msgid ""
+"As the title of the page changes depending on the page you're viewing, you "
+"can use the following special variable to automatically insert the title of "
+"the page into the table of contents heading:"
+msgstr ""
+"Zmiana tytułu strony, w zależności od strony, którą przeglądasz, możesz użyć "
+"następującej specjalnej zmiennej, aby automatycznie wstawić tytuł strony w "
+"spisie treści w pozycji:"
+
+#: ../toc.php:1007
+msgid "You can use it as is or place text either side of the variable."
+msgstr "Można używać go jaki jest lub umieścić tekstw miejsce zmiennej."
+
+#: ../toc.php:1008
+msgid ""
+"As an example: if your page is named <em>Great Expectations</em> and your "
+"table of contents title is set to <em>Contents for %PAGE_NAME%</em>, the "
+"final title would read <em>Contents for Great Expectations</em>"
+msgstr ""
+"Na przykład: jeśli strona jest nazwana <em>Great Expectations</em>, a spis "
+"treści tytuł jest ustawiony <em>Contents for %PAGE_NAME%</em>, ostateczny "
+"tytuł brzmiałby <em>Contents for Great Expectations</em>"
+
+#: ../toc.php:1010
+msgid "The sitemap uses a strange font dissimilar to the rest of the site"
+msgstr "Mapa wykorzystuje dziwne czcionki niepodobne do reszty strony"
+
+#: ../toc.php:1011
+msgid ""
+"No extra styles are created for the sitemap, instead it inherits any styles "
+"you used when adding the shortcode. If you copy and pasted, you probably "
+"also copied the 'code' tags surrounding it so remove them if this is the "
+"case."
+msgstr ""
+"Nie są tworzone dodatkowe style dla sitemap, zamiast tego dziedziczy "
+"wszelkie style używane podczas dodawania shortcode. W przypadku kopiowania i "
+"wklejania, prawdopodobnie również skopiowane \"CODE\" znaczniki otaczające "
+"go zostały usunięte w tym przypadku."
+
+#: ../toc.php:1012
+msgid ""
+"In most cases, try to have the shortcode on its own line with nothing before "
+"or after the square brackets."
+msgstr ""
+"W większości przypadków, spróbuj mieć shortcode we własnej linii z niczym "
+"przed lub po nawiasach kwadratowych."
+
+#: ../toc.php:1014
+msgid "What were those shortcodes and attributes again?"
+msgstr "Gdzie są te shortcodes i atrybuty?"
+
+#: ../toc.php:1015
+msgid ""
+"When attributes are left out for the shortcodes below, they will fallback to "
+"the settings you defined under Settings &gt; TOC+."
+msgstr ""
+"Jeśli atrybuty są opuszczone poniżej shortcode, będą wyświetlane z "
+"ustawieniami określonymi w Ustawienia &gt; TOC+."
+
+#: ../toc.php:1019
+msgid "Shortcode"
+msgstr "Shortcode"
+
+#: ../toc.php:1020
+msgid "Description"
+msgstr "Opis"
+
+#: ../toc.php:1021
+msgid "Attributes"
+msgstr "Atrybuty"
+
+#: ../toc.php:1027
+msgid ""
+"Lets you generate the table of contents at the preferred position. Also "
+"useful for sites that only require a TOC on a small handful of pages."
+msgstr ""
+"Umożliwia generowanie spisu treści w preferowanej pozycji. Przydatna także "
+"do miejsc, które wymagają tylko spis treści na garstce stron."
+
+#: ../toc.php:1030
+msgid "text, title of the table of contents"
+msgstr "tekst, tytuł spisu treści"
+
+#: ../toc.php:1031
+msgid "true/false, shows or hides the title"
+msgstr "prawda/fałsz, pokaż lub ukryj tytuł"
+
+#: ../toc.php:1032
+msgid "text, either \"left\" or \"right\""
+msgstr "tekst, albo \"left\" lub \"prawo\""
+
+#: ../toc.php:1033
+msgid ""
+"numbers, this lets you select the heading levels you want included in the "
+"table of contents. Separate multiple levels with a comma. Example: include "
+"headings 3, 4 and 5 but exclude the others with"
+msgstr ""
+"numery, to pozwala wybrać poziomy nagłówków, które chcesz uwzględnić w "
+"spisie treści. Poszczególne poziomy oddzielaj przecinkami. Przykład: m.in. "
+"dołącz nagłówki 3, 4 i 5, ale wykluczyć innych z"
+
+#: ../toc.php:1034
+msgid ""
+"text, enter headings to be excluded.  Separate multiple headings with a pipe "
+"<code>|</code>. Use an asterisk <code>*</code> as a wildcard to match other "
+"text. You could also use regular expressions for more advanced matching."
+msgstr ""
+"tekst, wprowadzone nagłówki mają być wyłączone. Poszczególne pozycje oddziel "
+"kreską <code> | </ code>. Użyj gwiazdki <code> * </ code> jako symbol "
+"wieloznaczny pasujące do innego tekstu. Można także używać wyrażeń "
+"regularnych do zaawansowanego dopasowywania."
+
+#: ../toc.php:1040
+msgid ""
+"Allows you to disable the table of contents for the current post, page, or "
+"custom post type."
+msgstr ""
+"Umożliwia wyłączenie spis treści na obecnym wpisie, stronie lub "
+"niestandardowego typie wpisu."
+
+#: ../toc.php:1045
+msgid ""
+"Produces a listing of all pages and categories for your site. You can use "
+"this on any post, page or even in a text widget."
+msgstr ""
+"Tworzy listę wszystkich stron i kategorii dla Twojej witryny. Można to "
+"wykorzystać na dowolnej stron lub wpisu, nawet w widgecie tekstowym."
+
+#: ../toc.php:1050
+msgid "Lets you print out a listing of only pages."
+msgstr "Pozwala prezentować tylko listę stron"
+
+#: ../toc.php:1053
+msgid "number between 1 and 6, defines which html heading to use"
+msgstr "numery pomiędzy 1 a 6, definiują jaki nagłówke html będzie użyty"
+
+#: ../toc.php:1054
+msgid "text, title of the list"
+msgstr "tekst, tytuł listy"
+
+#: ../toc.php:1055
+msgid "true/false, shows or hides the list heading"
+msgstr "prawda/fałsz, pokaż lub ukryj tytuł"
+
+#: ../toc.php:1056
+msgid "IDs of the pages or categories you wish to exclude"
+msgstr "ID stron i kategorii, które wykluczasz"
+
+#: ../toc.php:1057
+msgid ""
+"ID of the page or category you wish to exclude including its all descendants"
+msgstr ""
+"ID strony lub kategorii, które chcesz wykluczyć w tym jej wszystkich potomków"
+
+#: ../toc.php:1063
+msgid "Similar to [sitemap_pages] but for categories."
+msgstr "Podobne do [sitemap_pages] ale dla kategorii."
+
+#: ../toc.php:1068
+msgid ""
+"This lets you print out an index of all published posts on your site.  By "
+"default, posts are listed in alphabetical order grouped by their first "
+"letters. There are CSS classes for each section, letter and list allowing "
+"you to customise the appearance."
+msgstr ""
+"To pozwala prezentować indeks wszystkich publikowanych postów na swojej "
+"stronie. Domyślnie wiadomości są wyświetlane w kolejności alfabetycznej "
+"zgrupowane według ich pierwszych liter. Istnieją klasy CSS dla każdej "
+"sekcji, pisma i listy, co pozwala na dostosowanie wyglądu."
+
+#: ../toc.php:1071
+msgid "text, either ASC or DESC"
+msgstr "tekst, albo ASC lub DESC"
+
+#: ../toc.php:1072
+#, php-format
+msgid ""
+"text, popular options include \"title\", \"date\", \"ID\", and \"rand\". See "
+"%1$sWP_Query%2$s for a list."
+msgstr ""
+"tekst, dołączone popularne opcje \"title\", \"date\", \"ID\"  i \"rand\". "
+"Zobacz %1$sWP_Query%2$s dla listy."
+
+#: ../toc.php:1080
+msgid "I have another question..."
+msgstr "Mam inne pytanie..."
+
+#: ../toc.php:1081
+#, php-format
+msgid ""
+"Visit the %1$splugin homepage%2$s to ask your question - who knows, maybe "
+"your question has already been answered. I'd really like to hear your "
+"suggestions if you have any."
+msgstr ""
+"Odwiedź %1$splugin homepage%2$s aby zadać pytanie - kto wie, możena twoje "
+"pytanie już odpowiedziałem. Naprawdę chciałbym usłyszeć wasze propozycje, "
+"jeśli masz jakiekolwiek."
+
+#: ../toc.php:1083
+msgid "For developers"
+msgstr "Dla programistów"
+
+#: ../toc.php:1085
+msgid "How do I customise my anchors?"
+msgstr "Jak dostosować moje zakotwiczenie?"
+
+#: ../toc.php:1086
+msgid ""
+"If you're still not happy with the anchors, you can modify them to suit your "
+"needs through a custom function hooked into the <code>toc_url_anchor_target</"
+"code> filter.  As an example, place the below code snippet into your "
+"functions.php file to convert all anchors to uppercase."
+msgstr ""
+"Jeśli nadal nie jesteś zadowolony z kotwic, można je modyfikować w "
+"zależności od potrzeb za pomocą niestandardowej funkcji podpięty do <code> "
+"toc_url_anchor_target </ code> filtra. Jako przykład, umieścić fragment kodu "
+"poniżej do pliku functions.php aby przekonwertować wszystkie zakotwicza na "
+"wielkie litery."
+
+#: ../toc.php:1096
+msgid ""
+"Returns a HTML formatted string of the table of contents without the "
+"surrounding UL or OL tags to allow the theme editor to supply their own ID "
+"and/or classes to the outer list."
+msgstr ""
+"Zwraca ciąg w formacie HTML spisu treści bez otaczających tagów UL lub OL, "
+"aby redaktor motywu dostarczył własny identyfikator i/lub klasy, do "
+"zewnętrznej listy."
+
+#: ../toc.php:1097
+msgid "Both parameters are optional:"
+msgstr "Oba parametry są opcjonalne:"
+
+#: ../toc.php:1101
+msgid ""
+"is the entire content with headings.  If blank, will default to the current "
+"content found in $post (eg within \"the loop\")."
+msgstr ""
+"jest cała zawartość z nagłówkami. Jeśli pusta, domyślnie bieżąca treść "
+"zostanie znaleziona w $ post (np. w \"pętla \")."
+
+#: ../toc.php:1104
+msgid ""
+"is the URL to prefix the anchor with.  If a string was provided, it will be "
+"used as is.  If set to \"true\" then will try to obtain the permalink from "
+"the $post object."
+msgstr ""
+"jest URL z prefixem zakotwiczenia. Jeżeli ciąg będzie dostarczony, będzie "
+"stosowany bez zmian. Jeśli jest ustawiony na \"true \", a następnie spróbuje "
+"uzyskać odnośnika z $post obiektu."
+
+#: ../toc.php:1106
+msgid "These examples assume you are within \"the loop\":"
+msgstr "Te przykłady zakładają, że znajdują się w  \"pętla \":"
+
+#: ../toc.php:1108
+msgid "Obtain the index for the current page"
+msgstr "uzyskaj wskaźnik dla bieżącej strony"
+
+#: ../toc.php:1111
+msgid "Create a listing of all children and their headings"
+msgstr "Utwórz listę wszystkich spokrewnionych i ich nagłówki"
+
+#: ../toc.php:1136
+msgid "Update Options"
+msgstr "Opcje uaktualnione"
+
+#: ../toc.php:1616
+msgid "Display the table of contents in the sidebar with this widget"
+msgstr "Wyświetlaj spis treści w pasku bocznym z tego widgetu"
+
+#: ../toc.php:1708
+msgid "Show the table of contents only in the sidebar"
+msgstr "Pokaż spis treści tylko na pasku bocznym"

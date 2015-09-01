@@ -1,0 +1,1010 @@
+# Copyright (C) 2012 
+# This file is distributed under the same license as the  package.
+msgid ""
+msgstr ""
+"Project-Id-Version: TOC Trans 20150423\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/table-of-contents-plus\n"
+"POT-Creation-Date: 2015-04-23 19:41+0800\n"
+"PO-Revision-Date: 2015-04-26 15:25+0800\n"
+"Language-Team: 海盈网络 <service@hiwins.com>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.5\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c\n"
+"Last-Translator: 海盈网络 <service@hiwins.com>\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../toc.php:201
+msgid "Settings"
+msgstr "设置"
+
+#: ../toc.php:467 ../toc.php:468
+msgid "TOC"
+msgstr "TOC"
+
+#: ../toc.php:638
+msgid "Options saved."
+msgstr "选项已保存。"
+
+#: ../toc.php:640
+msgid "Save failed."
+msgstr "保存失败。"
+
+#: ../toc.php:652
+msgid "Main Options"
+msgstr "主要选项"
+
+#: ../toc.php:653
+msgid "Sitemap"
+msgstr "站点地图"
+
+#: ../toc.php:654
+msgid "Help"
+msgstr "帮助"
+
+#: ../toc.php:662
+msgid "Position"
+msgstr "位置"
+
+#: ../toc.php:665
+msgid "Before first heading (default)"
+msgstr "第一个标题前面（默认）"
+
+#: ../toc.php:666
+msgid "After first heading"
+msgstr "在第一个标题之后"
+
+#: ../toc.php:667
+msgid "Top"
+msgstr "顶部"
+
+#: ../toc.php:668
+msgid "Bottom"
+msgstr "底部"
+
+#: ../toc.php:673
+msgid "Show when"
+msgstr "何时显示"
+
+#: ../toc.php:685
+msgid "or more headings are present"
+msgstr "或者更多标题存在时"
+
+#: ../toc.php:689
+msgid "Auto insert for the following content types"
+msgstr "自动插入以下类别的内容中"
+
+#: ../toc.php:704
+msgid "Heading text"
+msgstr "标题文本"
+
+#: ../toc.php:706
+msgid "Show title on top of the table of contents"
+msgstr "在文章目录顶部显示标题"
+
+#: ../toc.php:709
+msgid "Eg: Contents, Table of Contents, Page Contents"
+msgstr "例：内容，文章目录，页面内容"
+
+#: ../toc.php:711
+msgid "Allow the user to toggle the visibility of the table of contents"
+msgstr "允许用户显示/隐藏文章目录"
+
+#: ../toc.php:716
+msgid "Show text"
+msgstr "显示文本"
+
+#: ../toc.php:720
+msgid "Eg: show"
+msgstr "例：显示"
+
+#: ../toc.php:723
+msgid "Hide text"
+msgstr "隐藏文本"
+
+#: ../toc.php:727
+msgid "Eg: hide"
+msgstr "例：隐藏"
+
+#: ../toc.php:731
+msgid "Hide the table of contents initially"
+msgstr "默认隐藏文章目录"
+
+#: ../toc.php:737
+msgid "Show hierarchy"
+msgstr "显示目录层级"
+
+#: ../toc.php:741
+msgid "Number list items"
+msgstr "显示编号"
+
+#: ../toc.php:745
+msgid "Enable smooth scroll effect"
+msgstr "开启平滑滚动效果"
+
+#: ../toc.php:746
+msgid "Scroll rather than jump to the anchor link"
+msgstr "平滑滚动到相应锚位置而不是跳转"
+
+#: ../toc.php:751
+msgid "Appearance"
+msgstr "外观"
+
+#: ../toc.php:755
+msgid "Width"
+msgstr "宽度"
+
+#: ../toc.php:758
+msgid "Fixed width"
+msgstr "固定宽度"
+
+#: ../toc.php:769
+msgid "Relative"
+msgstr "相对宽度"
+
+#: ../toc.php:770
+msgid "Auto (default)"
+msgstr "自动（默认）"
+
+#: ../toc.php:780
+msgid "Other"
+msgstr "其他"
+
+#: ../toc.php:781
+msgid "User defined"
+msgstr "用户自定义"
+
+#: ../toc.php:787
+#, php-format
+msgid "Please enter a number and %s select its units, eg: 100px, 10em"
+msgstr "请输入一个数字并 %s 选择单位，例如：100px，10em"
+
+#: ../toc.php:798
+msgid "Wrapping"
+msgstr "自动换行"
+
+#: ../toc.php:801
+msgid "None (default)"
+msgstr "无（默认）"
+
+#: ../toc.php:802
+msgid "Left"
+msgstr "向左"
+
+#: ../toc.php:803
+msgid "Right"
+msgstr "向右"
+
+#: ../toc.php:808
+msgid "Font size"
+msgstr "字体大小"
+
+#: ../toc.php:821
+msgid "Presentation"
+msgstr "风格"
+
+#: ../toc.php:824
+msgid "Grey (default)"
+msgstr "灰色（默认）"
+
+#: ../toc.php:829
+msgid "Light blue"
+msgstr "淡蓝色"
+
+#: ../toc.php:834
+msgid "White"
+msgstr "白色"
+
+#: ../toc.php:839
+msgid "Black"
+msgstr "黑色"
+
+#: ../toc.php:844
+msgid "Transparent"
+msgstr "透明"
+
+#: ../toc.php:849
+msgid "Custom"
+msgstr "自定义"
+
+#: ../toc.php:859
+msgid "Background"
+msgstr "背景"
+
+#: ../toc.php:863
+msgid "Border"
+msgstr "边框"
+
+#: ../toc.php:867 ../toc.php:1799
+msgid "Title"
+msgstr "标题"
+
+#: ../toc.php:871
+msgid "Links"
+msgstr "链接"
+
+#: ../toc.php:875
+msgid "Links (hover)"
+msgstr "链接（鼠标悬浮）"
+
+#: ../toc.php:879
+msgid "Links (visited)"
+msgstr "链接（访问过的）"
+
+#: ../toc.php:886
+#, php-format
+msgid "Leaving the value as %s will inherit your theme's styles"
+msgstr "使用 %s 将会继承主题样式"
+
+#: ../toc.php:893
+msgid "Advanced"
+msgstr "高级"
+
+#: ../toc.php:893 ../toc.php:1030 ../toc.php:1148
+msgid "show"
+msgstr "显示"
+
+#: ../toc.php:895
+msgid "Power options"
+msgstr "动力设置"
+
+#: ../toc.php:899
+msgid "Lowercase"
+msgstr "小写"
+
+#: ../toc.php:900
+msgid "Ensure anchors are in lowercase"
+msgstr "确保锚点小写"
+
+#: ../toc.php:903
+msgid "Hyphenate"
+msgstr "连字符"
+
+#: ../toc.php:904
+msgid "Use - rather than _ in anchors"
+msgstr "使用 - 而非 _ 作为连字符"
+
+#: ../toc.php:907
+msgid "Include homepage"
+msgstr "包含首页"
+
+#: ../toc.php:908
+msgid "Show the table of contents for qualifying items on the homepage"
+msgstr "对首页中排序的列表也添加目录内容支持"
+
+#: ../toc.php:911
+msgid "Exclude CSS file"
+msgstr "不加载CSS"
+
+#: ../toc.php:912
+msgid ""
+"Prevent the loading of this plugin's CSS styles. When selected, the "
+"appearance options from above will also be ignored."
+msgstr "禁止加载本插件的CSS样式，选中后以上外观选项将失效"
+
+#: ../toc.php:915
+msgid "Preserve theme bullets"
+msgstr "主题兼容"
+
+#: ../toc.php:916
+msgid ""
+"If your theme includes background images for unordered list elements, enable "
+"this to support them"
+msgstr "如果您的主题有修改无序列表的背景图片时，您可以开启此功能添加主题兼容。"
+
+#: ../toc.php:919
+msgid "Heading levels"
+msgstr "标题层级"
+
+#: ../toc.php:921
+msgid ""
+"Include the following heading levels. Deselecting a heading will exclude it."
+msgstr "包含以下标题层级，留空的层级将会被忽略"
+
+#: ../toc.php:927
+msgid "heading "
+msgstr "标题 "
+
+#: ../toc.php:933
+msgid "Exclude headings"
+msgstr "排除的标题"
+
+#: ../toc.php:936
+msgid ""
+"Specify headings to be excluded from appearing in the table of contents.  "
+"Separate multiple headings with a pipe <code>|</code>.  Use an asterisk "
+"<code>*</code> as a wildcard to match other text.  Note that this is not "
+"case sensitive. Some examples:"
+msgstr ""
+"指定在文章目录中排除的标题。多个标题使用管道符号 <code>|</code> 。使用星号 "
+"<code>*</code> 作为通配符匹配其他文本。注意此处对大小写不敏感。举例如下："
+
+#: ../toc.php:938
+msgid "<code>Fruit*</code> ignore headings starting with \"Fruit\""
+msgstr "<code>水果*</code> 将忽略 \"水果\" 开头的标题"
+
+#: ../toc.php:939
+msgid ""
+"<code>*Fruit Diet*</code> ignore headings with \"Fruit Diet\" somewhere in "
+"the heading"
+msgstr "<code>*水果饮食*</code> 将忽略在任何一处包含 \"水果饮食\" 的标题"
+
+#: ../toc.php:940
+msgid ""
+"<code>Apple Tree|Oranges|Yellow Bananas</code> ignore headings that are "
+"exactly \"Apple Tree\", \"Oranges\" or \"Yellow Bananas\""
+msgstr ""
+"<code>苹果树|橘子|黄香蕉</code> 将忽略与 \"苹果树\" ，\"橘子\" ，或者 \"黄香"
+"蕉\" 精确匹配的标题"
+
+#: ../toc.php:945
+msgid "Smooth scroll top offset"
+msgstr "平滑滚动顶部偏移"
+
+#: ../toc.php:948
+msgid ""
+"If you have a consistent menu across the top of your site, you can adjust "
+"the top offset to stop the headings from appearing underneath the top menu. "
+"A setting of 30 accommodates the WordPress admin bar. This setting appears "
+"after you have enabled smooth scrolling from above."
+msgstr ""
+"如果站点顶部有固定的菜单栏，可以调整顶部偏移让标题显示在该菜单栏下面。推荐使"
+"用的数值30是为Wordpress管理菜单栏设计的。在上方启用平滑滚动后此设置有效。"
+
+#: ../toc.php:952
+msgid "Restrict path"
+msgstr "限制路径"
+
+#: ../toc.php:955
+msgid ""
+"Restrict generation of the table of contents to pages that match the "
+"required path. This path is from the root of your site and always begins "
+"with a forward slash."
+msgstr ""
+"限制文章目录产生页面与要求的路径相匹配，此路径相对站点根目录，以斜杠（/）开"
+"始。"
+
+#: ../toc.php:958
+msgid "Eg: /wiki/, /corporate/annual-reports/"
+msgstr "例：/wiki/，/corporate/annual-reports/"
+
+#: ../toc.php:962
+msgid "Default anchor prefix"
+msgstr "默认锚前缀"
+
+#: ../toc.php:965
+msgid ""
+"Anchor targets are restricted to alphanumeric characters as per HTML "
+"specification (see readme for more detail). The default anchor prefix will "
+"be used when no characters qualify. When left blank, a number will be used "
+"instead."
+msgstr ""
+"因为HTML规范化的要求，锚目标只能使用数字或者字母。(参阅自述了解更多)。如果标"
+"题中不包含字母将使用默认锚前缀。留空则使用数字。"
+
+#: ../toc.php:966
+msgid ""
+"This option normally applies to content written in character sets other than "
+"ASCII."
+msgstr "此选项只能输入字符集而不是ASCII。"
+
+#: ../toc.php:969
+msgid "Eg: i, toc_index, index, _"
+msgstr "例：i, toc_index, index, _"
+
+#: ../toc.php:977
+msgid "Usage"
+msgstr "使用"
+
+#: ../toc.php:978
+#, php-format
+msgid ""
+"If you would like to fully customise the position of the table of contents, "
+"you can use the %s shortcode by placing it at the desired position of your "
+"post, page or custom post type. This method allows you to generate the table "
+"of contents despite having auto insertion disabled for its content type. "
+"Please visit the help tab for further information about this shortcode."
+msgstr ""
+"如果喜欢完全自定义文章目录位置，可以将 %s 短代码放在文章、页面或者自定义文章"
+"类型需要的位置。此方法在即便禁用向它的文章类型自动插入时也可以生成文章目录。"
+"请参阅帮助标签页了解短代码的更多信息。"
+
+#: ../toc.php:986
+#, php-format
+msgid ""
+"At its simplest, placing %s into a page will automatically create a sitemap "
+"of all pages and categories. This also works in a text widget."
+msgstr ""
+"最简单的法子，将 %s 放在一个页面中将自动产生一个包括所有页面和目录的网站地"
+"图。在文本小工具中同样奏效。"
+
+#: ../toc.php:990
+msgid "Show page listing"
+msgstr "显示页面列表"
+
+#: ../toc.php:994
+msgid "Show category listing"
+msgstr "显示分类列表"
+
+#: ../toc.php:998
+msgid "Heading type"
+msgstr "标题类型"
+
+#: ../toc.php:1001
+msgid "Use"
+msgstr "使用"
+
+#: ../toc.php:1012
+msgid "to print out the titles"
+msgstr "输出标题"
+
+#: ../toc.php:1016
+msgid "Pages label"
+msgstr "页面标签"
+
+#: ../toc.php:1018
+msgid "Eg: Pages, Page List"
+msgstr "例：页面、页面列表"
+
+#: ../toc.php:1022
+msgid "Categories label"
+msgstr "分类标签"
+
+#: ../toc.php:1024
+msgid "Eg: Categories, Category List"
+msgstr "例：分类、分类列表"
+
+#: ../toc.php:1030
+msgid "Advanced usage"
+msgstr "高级功能"
+
+#: ../toc.php:1032
+#, php-format
+msgid ""
+"lets you print out a listing of only pages. Similarly %s can be used to "
+"print out a category listing. They both can accept a number of attributes so "
+"visit the help tab for more information."
+msgstr ""
+"用于仅输出页面列表，相应的 %s 可以用于输出分类列表。他们都可以具有多重属性，"
+"参阅帮助标签页了解更多信息。"
+
+#: ../toc.php:1033
+msgid "Examples"
+msgstr "例"
+
+#: ../toc.php:1035
+msgid "hides the heading from a category listing"
+msgstr " 将标题从分类列表中移除"
+
+#: ../toc.php:1036
+#, php-format
+msgid ""
+"Uses h6 to display %s on a page listing excluding pages with IDs 1 and 15"
+msgstr "使用h6在一个排除包含ID 1 和15页面的页面列表上显示 %s"
+
+#: ../toc.php:1044
+msgid "Where's my table of contents?"
+msgstr "文章目录显示在哪里？"
+
+#: ../toc.php:1045
+msgid ""
+"If you're reading this, then chances are you have successfully installed and "
+"enabled the plugin and you're just wondering why the index isn't appearing "
+"right?  Try the following:"
+msgstr ""
+"如果正在阅读此内容的话，则表示插件已成功安装并启用。而现在很困惑为什么目录没"
+"有正常显示？请尝试："
+
+#: ../toc.php:1047
+msgid ""
+"In most cases, the post, page or custom post type has less than the minimum "
+"number of headings. By default, this is set to four so make sure you have at "
+"least four headings within your content. If you want to change this value, "
+"you can find it under 'Main Options' &gt; 'Show when'."
+msgstr ""
+"大部分情况下，文章、页面或者自定义文章类别中所含有的标题数量少于要求的最小"
+"值。默认下，最小值为4，这表示说如果您想要显示目录，文章中至少得有4个标题。如"
+"果需要修改此数值的话，可以再“主要选项” &gt; “何时显示”中调整。"
+
+#: ../toc.php:1048
+msgid ""
+"Is auto insertion enabled for your content type? By default, only pages are "
+"enabled."
+msgstr "内容类型是否支持自动插入？默认情况下，仅支持页面类型。"
+
+#: ../toc.php:1049
+msgid ""
+"Have you got <code>[no_toc]</code> somewhere within the content? This will "
+"disable the index for the current post, page or custom post type."
+msgstr ""
+"文章中是否有 <code>[no_toc]</code> 短代码？这将禁用当前文章、页面或自定义文章"
+"类型的目录显示。"
+
+#: ../toc.php:1050
+msgid ""
+"If you are using the TOC+ widget, check if you have the <em>\"Show the table "
+"of contents only in the sidebar\"</em> enabled as this will limit its "
+"display to only the sidebar. You can check by going into Appearance &gt; "
+"Widgets."
+msgstr ""
+"如果正在使用TOC+小工具，请检查是否启用了 <em>\"仅在侧边栏显示文章目录\"</"
+"em> ，要知道这将限制它只会在侧边栏显示。可以到外观&gt; 小工具页面检查设置。"
+
+#: ../toc.php:1051
+msgid ""
+"You may have restricted generation to a URL path match. The setting can be "
+"found in the advanced section under Main Options."
+msgstr "或许限制了URL路径匹配生成， 此设置可以在主选项的高级部分找到。"
+
+#: ../toc.php:1054
+msgid "How do I stop the table of contents from appearing on a single page?"
+msgstr "如何避免在单独页面中显示文章目录？"
+
+#: ../toc.php:1055
+msgid ""
+"Place the following <code>[no_toc]</code> anywhere on the page to suppress "
+"the table of contents. This is known as a shortcode and works for posts, "
+"pages and custom post types that make use of the_content()"
+msgstr ""
+"将 <code>[no_toc]</code> 短代码放在页面的任何地方以禁用文章目录。此短代码可以"
+"在所有使用 the_content() 函数的文章，页面和自定义文章类别中使用。"
+
+#: ../toc.php:1057
+msgid ""
+"I've set wrapping to left or right but the headings don't wrap around the "
+"table of contents"
+msgstr "我已经设置自动换行为左或者右，但是标题并没有环绕在文章目录附近"
+
+#: ../toc.php:1058
+msgid ""
+"This normally occurs when there is a CSS clear directive in or around the "
+"heading originating from the theme (Twenty Eleven and Twenty Twelve are two "
+"themes which do this). This directive tells the user agent to reset the "
+"previous wrapping specifications."
+msgstr ""
+"这一般是由于主题（比如自带的Twenty Eleven和Twenty Twelve主题）在标题内部或者"
+"周围有CSS清除（clear）属性。该属性会让浏览器重置之前的换行设置。"
+
+#: ../toc.php:1059
+#, php-format
+msgid ""
+"You can adjust your theme's CSS or try moving the table of contents position "
+"to the top of the page. If you didn't build your theme, I'd highly suggest "
+"you try the %s if you wish to make CSS changes."
+msgstr ""
+"请调整主题CSS或者将文章目录位置移动到页面顶部。如果主题并非亲自设计，强烈建议"
+"尝试 %s 来修改CSS。"
+
+#: ../toc.php:1062
+msgid ""
+"Try adding the following CSS to allow the wrapping to occur around the table "
+"of contents:"
+msgstr "请把以下内容添加到CSS中以允许在文章目录周围换行："
+
+#: ../toc.php:1067
+msgid "How do I include the name of the page in the table of contents title?"
+msgstr "如何才能在文章目录中包含页面名称？"
+
+#: ../toc.php:1068
+msgid ""
+"As the title of the page changes depending on the page you're viewing, you "
+"can use the following special variable to automatically insert the title of "
+"the page into the table of contents heading:"
+msgstr ""
+"由于页面标题随浏览页面不同而变化，可以使用下面的变量在内容列表标题中自动插入"
+"页面标题："
+
+#: ../toc.php:1070
+msgid "You can use it as is or place text either side of the variable."
+msgstr "可以直接使用或者在变量的任一边加入文本。"
+
+#: ../toc.php:1071
+msgid ""
+"As an example: if your page is named <em>Great Expectations</em> and your "
+"table of contents title is set to <em>Contents for %PAGE_NAME%</em>, the "
+"final title would read <em>Contents for Great Expectations</em>"
+msgstr ""
+"例如：页面名称为 <em>Great Expectations</em> ，内容列表标题设置为 "
+"<em>Contents for %PAGE_NAME%</em>，将显示为 <em>Contents for Great "
+"Expectations</em>。"
+
+#: ../toc.php:1073
+msgid "The sitemap uses a strange font dissimilar to the rest of the site"
+msgstr "站点地图使用了和网站其他地方不同的字体"
+
+#: ../toc.php:1074
+msgid ""
+"No extra styles are created for the sitemap, instead it inherits any styles "
+"you used when adding the shortcode. If you copy and pasted, you probably "
+"also copied the 'code' tags surrounding it so remove them if this is the "
+"case."
+msgstr ""
+"并没有为站点地图创建新样式，相反它继承在添加短代码时的样式。如果复制粘贴，很"
+"可能也把环绕在它周围的'code'标签也复制过来了，这种情况下需要删除它们。"
+
+#: ../toc.php:1075
+msgid ""
+"In most cases, try to have the shortcode on its own line with nothing before "
+"or after the square brackets."
+msgstr ""
+"大部分情况下，建议独占一行添加短代码，在该行内，方括号前后不要有任何内容。"
+
+#: ../toc.php:1077
+msgid "What were those shortcodes and attributes again?"
+msgstr "什么是短代码以及短代码属性？"
+
+#: ../toc.php:1078
+msgid ""
+"When attributes are left out for the shortcodes below, they will fallback to "
+"the settings you defined under Settings &gt; TOC+."
+msgstr "如果短代码输入时属性留空，插件将使用 设置 &gt; TOC+ 的设定值。"
+
+#: ../toc.php:1082
+msgid "Shortcode"
+msgstr "短代码"
+
+#: ../toc.php:1083
+msgid "Description"
+msgstr "描述"
+
+#: ../toc.php:1084
+msgid "Attributes"
+msgstr "属性"
+
+#: ../toc.php:1090
+msgid ""
+"Lets you generate the table of contents at the preferred position. Also "
+"useful for sites that only require a TOC on a small handful of pages."
+msgstr ""
+"在想要的位置生成文章目录。同时方便那些只有一点儿内容但是需要生成目录的站点。"
+
+#: ../toc.php:1093
+msgid "text, title of the table of contents"
+msgstr "文本，文章目录的标题"
+
+#: ../toc.php:1094
+msgid "true/false, shows or hides the title"
+msgstr "true/false，显示或者隐藏标题"
+
+#: ../toc.php:1095
+msgid "text, either \"left\" or \"right\""
+msgstr "文本， \"left\" 或者 \"right\" (分别表示“向左”、“向右”)"
+
+#: ../toc.php:1096
+msgid ""
+"numbers, this lets you select the heading levels you want included in the "
+"table of contents. Separate multiple levels with a comma. Example: include "
+"headings 3, 4 and 5 but exclude the others with"
+msgstr ""
+"数字，用来选择要在文章目录中显示的标题级别，以英文逗号隔开多个级别。例：仅显"
+"示h3，h4，h5"
+
+#: ../toc.php:1097
+msgid ""
+"text, enter headings to be excluded.  Separate multiple headings with a pipe "
+"<code>|</code>. Use an asterisk <code>*</code> as a wildcard to match other "
+"text. You could also use regular expressions for more advanced matching."
+msgstr ""
+"文本，需要排除的标题。使用管道符号 <code>|</code> 隔开多个标题。使用星号 "
+"<code>*</code> 作为通配符匹配其他文本，还可以使用正则表达式来实现高级匹配。"
+
+#: ../toc.php:1098
+msgid ""
+"text, enter CSS classes to be added to the container.  Separate multiple "
+"classes with a space."
+msgstr ""
+"文本，需要添加到容器中的CSS类选择符（class），使用空格隔开多个类选择符。"
+
+#: ../toc.php:1104
+msgid ""
+"Allows you to disable the table of contents for the current post, page, or "
+"custom post type."
+msgstr "在当前文章、页面或自定义文章类型中禁止文章目录。"
+
+#: ../toc.php:1109
+msgid ""
+"Produces a listing of all pages and categories for your site. You can use "
+"this on any post, page or even in a text widget."
+msgstr "生成站点所有页面和目录列表，可以在文章、页面甚至文本小工具中使用。"
+
+#: ../toc.php:1114
+msgid "Lets you print out a listing of only pages."
+msgstr "仅输出页面列表。"
+
+#: ../toc.php:1117
+msgid "number between 1 and 6, defines which html heading to use"
+msgstr "1 到 6 之间的数字，用来定义需要使用的html标题级别。"
+
+#: ../toc.php:1118
+msgid "text, title of the list"
+msgstr "文本，列表标题"
+
+#: ../toc.php:1119
+msgid "true/false, shows or hides the list heading"
+msgstr "true/false，显示/隐藏列表标题"
+
+#: ../toc.php:1120
+msgid "IDs of the pages or categories you wish to exclude"
+msgstr "数字，需要排除的页面或者分类ID"
+
+#: ../toc.php:1121
+msgid ""
+"ID of the page or category you wish to exclude including its all descendants"
+msgstr "数字，需要排除的页面或分类ID，包括其子页面、子分类"
+
+#: ../toc.php:1127
+msgid "Similar to [sitemap_pages] but for categories."
+msgstr "类似 [sitemap_pages] ，应用于分类目录"
+
+#: ../toc.php:1132
+msgid ""
+"This lets you print out an index of all published posts on your site.  By "
+"default, posts are listed in alphabetical order grouped by their first "
+"letters. There are CSS classes for each section, letter and list allowing "
+"you to customise the appearance."
+msgstr ""
+"输出网站所有已发布文章列表，默认情况下文章列表将按首字母排序。针对每一节，字"
+"母和列表都有CSS类选择符（class）方便自定义外观样式。"
+
+#: ../toc.php:1135
+msgid "text, either ASC or DESC"
+msgstr "文本，ASC或DESC（升序或降序）"
+
+#: ../toc.php:1136
+#, php-format
+msgid ""
+"text, popular options include \"title\", \"date\", \"ID\", and \"rand\". See "
+"%1$sWP_Query%2$s for a list."
+msgstr ""
+"文本，常见选项包括 \"title\", \"date\", \"ID\", and \"rand\" （分别代表用于排"
+"序的对象：标题，日期，ID或者随机），参见 %1$sWP_Query%2$s 查看可用列表。"
+
+#: ../toc.php:1137
+msgid ""
+"true/false (defaults to true), does not separate the lists by first letter "
+"when set to false."
+msgstr "true/false（默认true），当设置为false时不按照首字母单独列表。"
+
+#: ../toc.php:1145
+msgid "I have another question..."
+msgstr "还有其他不明白的地方..."
+
+#: ../toc.php:1146
+#, php-format
+msgid ""
+"Visit the %1$splugin homepage%2$s to ask your question - who knows, maybe "
+"your question has already been answered. I'd really like to hear your "
+"suggestions if you have any."
+msgstr ""
+"可以到 %1$s插件主页%2$s 提问，如果人品好没准以前有人已经问过并且已经得到了解"
+"答。非常高兴倾听任何建议意见。"
+
+#: ../toc.php:1148
+msgid "For developers"
+msgstr "供开发者"
+
+#: ../toc.php:1150
+msgid "How do I customise my anchors?"
+msgstr "如何自定义锚点？"
+
+#: ../toc.php:1151
+msgid ""
+"If you're still not happy with the anchors, you can modify them to suit your "
+"needs through a custom function hooked into the <code>toc_url_anchor_target</"
+"code> filter.  As an example, place the below code snippet into your "
+"functions.php file to convert all anchors to uppercase."
+msgstr ""
+"如果对这些锚点仍然不满意，可以将自定义函数挂载到 "
+"<code>toc_url_anchor_target</code> 过滤器以满足需要。比如，把下面的代码片段放"
+"到functions.php文件中以实现把所有的锚点转换为大写。"
+
+#: ../toc.php:1161
+msgid ""
+"Returns a HTML formatted string of the table of contents without the "
+"surrounding UL or OL tags to allow the theme editor to supply their own ID "
+"and/or classes to the outer list."
+msgstr ""
+"返回一个HTML格式化过的内容列表，不含外围的UL或OL标签以允许主题编辑器向外围列"
+"表提供它们自己的（CSS）ID和/或类"
+
+#: ../toc.php:1162
+msgid "Both parameters are optional:"
+msgstr "两个可选参数"
+
+#: ../toc.php:1166
+msgid ""
+"is the entire content with headings.  If blank, will default to the current "
+"content found in $post (eg within \"the loop\")."
+msgstr ""
+"带标题的完整内容。如果留空将默认显示在 $post（比如在 \"the loop\"）中存在的内"
+"容。"
+
+#: ../toc.php:1169
+msgid ""
+"is the URL to prefix the anchor with.  If a string was provided, it will be "
+"used as is.  If set to \"true\" then will try to obtain the permalink from "
+"the $post object."
+msgstr ""
+"锚点URL前缀。如果提供一个字符串将使用该字符串。如果设置为 \"true\" 将尝试从 "
+"$post 对象中获取永久链接。"
+
+#: ../toc.php:1171
+msgid "These examples assume you are within \"the loop\":"
+msgstr "这些例子假设正在 \"the loop\" 中："
+
+#: ../toc.php:1173
+msgid "Obtain the index for the current page"
+msgstr "获取当前页面列表"
+
+#: ../toc.php:1176
+msgid "Create a listing of all children and their headings"
+msgstr "创建所有子文章及标题的列表。"
+
+#: ../toc.php:1201
+msgid "Update Options"
+msgstr "更新设置"
+
+#: ../toc.php:1704
+msgid "Display the table of contents in the sidebar with this widget"
+msgstr "在侧边栏小工具中显示文章目录"
+
+#: ../toc.php:1805
+msgid "Show the table of contents only in the sidebar"
+msgstr "仅在侧边栏中显示文章目录"
+
+#: ../toc.php:1809
+msgid "For the following content types:"
+msgstr "针对以下内容类型："
+
+#~ msgid "(default)"
+#~ msgstr "(默认)"
+
+#~ msgid "Auto"
+#~ msgstr "自动调整"
+
+#~ msgid "Please enter a number and"
+#~ msgstr "请输入数字并"
+
+#~ msgid "select its units, eg: 100px, 10em"
+#~ msgstr "选择相应的单位，如：100px, 10em"
+
+#~ msgid "Leaving the value as"
+#~ msgstr "数值设定为"
+
+#~ msgid "will inherit your theme's styles"
+#~ msgstr "将使用主题的风格"
+
+#~ msgid ""
+#~ "Prevent the loading of this plugin's CSS styles. When selected, the "
+#~ "presentation options from above will also be ignored."
+#~ msgstr "不加载插件内置的CSS。勾选此项后，上面的选项也将失效。"
+
+#~ msgid "Include (or exclude) the following heading levels"
+#~ msgstr "包含(或者排除)以下标题级别"
+
+#~ msgid ""
+#~ "If you would like to fully customise the position of the table of "
+#~ "contents, you can use the"
+#~ msgstr "如果您想要完全自定义目录的显示位置，您可以使用短代码"
+
+#~ msgid ""
+#~ "shortcode by placing it at the desired position of your post, page or "
+#~ "custom post type. This method allows you to generate the table of "
+#~ "contents despite having auto insertion disabled for its content type. "
+#~ "Please visit the help tab for further information about this shortcode."
+#~ msgstr ""
+#~ "，并把它放在您想要的位置中，可以是文章、页面或者是自定义的文章类型。此方法"
+#~ "方便您在任何情况下生成目录，即使您关闭了该内容类型的自动插入。详细内容可以"
+#~ "查看帮助标签中个关于短代码的说明。"
+
+#~ msgid "At its simplest, placing"
+#~ msgstr "简单点说，输入"
+
+#~ msgid ""
+#~ "into a page will automatically create a sitemap of all pages and "
+#~ "categories. This also works in a text widget."
+#~ msgstr ""
+#~ "在页面中将显示所有页面、分类的站点地图。您也可以在文本小工具使用此工具。"
+
+#~ msgid "lets you print out a listing of only pages. Similarly"
+#~ msgstr " 用来输出纯页面列表。同样地，"
+
+#~ msgid ""
+#~ "can be used to print out a category listing. They both can accept a "
+#~ "number of attributes so visit the help tab for more information."
+#~ msgstr ""
+#~ " 用来输出纯分类列表。两者都有其他的参数设定，具体查看帮助标签的内容。"
+
+#~ msgid "Uses h6 to display"
+#~ msgstr " 在一个含页面ID为1和15的页面列表中，用 h6 显示 "
+
+#~ msgid "on a page listing excluding pages with IDs 1 and 15."
+#~ msgstr "。"
+
+#~ msgid "Have you got"
+#~ msgstr "内容中是否使用了 "
+
+#~ msgid ""
+#~ "somewhere within the content? This will disable the index for the current "
+#~ "post, page or custom post type."
+#~ msgstr " 短代码？这将阻止当前文章、页面或者自定义页面显示目录。"
+
+#~ msgid "If you are using the TOC+ widget, check if you have the"
+#~ msgstr "如果您正在使用 TOC+ 小工具，检查以下是否开启了 "
+
+#~ msgid ""
+#~ "enabled as this will limit its display to only the sidebar. You can check "
+#~ "by going into Appearance &gt; Widgets."
+#~ msgstr "。如果不了解的么可以到外观 &gt; 小工具中查看。"
+
+#~ msgid "Place the following"
+#~ msgstr "在内容任意位置中输入短代码 "
+
+#~ msgid ""
+#~ "anywhere on the page to suppress the table of contents. This is known as "
+#~ "a shortcode and works for posts, pages and custom post types that make "
+#~ "use of the_content()"
+#~ msgstr ""
+#~ "可以避免目录内容的显示。此短代码对任何帖子、页面以及其他使用the_content()"
+#~ "的自定义文章类型都有效。"
+
+#~ msgid ""
+#~ "This normally occurs when there is a CSS clear directive in or around the "
+#~ "heading specified by the theme author. This directive tells the user "
+#~ "agent to reset the previous wrapping specifications."
+#~ msgstr ""
+#~ "一般是因为您使用的主题中CSS移除了标题的指令。该指令让用户代理重置了前一个"
+#~ "自动换行规则。"
+
+#~ msgid ""
+#~ "You can adjust your theme's CSS or try moving the table of contents "
+#~ "position to the top of the page. If you didn't build your theme, I'd "
+#~ "highly suggest you try the"
+#~ msgstr ""
+#~ "您可以调整您的主题CSS或者尝试移动目录内容的位置到页面顶部。如果您对主题并"
+#~ "不了解，强烈建议尝试用 "
+
+#~ msgid "if you wish to make CSS changes."
+#~ msgstr " 修改CSS。"
+
+#~ msgid "Why are some headings not included in the table of contents?"
+#~ msgstr "为什么部分标题没有显示在目录中？"
+
+#~ msgid ""
+#~ "First, make sure the title text that isn't appearing in the table of "
+#~ "contents is actually marked up as a heading (eg heading 1 through to 6).  "
+#~ "After verifying that it really is a heading, make sure that there are no "
+#~ "linebreaks or enters from the start to the end of the heading HTML tags.  "
+#~ "Eg, it should not be like the following:"
+#~ msgstr ""
+#~ "首先，请确认标题中未显示的标题文本确实标记为标题（例：标题1到标题6）。如果"
+#~ "已确认是标题的话，请检查一下h标签内的文本是否有跳行。例：不要出现以下形"
+#~ "式："
+
+#~ msgid "Rather, it should be something like:"
+#~ msgstr "正确地，应该是："
+
+#~ msgid "The sitemap uses a strange font disimilar to the rest of the site"
+#~ msgstr "站点地图与站点使用的字体不一样"
+
+#~ msgid "Similar to"
+#~ msgstr "类 "
+
+#~ msgid "but for categories."
+#~ msgstr " 但仅输出分类。"
+
+#~ msgid "Visit the"
+#~ msgstr "可以访问 "
+
+#~ msgid "plugin homepage"
+#~ msgstr "插件主页"
+
+#~ msgid ""
+#~ "to ask your question - who knows, maybe your question has already been "
+#~ "answered. I'd really like to hear your suggestions if you have any."
+#~ msgstr ""
+#~ " 求助 - 谁知道呢，也许您的问题已经解答过了。如果您有建议的话，我会更乐意。"
