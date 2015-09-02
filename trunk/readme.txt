@@ -31,7 +31,7 @@ Custom post types are supported, however, auto insertion works only when the_con
 * French - Jean-Michel Duriez
 * German - [Ben](http://blog.bmarwell.de/)
 * Hebrew - [Ahrale](http://atar4u.com/)
-* Japanese - 二宮大地
+* Japanese - [二宮大地](http://ja.gravatar.com/deerboy01)
 * Polish - [Jakub](http://notatki.4use.pl/)
 * Simplified Chinese - Jason
 * Slovak - Boris Gereg
@@ -117,7 +117,7 @@ I will never ask for any form of reward or compensation.  Helping others achieve
 = 1509 =
 * Released: xx September 2015
 * Added Hebrew translation thanks to [Ahrale](http://atar4u.com/)
-* Added Japaense translation thanks to 二宮大地
+* Added Japaense translation thanks to [二宮大地](http://ja.gravatar.com/deerboy01)
 * Plugin has moved to [GitHub](https://github.com/zedzedzed/table-of-contents-plus/) for better collaboration.
 
 = 1507 =
