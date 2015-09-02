@@ -118,6 +118,7 @@ I will never ask for any form of reward or compensation.  Helping others achieve
 * Released: xx September 2015
 * Added Hebrew translation thanks to [Ahrale](http://atar4u.com/)
 * Added Japaense translation thanks to [シカマル](http://ja.gravatar.com/deerboy01)
+* Fixed: PHP notices
 * Plugin has moved to [GitHub](https://github.com/zedzedzed/table-of-contents-plus/) for better collaboration.
 
 = 1507 =
