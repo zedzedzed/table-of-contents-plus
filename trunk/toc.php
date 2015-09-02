@@ -1567,7 +1567,7 @@ if ( !class_exists( 'toc_widget' ) ) :
 				'height' => 350, 
 				'id_base' => 'toc-widget'
 			);
-			$this->WP_Widget( 'toc-widget', 'TOC+', $widget_options, $control_options );
+			parent::__construct( 'toc-widget', 'TOC+', $widget_options, $control_options );
 		}
 		
 
@@ -1589,7 +1589,7 @@ if ( !class_exists( 'toc_widget' ) ) :
 				extract( $args );
 				
 				$items = $tic->extract_headings( $find, $replace, wptexturize($post->post_content) );
-				$title = apply_filters('widget_title', $instance['title'] );
+				$title = ( array_key_exists('title', $instance) ) ? apply_filters('widget_title', $instance['title']) : '';
 				if ( strpos($title, '%PAGE_TITLE%') !== false ) $title = str_replace( '%PAGE_TITLE%', get_the_title(), $title );
 				if ( strpos($title, '%PAGE_NAME%') !== false ) $title = str_replace( '%PAGE_NAME%', get_the_title(), $title );
 				$hide_inline = $toc_options['show_toc_in_widget_only'];
