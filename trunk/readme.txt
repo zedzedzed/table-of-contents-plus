@@ -120,6 +120,8 @@ I will never ask for any form of reward or compensation.  Helping others achieve
 * Added Hebrew translation thanks to [Ahrale](http://atar4u.com/)
 * Added Japaense translation thanks to [シカマル](http://ja.gravatar.com/deerboy01)
 * Added Greek translation thanks to [Dimitrios Kaisaris](http://www.foodblostarter.com/)
+* Updated jQuery Smooth Scroll 1.4.10 to 1.5.5
+* Provide both minified and unminified CSS and JS files, use minified versions.
 * Fixed: PHP notice introduced in WP 4.3
 * Plugin has moved to [GitHub](https://github.com/zedzedzed/table-of-contents-plus/) for better collaboration.
 

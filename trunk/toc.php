@@ -39,7 +39,7 @@ FOR CONSIDERATION:
 	- highlight target css
 */
 
-define( 'TOC_VERSION', '1505' );
+define( 'TOC_VERSION', '1509' );
 define( 'TOC_POSITION_BEFORE_FIRST_HEADING', 1 );
 define( 'TOC_POSITION_TOP', 2 );
 define( 'TOC_POSITION_BOTTOM', 3 );
@@ -431,11 +431,9 @@ if ( !class_exists( 'toc' ) ) :
 		{
 			$js_vars = array();
 			
-			
 			// register our CSS and scripts
-			wp_register_style( 'toc-screen', $this->path . '/screen.css', array(), TOC_VERSION );
-			wp_register_script( 'toc-front', $this->path . '/front.js', array('jquery'), TOC_VERSION, true );
-			
+			wp_register_style( 'toc-screen', $this->path . '/screen.min.css', array(), TOC_VERSION );
+			wp_register_script( 'toc-front', $this->path . '/front.min.js', array('jquery'), TOC_VERSION, true );
 			
 			// enqueue them!
 			if ( !$this->options['exclude_css'] ) wp_enqueue_style("toc-screen");
