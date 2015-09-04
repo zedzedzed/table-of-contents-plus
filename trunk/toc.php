@@ -1113,6 +1113,9 @@ if ( !class_exists( 'toc' ) ) :
 			
 			if ( $title ) {
 				$return = trim( strip_tags($title) );
+
+				// convert accented characters to ASCII 
+				$return = remove_accents( $return );
 				
 				// replace newlines with spaces (eg when headings are split over multiple lines)
 				$return = str_replace( array("\r", "\n", "\n\r", "\r\n"), ' ', $return );
