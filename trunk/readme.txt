@@ -123,6 +123,7 @@ I will never ask for any form of reward or compensation.  Helping others achieve
 * Updated jQuery Smooth Scroll 1.4.10 to 1.5.5
 * Supply both minified and unminified CSS and JS files, use minified versions.
 * Convert accented characters to ASCII in anchors.
+* Bump tested WordPress version to 4.3
 * Fixed: PHP notice introduced in WP 4.3
 * Fixed: javascript error with $.browser testing for Internet Explorer 7.
 * Plugin has moved to [GitHub](https://github.com/zedzedzed/table-of-contents-plus/) for better collaboration.
