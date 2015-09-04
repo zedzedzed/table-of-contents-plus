@@ -116,14 +116,17 @@ I will never ask for any form of reward or compensation.  Helping others achieve
 
 == Changelog ==
 = 1509 =
-* Released: xx September 2015
+* Released: 4 September 2015
 * Added Hebrew translation thanks to [Ahrale](http://atar4u.com/)
 * Added Japaense translation thanks to [シカマル](http://ja.gravatar.com/deerboy01)
 * Added Greek translation thanks to [Dimitrios Kaisaris](http://www.foodblostarter.com/)
 * Updated jQuery Smooth Scroll 1.4.10 to 1.5.5
-* Provide both minified and unminified CSS and JS files, use minified versions.
+* Supply both minified and unminified CSS and JS files, use minified versions.
+* Convert accented characters to ASCII in anchors.
 * Fixed: PHP notice introduced in WP 4.3
+* Fixed: javascript error with $.browser testing for Internet Explorer 7.
 * Plugin has moved to [GitHub](https://github.com/zedzedzed/table-of-contents-plus/) for better collaboration.
+* Help needed: preg_match_all failing with bad UTF8 characters producing no TOC. If you can help, please participate in this [issue](https://github.com/zedzedzed/table-of-contents-plus/issues/105).
 
 = 1507 =
 * Released: 5 July 2015
