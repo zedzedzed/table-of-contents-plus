@@ -30,6 +30,7 @@ Custom post types are supported, however, auto insertion works only when the_con
 * Dutch - [Renee](http://101themes.com/)
 * French - Jean-Michel Duriez
 * German - [Ben](http://blog.bmarwell.de/)
+* Greek - [Dimitrios Kaisaris](http://www.foodblostarter.com/)
 * Hebrew - [Ahrale](http://atar4u.com/)
 * Japanese - [シカマル](http://ja.gravatar.com/deerboy01)
 * Polish - [Jakub](http://notatki.4use.pl/)
@@ -118,7 +119,8 @@ I will never ask for any form of reward or compensation.  Helping others achieve
 * Released: xx September 2015
 * Added Hebrew translation thanks to [Ahrale](http://atar4u.com/)
 * Added Japaense translation thanks to [シカマル](http://ja.gravatar.com/deerboy01)
-* Fixed: PHP notices
+* Added Greek translation thanks to [Dimitrios Kaisaris](http://www.foodblostarter.com/)
+* Fixed: PHP notice introduced in WP 4.3
 * Plugin has moved to [GitHub](https://github.com/zedzedzed/table-of-contents-plus/) for better collaboration.
 
 = 1507 =
