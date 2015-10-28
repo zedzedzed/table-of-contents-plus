@@ -165,6 +165,24 @@ if ( !class_exists( 'toc' ) ) :
 		{
 			$this->options = array_merge($this->options, $array);
 		}
+
+
+		/**
+		 * Allows the developer to disable TOC execution
+		 */
+		public function disable()
+		{
+			$this->show_toc = false;
+		}
+
+
+		/**
+		 * Allows the developer to enable TOC execution
+		 */
+		public function enable()
+		{
+			$this->show_toc = true;
+		}
 		
 		
 		public function set_show_toc_in_widget_only( $value = false )

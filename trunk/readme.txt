@@ -2,7 +2,7 @@
 Contributors: conjur3r
 Tags: table of contents, indexes, toc, sitemap, cms, options, list, page listing, category listing
 Requires at least: 3.2
-Tested up to: 4.3
+Tested up to: 4.3.1
 Stable tag: 1509
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -115,6 +115,11 @@ I will never ask for any form of reward or compensation.  Helping others achieve
 
 
 == Changelog ==
+= 15xx =
+* Released: xx
+* Bump tested WordPress version to 4.3.1
+* Add 'enable' and 'disable' API functions so a developer can better control the execution.
+
 = 1509 =
 * Released: 4 September 2015
 * Added Hebrew translation thanks to [Ahrale](http://atar4u.com/)
