@@ -125,6 +125,7 @@ I will never ask for any form of reward or compensation.  Helping others achieve
 * Add 'enable' and 'disable' API functions so a developer can better control the execution.
 * Add Brazilian Portuguese translation thanks to [Blog de Niterói](https://twitter.com/BlogNiteroi/)
 * Add Spanish translation thanks to [@davidsaiz](https://twitter.com/davidsaiz)
+* Updated text domain to better support translation packs.
 
 = 1509 =
 * Released: 4 September 2015
