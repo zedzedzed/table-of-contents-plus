@@ -24,6 +24,8 @@ Prefer to include the index in the sidebar?  Go to Appearance > Widgets and drag
 
 Custom post types are supported, however, auto insertion works only when the_content() has been used by the custom post type.  Each post type will appear in the options panel, so enable the ones you want.
 
+Collaborate, participate, fork this plugin on [Github](https://github.com/zedzedzed/table-of-contents-plus/).
+
 = Available Languages =
 * Australian English (default)
 * Danish - [Cupunu](http://cupunu.dk/)
@@ -36,6 +38,7 @@ Custom post types are supported, however, auto insertion works only when the_con
 * Polish - [Jakub](http://notatki.4use.pl/)
 * Simplified Chinese - Jason
 * Slovak - Boris Gereg
+* Spanish - [Davidsaiz](https://twitter.com/davidsaiz)
 * Ukrainian - [Michael Yunat](http://www.iphostmonitor.com/)
 
 Translations are more than welcome. If you have any advice in making it easier to translate, please let me know.
@@ -119,6 +122,7 @@ I will never ask for any form of reward or compensation.  Helping others achieve
 * Released: xx
 * Bump tested WordPress version to 4.3.1
 * Add 'enable' and 'disable' API functions so a developer can better control the execution.
+* Add Spanish translation thanks to [@davidsaiz](https://twitter.com/davidsaiz)
 
 = 1509 =
 * Released: 4 September 2015
