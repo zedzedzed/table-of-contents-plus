@@ -28,6 +28,7 @@ Collaborate, participate, fork this plugin on [Github](https://github.com/zedzed
 
 = Available Languages =
 * Australian English (default)
+* Brazilian Portuguese - [Blog de Niterói](https://twitter.com/BlogNiteroi/)
 * Danish - [Cupunu](http://cupunu.dk/)
 * Dutch - [Renee](http://101themes.com/)
 * French - Jean-Michel Duriez
@@ -122,6 +123,7 @@ I will never ask for any form of reward or compensation.  Helping others achieve
 * Released: xx
 * Bump tested WordPress version to 4.3.1
 * Add 'enable' and 'disable' API functions so a developer can better control the execution.
+* Add Brazilian Portuguese translation thanks to [Blog de Niterói](https://twitter.com/BlogNiteroi/)
 * Add Spanish translation thanks to [@davidsaiz](https://twitter.com/davidsaiz)
 
 = 1509 =

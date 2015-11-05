@@ -1,0 +1,900 @@
+# Copyright (C) 2014 
+# This file is distributed under the same license as the  package.
+msgid ""
+msgstr ""
+"Project-Id-Version: TOC+ pt_BR 1505\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/table-of-contents-"
+"plus\n"
+"POT-Creation-Date: 2015-09-05 01:43-0300\n"
+"PO-Revision-Date: 2015-09-05 01:47-0300\n"
+"Last-Translator: Leonardo Antonioli <leo@tobeguarany.com>\n"
+"Language-Team: To Be Guarany! <leo@tobeguarany.com>\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.4\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+#: toc.php:201
+msgid "Settings"
+msgstr "Configurações"
+
+#: toc.php:482 toc.php:483
+msgid "TOC"
+msgstr "TOC"
+
+#: toc.php:653
+msgid "Options saved."
+msgstr "Opções gravadas."
+
+#: toc.php:655
+msgid "Save failed."
+msgstr "Erro ao gravar."
+
+#: toc.php:667
+msgid "Main Options"
+msgstr "Opções Principais"
+
+#: toc.php:668
+msgid "Sitemap"
+msgstr "Sitemap"
+
+#: toc.php:669
+msgid "Help"
+msgstr "Ajuda"
+
+#: toc.php:677
+msgid "Position"
+msgstr "Posição"
+
+#: toc.php:680
+msgid "Before first heading (default)"
+msgstr "Antes do primeiro título (padrão)"
+
+#: toc.php:681
+msgid "After first heading"
+msgstr "Após o primeiro título"
+
+#: toc.php:682
+msgid "Top"
+msgstr "Início da página"
+
+#: toc.php:683
+msgid "Bottom"
+msgstr "Final da página"
+
+#: toc.php:688
+msgid "Show when"
+msgstr "Exibir quando..."
+
+#. translators: text follows drop down list of numbers
+#: toc.php:700
+msgid "or more headings are present"
+msgstr "ou mais títulos estiverem presentes"
+
+#: toc.php:704
+msgid "Auto insert for the following content types"
+msgstr "Inserção automática para os seguintes tipos de conteúdo"
+
+#. translators: this is the title of the table of contents
+#: toc.php:719
+msgid "Heading text"
+msgstr "Título da Tabela de Conteúdos"
+
+#: toc.php:721
+msgid "Show title on top of the table of contents"
+msgstr "Exibir título no topo da tabela de conteúdos"
+
+#: toc.php:724
+msgid "Eg: Contents, Table of Contents, Page Contents"
+msgstr "Ex: Conteúdo, Tabela de Conteúdos, Página de Conteúdos"
+
+#: toc.php:726
+msgid "Allow the user to toggle the visibility of the table of contents"
+msgstr "Deixar o usuário exibir/ocultar a tabela"
+
+#: toc.php:731
+msgid "Show text"
+msgstr "Texto para exibir"
+
+#. translators: example text to display when you want to expand the table of
+#. contents
+#: toc.php:735
+msgid "Eg: show"
+msgstr "ex: Exibir"
+
+#: toc.php:738
+msgid "Hide text"
+msgstr "Texto para ocultar"
+
+#. translators: example text to display when you want to collapse the table of
+#. contents
+#: toc.php:742
+msgid "Eg: hide"
+msgstr "Ex: Ocultar"
+
+#: toc.php:746
+msgid "Hide the table of contents initially"
+msgstr "Ocultar a tabela por padrão"
+
+#: toc.php:752
+msgid "Show hierarchy"
+msgstr "Usar hierarquia"
+
+#: toc.php:756
+msgid "Number list items"
+msgstr "Lista numerada"
+
+#: toc.php:760
+msgid "Enable smooth scroll effect"
+msgstr "Habilitar efeito de scroll suave"
+
+#: toc.php:761
+msgid "Scroll rather than jump to the anchor link"
+msgstr "Desliza para o título em vez de pular"
+
+#: toc.php:766
+msgid "Appearance"
+msgstr "Aparência"
+
+#: toc.php:770
+msgid "Width"
+msgstr "Largura"
+
+#: toc.php:773
+msgid "Fixed width"
+msgstr "Largura fixa"
+
+#: toc.php:784
+msgid "Relative"
+msgstr "Largura relativa"
+
+#: toc.php:785
+msgid "Auto (default)"
+msgstr "Auto (padrão)"
+
+#. translators: other width
+#: toc.php:795
+msgid "Other"
+msgstr "Outra largura"
+
+#: toc.php:796
+msgid "User defined"
+msgstr "Definida pelo usuário"
+
+#. translators: ignore %s as it's some HTML label tags
+#: toc.php:802
+msgid "Please enter a number and %s select its units, eg: 100px, 10em"
+msgstr ""
+"Por favor, digite um número e %s selecione sua unidade. Ex: 100px, 10em"
+
+#: toc.php:813
+msgid "Wrapping"
+msgstr "Flutuar"
+
+#: toc.php:816
+msgid "None (default)"
+msgstr "Não (padrão)"
+
+#: toc.php:817
+msgid "Left"
+msgstr "Esquerda"
+
+#: toc.php:818
+msgid "Right"
+msgstr "Direita"
+
+#: toc.php:823
+msgid "Font size"
+msgstr "Tamanho da fonte"
+
+#. translators: appearance / colour / look and feel options
+#: toc.php:836
+msgid "Presentation"
+msgstr "Apresentação"
+
+#: toc.php:839
+msgid "Grey (default)"
+msgstr "Cinza (padrão)"
+
+#: toc.php:844
+msgid "Light blue"
+msgstr "Azul claro"
+
+#: toc.php:849
+msgid "White"
+msgstr "Branco"
+
+#: toc.php:854
+msgid "Black"
+msgstr "Preto"
+
+#: toc.php:859
+msgid "Transparent"
+msgstr "Transparente"
+
+#: toc.php:864
+msgid "Custom"
+msgstr "Personalizada"
+
+#: toc.php:874
+msgid "Background"
+msgstr "Fundo"
+
+#: toc.php:878
+msgid "Border"
+msgstr "Borda"
+
+#: toc.php:882 toc.php:1658
+msgid "Title"
+msgstr "Título"
+
+#: toc.php:886
+msgid "Links"
+msgstr "Links"
+
+#: toc.php:890
+msgid "Links (hover)"
+msgstr "Links (hover)"
+
+#: toc.php:894
+msgid "Links (visited)"
+msgstr "Links (visitados)"
+
+#: toc.php:901
+msgid "Leaving the value as %s will inherit your theme's styles"
+msgstr "Deixe o valor como %s para herdar o CSS do seu tema"
+
+#: toc.php:908
+msgid "Advanced"
+msgstr "Avançado"
+
+#: toc.php:908 toc.php:1045
+msgid "show"
+msgstr "exibir"
+
+#: toc.php:910
+msgid "Power options"
+msgstr "Opções poderosas!"
+
+#: toc.php:914
+msgid "Lowercase"
+msgstr "Minúsculas"
+
+#: toc.php:915
+msgid "Ensure anchors are in lowercase"
+msgstr "Usar âncoras sempre em minúsculas"
+
+#: toc.php:918
+msgid "Hyphenate"
+msgstr "Usar hifens"
+
+#: toc.php:919
+msgid "Use - rather than _ in anchors"
+msgstr "Usar - em vez de _ nas âncoras"
+
+#: toc.php:922
+msgid "Include homepage"
+msgstr "Incluir página inicial"
+
+#: toc.php:923
+msgid "Show the table of contents for qualifying items on the homepage"
+msgstr "Exibir tabela de conteúdos também para itens da página inicial"
+
+#: toc.php:926
+msgid "Exclude CSS file"
+msgstr "Excluir arquivo CSS"
+
+#: toc.php:927
+msgid ""
+"Prevent the loading of this plugin's CSS styles. When selected, the "
+"appearance options from above will also be ignored."
+msgstr ""
+"Não carregar o CSS desse plugin. Se selecionado, as opções de aparência "
+"acima também serão ignoradas."
+
+#: toc.php:930
+msgid "Preserve theme bullets"
+msgstr "Usar bullets do tema"
+
+#: toc.php:931
+msgid ""
+"If your theme includes background images for unordered list elements, enable "
+"this to support them"
+msgstr ""
+"Se o seu tema usa imagens de fundo para listas não-ordenadas, habilite essa "
+"opção para usá-las"
+
+#: toc.php:934
+msgid "Heading levels"
+msgstr "Níveis de títulos"
+
+#: toc.php:936
+msgid ""
+"Include the following heading levels. Deselecting a heading will exclude it."
+msgstr ""
+"Utilizar os seguintes níveis de títulos (títulos desmarcados não serão "
+"usados para compor a tabela):"
+
+#: toc.php:942
+msgid "heading "
+msgstr "título "
+
+#: toc.php:948
+msgid "Exclude headings"
+msgstr "Excluir títulos"
+
+#: toc.php:951
+msgid ""
+"Specify headings to be excluded from appearing in the table of contents.  "
+"Separate multiple headings with a pipe <code>|</code>.  Use an asterisk "
+"<code>*</code> as a wildcard to match other text.  Note that this is not "
+"case sensitive. Some examples:"
+msgstr ""
+"Especifique títulos que não devem aparecer na tabela de conteúdos. Separe "
+"vários títulos com um pipe <code>|</code>.  Use asteriscos <code>*</code> "
+"como curingas para casar com outros textos. Essa opção não diferencia "
+"maiúsculas de minúsculas. Alguns exemplos:"
+
+#: toc.php:953
+msgid "<code>Fruit*</code> ignore headings starting with \"Fruit\""
+msgstr "<code>Dieta*</code> ignora títulos que comecem com \"Dieta\""
+
+#: toc.php:954
+msgid ""
+"<code>*Fruit Diet*</code> ignore headings with \"Fruit Diet\" somewhere in "
+"the heading"
+msgstr ""
+"<code>*Dieta da Fruta*</code> ignora títulos que contenham \"Dieta da Fruta"
+"\" em qualquer lugar"
+
+#: toc.php:955
+msgid ""
+"<code>Apple Tree|Oranges|Yellow Bananas</code> ignore headings that are "
+"exactly \"Apple Tree\", \"Oranges\" or \"Yellow Bananas\""
+msgstr ""
+"<code>Macieira|Laranjas|Bananas Amarelas</code> ignora títulos que "
+"correspondam exatamente a \"Macieira\", \"Laranjas\" ou \"Bananas Amarelas\""
+
+#: toc.php:960
+msgid "Smooth scroll top offset"
+msgstr "Recuo superior do scroll suave"
+
+#: toc.php:963
+msgid ""
+"If you have a consistent menu across the top of your site, you can adjust "
+"the top offset to stop the headings from appearing underneath the top menu. "
+"A setting of 30 accommodates the WordPress admin bar. This setting appears "
+"after you have enabled smooth scrolling from above."
+msgstr ""
+"Se você usa um menu no topo do seu site, você pode ajustar um recuo superior "
+"para evitar que os títulos sejam cobertos por ele. A configuração de 30px "
+"funciona para a barra de administração do Wordpress. Essa configuração só é "
+"exibida caso você habilite o scroll suave acima."
+
+#: toc.php:967
+msgid "Restrict path"
+msgstr "Restringir caminho"
+
+#: toc.php:970
+msgid ""
+"Restrict generation of the table of contents to pages that match the "
+"required path. This path is from the root of your site and always begins "
+"with a forward slash."
+msgstr ""
+"Restringir a inserção das tabelas de conteúdos às páginas que correspondam "
+"ao caminho especificado. Este caminho é relativo ao seu domínio e sempre "
+"começa como uma barra."
+
+#. translators: example URL path restriction
+#: toc.php:973
+msgid "Eg: /wiki/, /corporate/annual-reports/"
+msgstr "Ex: /wiki/, /sobre/relatorios-anuais/"
+
+#: toc.php:977
+msgid "Default anchor prefix"
+msgstr "Prefixo padrão para âncoras"
+
+#: toc.php:980
+msgid ""
+"Anchor targets are restricted to alphanumeric characters as per HTML "
+"specification (see readme for more detail). The default anchor prefix will "
+"be used when no characters qualify. When left blank, a number will be used "
+"instead."
+msgstr ""
+"As âncoras só podem conter caracteres alfanuméricos devido à especificação "
+"HTML (leia o readme para mais detalhes). O prefixo padrão será usado quando "
+"não houver no título caracteres que possam ser usados. Se deixado em branco, "
+"será usado um número."
+
+#: toc.php:981
+msgid ""
+"This option normally applies to content written in character sets other than "
+"ASCII."
+msgstr ""
+"Essa opção normalmente se aplica ao conteúdo escrito com caracteres que não "
+"são ASCII."
+
+#. translators: example anchor prefixes when no ascii characters match
+#: toc.php:984
+msgid "Eg: i, toc_index, index, _"
+msgstr "Ex: i, toc_index, index, _"
+
+#. translators: advanced usage
+#: toc.php:992
+msgid "Usage"
+msgstr "Especificações"
+
+#: toc.php:993
+msgid ""
+"If you would like to fully customise the position of the table of contents, "
+"you can use the %s shortcode by placing it at the desired position of your "
+"post, page or custom post type. This method allows you to generate the table "
+"of contents despite having auto insertion disabled for its content type. "
+"Please visit the help tab for further information about this shortcode."
+msgstr ""
+"Se você quer controle total sobre a posição da tabela de conteúdos, você "
+"pode usar o shortcode %s no local desejado no seu post, página ou tipos "
+"customizados. Esse método permite gerar uma tabela de conteúdos mesmo que a "
+"inserção automática esteja desabilitada para um determinado tipo de "
+"conteúdo. Por favor, veja a aba Ajuda para maiores informações."
+
+#: toc.php:1001
+msgid ""
+"At its simplest, placing %s into a page will automatically create a sitemap "
+"of all pages and categories. This also works in a text widget."
+msgstr ""
+"Basta colocar %s em uma página para criar automaticamente um mapa do site "
+"com todas suas páginas e categorias. Também funciona em um widget de texto."
+
+#: toc.php:1005
+msgid "Show page listing"
+msgstr "Mostrar lista de páginas"
+
+#: toc.php:1009
+msgid "Show category listing"
+msgstr "Mostrar lista de categorias"
+
+#: toc.php:1013
+msgid "Heading type"
+msgstr "Tipo de título"
+
+#. translators: the full line is supposed to read - Use [1-6 drop down list] to
+#. print out the titles
+#: toc.php:1016
+msgid "Use"
+msgstr "Usar"
+
+#. translators: the full line is supposed to read - Use [h1-h6 drop down list]
+#. to print out the titles
+#: toc.php:1027
+msgid "to print out the titles"
+msgstr "para exibir os títulos"
+
+#: toc.php:1031
+msgid "Pages label"
+msgstr "Rótulo de Páginas"
+
+#: toc.php:1033
+msgid "Eg: Pages, Page List"
+msgstr "Ex: Páginas, Lista de Páginas"
+
+#: toc.php:1037
+msgid "Categories label"
+msgstr "Rótulo de Categorias"
+
+#: toc.php:1039
+msgid "Eg: Categories, Category List"
+msgstr "Ex: Categorias, Lista de Categorias"
+
+#: toc.php:1045
+msgid "Advanced usage"
+msgstr "Especificações Avançadas"
+
+#: toc.php:1047
+msgid ""
+"lets you print out a listing of only pages. Similarly %s can be used to "
+"print out a category listing. They both can accept a number of attributes so "
+"visit the help tab for more information."
+msgstr ""
+"permite exibir apenas a lista de páginas. Da mesma forma, %s pode ser usada "
+"para exibir a lista de categorias. Ambos aceitam alguns atributos, que estão "
+"detalhados na aba Ajuda."
+
+#: toc.php:1048
+msgid "Examples"
+msgstr "Exemplos"
+
+#: toc.php:1050
+msgid "hides the heading from a category listing"
+msgstr "esconde o título de uma lista de categorias"
+
+#: toc.php:1051
+msgid ""
+"Uses h6 to display %s on a page listing excluding pages with IDs 1 and 15"
+msgstr ""
+"usa h6 para exibir %s numa lista de páginas, excluindo aquelas com IDs 1 e 15"
+
+#: toc.php:1060
+msgid "Update Options"
+msgstr "Atualizar Opções"
+
+#: toc.php:1563
+msgid "Display the table of contents in the sidebar with this widget"
+msgstr "Mostre a tabela de conteúdos na barra lateral com este widget"
+
+#: toc.php:1664
+msgid "Show the table of contents only in the sidebar"
+msgstr "Exibir a Tabela de Conteúdos somente na barra lateral"
+
+#: toc.php:1668
+msgid "For the following content types:"
+msgstr "Para os seguintes tipos de conteúdo:"
+
+#. Plugin Name of the plugin/theme
+msgid "Table of Contents Plus"
+msgstr "Table of Contents Plus"
+
+#. Plugin URI of the plugin/theme
+msgid "http://dublue.com/plugins/toc/"
+msgstr "http://dublue.com/plugins/toc/"
+
+#. Description of the plugin/theme
+msgid ""
+"A powerful yet user friendly plugin that automatically creates a table of "
+"contents. Can also output a sitemap listing all pages and categories."
+msgstr ""
+"Um plugin poderoso e fácil de usar que cria automaticamente uma tabela de "
+"conteúdo. Também pode produzir um sitemap listando todas as páginas e "
+"categorias."
+
+#. Author of the plugin/theme
+msgid "Michael Tran"
+msgstr "Michael Tran"
+
+#. Author URI of the plugin/theme
+msgid "http://dublue.com/"
+msgstr "http://dublue.com/"
+
+#~ msgid "Where's my table of contents?"
+#~ msgstr "Cadê minha Tabela de Conteúdos?"
+
+#~ msgid ""
+#~ "If you're reading this, then chances are you have successfully installed "
+#~ "and enabled the plugin and you're just wondering why the index isn't "
+#~ "appearing right?  Try the following:"
+#~ msgstr ""
+#~ "Se você está lendo isso, então você instalou e habilitou o plugin com "
+#~ "sucesso, e está apenas se perguntando por que sua tabela ainda não "
+#~ "apareceu, certo? Tente o seguinte:"
+
+#~ msgid ""
+#~ "In most cases, the post, page or custom post type has less than the "
+#~ "minimum number of headings. By default, this is set to four so make sure "
+#~ "you have at least four headings within your content. If you want to "
+#~ "change this value, you can find it under 'Main Options' &gt; 'Show when'."
+#~ msgstr ""
+#~ "Na maioria dos casos, o post, página ou tipo customizado têm menos "
+#~ "títulos do que o mínimo necessário. Por padrão, é necessário pelo menos "
+#~ "quatro títulos. Você pode alterar esse valor em 'Opções Principais' &gt; "
+#~ "'Exibir quando...'"
+
+#~ msgid ""
+#~ "Is auto insertion enabled for your content type? By default, only pages "
+#~ "are enabled."
+#~ msgstr ""
+#~ "A inserção automática está habilitada para seu tipo de conteúdo? Por "
+#~ "padrão, apenas páginas estão habilitadas."
+
+#~ msgid ""
+#~ "Have you got <code>[no_toc]</code> somewhere within the content? This "
+#~ "will disable the index for the current post, page or custom post type."
+#~ msgstr ""
+#~ "Existe o código <code>[no_toc]</code> em algum lugar do seu conteúdo? "
+#~ "Isso desabilitará a tabela para o post, página ou tipo customizado que o "
+#~ "contiver."
+
+#~ msgid ""
+#~ "If you are using the TOC+ widget, check if you have the <em>\"Show the "
+#~ "table of contents only in the sidebar\"</em> enabled as this will limit "
+#~ "its display to only the sidebar. You can check by going into Appearance "
+#~ "&gt; Widgets."
+#~ msgstr ""
+#~ "Se você está usando o widget TOC+, verifique se você habilitou a opção "
+#~ "<em>\"Exibir a Tabela de Conteúdos somente na barra lateral\"</em>. Você "
+#~ "pode fazer essa verificação em Aparência &gt; Widgets."
+
+#~ msgid ""
+#~ "You may have restricted generation to a URL path match. The setting can "
+#~ "be found in the advanced section under Main Options."
+#~ msgstr ""
+#~ "Talvez você tenha restringido a criação das tabelas a um caminho "
+#~ "específico. Essa configuração pode ser encontrada na seção Avançado das "
+#~ "Opções Principais."
+
+#~ msgid "How do I stop the table of contents from appearing on a single page?"
+#~ msgstr "Como desabilito a Tabela de Conteúdos em uma única página?"
+
+#~ msgid ""
+#~ "Place the following <code>[no_toc]</code> anywhere on the page to "
+#~ "suppress the table of contents. This is known as a shortcode and works "
+#~ "for posts, pages and custom post types that make use of the_content()"
+#~ msgstr ""
+#~ "Digite o código <code>[no_toc]</code> em qualquer local da página para "
+#~ "suprimir a tabela de conteúdos. Isso é conhecido como shortcode e "
+#~ "funciona para posts, páginas e tipos customizados que fazem uso da função "
+#~ "the_content()"
+
+#~ msgid ""
+#~ "I've set wrapping to left or right but the headings don't wrap around the "
+#~ "table of contents"
+#~ msgstr ""
+#~ "Eu configurei a Tabela de Conteúdos para flutuar na esquerda ou na "
+#~ "direita, mas os títulos continuam abaixo dela"
+
+#~ msgid ""
+#~ "This normally occurs when there is a CSS clear directive in or around the "
+#~ "heading originating from the theme (Twenty Eleven and Twenty Twelve are "
+#~ "two themes which do this). This directive tells the user agent to reset "
+#~ "the previous wrapping specifications."
+#~ msgstr ""
+#~ "Isso normalmente ocorre quando existe uma regra CSS 'clear' no título do "
+#~ "tema  (Twenty Eleven e Twenty Twelve são temas que fazem isso). Essa "
+#~ "regra diz ao navegador para não aceitar regras de floating ao redor do "
+#~ "elemento para a qual foi definida."
+
+#~ msgid ""
+#~ "You can adjust your theme's CSS or try moving the table of contents "
+#~ "position to the top of the page. If you didn't build your theme, I'd "
+#~ "highly suggest you try the %s if you wish to make CSS changes."
+#~ msgstr ""
+#~ "Você pode ajustar o CSS do seu tema ou tentar mover a tabela de conteúdos "
+#~ "para o início da página. Se você não construiu seu tema, recomendo "
+#~ "fortemente o uso do %s para fazer mudanças no CSS."
+
+#~ msgid ""
+#~ "Try adding the following CSS to allow the wrapping to occur around the "
+#~ "table of contents:"
+#~ msgstr ""
+#~ "Tente adicionar o seguinte CSS para permitir que seus títulos se acomodem "
+#~ "ao lado da tabela de conteúdos:"
+
+#~ msgid ""
+#~ "How do I include the name of the page in the table of contents title?"
+#~ msgstr ""
+#~ "Como posso incluir o título da minha página no título da Tabela de "
+#~ "Conteúdos?"
+
+#~ msgid ""
+#~ "As the title of the page changes depending on the page you're viewing, "
+#~ "you can use the following special variable to automatically insert the "
+#~ "title of the page into the table of contents heading:"
+#~ msgstr ""
+#~ "Você pode usar a seguinte variável para automaticamente inserir o título "
+#~ "da sua página no título da Tabela de Conteúdos:"
+
+#~ msgid "You can use it as is or place text either side of the variable."
+#~ msgstr "Você pode usá-la sozinha ou conjuntamente com outros textos."
+
+#~ msgid ""
+#~ "As an example: if your page is named <em>Great Expectations</em> and your "
+#~ "table of contents title is set to <em>Contents for %PAGE_NAME%</em>, the "
+#~ "final title would read <em>Contents for Great Expectations</em>"
+#~ msgstr ""
+#~ "Por exemplo: se sua página se chama <em>Grandes Espectativas</em> e o "
+#~ "título da sua Tabela de Conteúdos está definido como <em>Conteúdos de "
+#~ "%PAGE_NAME%</em>, o título exibido será <em>Conteúdos de Grandes "
+#~ "Espectativas</em>"
+
+#~ msgid "The sitemap uses a strange font dissimilar to the rest of the site"
+#~ msgstr "O Sitemap usa uma fonte estranha, diferente do resto do site"
+
+#~ msgid ""
+#~ "No extra styles are created for the sitemap, instead it inherits any "
+#~ "styles you used when adding the shortcode. If you copy and pasted, you "
+#~ "probably also copied the 'code' tags surrounding it so remove them if "
+#~ "this is the case."
+#~ msgstr ""
+#~ "Não são criados estilos extras para o Sitemap. Mas ele herda todos os "
+#~ "estilos usados ao adicionar o shortcode. Então se você copiou e colou, "
+#~ "você provavelmente copiou também as tags 'code' que o envolvem. Se for "
+#~ "esse o caso, apenas remova-as."
+
+#~ msgid ""
+#~ "In most cases, try to have the shortcode on its own line with nothing "
+#~ "before or after the square brackets."
+#~ msgstr ""
+#~ "Procure deixar o shortcode sozinho na linha, sem nada antes ou depois dos "
+#~ "colchetes."
+
+#~ msgid "What were those shortcodes and attributes again?"
+#~ msgstr "Quais são os shortcodes e atributos mesmo?"
+
+#~ msgid ""
+#~ "When attributes are left out for the shortcodes below, they will fallback "
+#~ "to the settings you defined under Settings &gt; TOC+."
+#~ msgstr ""
+#~ "Quando os atributos não forem definidos, eles usarão as configurações "
+#~ "determinadas em Configurações &gt; TOC+."
+
+#~ msgid "Shortcode"
+#~ msgstr "Shortcode"
+
+#~ msgid "Description"
+#~ msgstr "Descrição"
+
+#~ msgid "Attributes"
+#~ msgstr "Atributos"
+
+#~ msgid ""
+#~ "Lets you generate the table of contents at the preferred position. Also "
+#~ "useful for sites that only require a TOC on a small handful of pages."
+#~ msgstr ""
+#~ "Permite criar a Tabela de Conteúdos em uma posição específica. Também é "
+#~ "útil para sites que só precisem da Tabela de Conteúdos em poucas páginas."
+
+#~ msgid "text, title of the table of contents"
+#~ msgstr "texto, título da tabela de conteúdos"
+
+#~ msgid "true/false, shows or hides the title"
+#~ msgstr "true/false, exibe ou oculta o título"
+
+#~ msgid "text, either \"left\" or \"right\""
+#~ msgstr "texto, apenas \"left\" ou \"right\""
+
+#~ msgid ""
+#~ "numbers, this lets you select the heading levels you want included in the "
+#~ "table of contents. Separate multiple levels with a comma. Example: "
+#~ "include headings 3, 4 and 5 but exclude the others with"
+#~ msgstr ""
+#~ "números, permite selecionar os níveis de títulos que devem ser incluídos "
+#~ "na tabela de conteúdos. Separe múltiplos níveis com vírgulas. Exemplo: "
+#~ "para incluir os títulos 3, 4 e 5, mas excluir os demais, use"
+
+#~ msgid ""
+#~ "text, enter headings to be excluded.  Separate multiple headings with a "
+#~ "pipe <code>|</code>. Use an asterisk <code>*</code> as a wildcard to "
+#~ "match other text. You could also use regular expressions for more "
+#~ "advanced matching."
+#~ msgstr ""
+#~ "texto, digite títulos que devem ser excluídos. Separe vários títulos com "
+#~ "um pipe <code>|</code>.  Use asteriscos <code>*</code> como curingas para "
+#~ "casar com outros textos. Você também pode usar expressões regulares para "
+#~ "correspondências avançadas."
+
+#~ msgid ""
+#~ "Allows you to disable the table of contents for the current post, page, "
+#~ "or custom post type."
+#~ msgstr ""
+#~ "Desabilita a Tabela de Conteúdos em um post, página ou tipo customizado "
+#~ "específico."
+
+#~ msgid ""
+#~ "Produces a listing of all pages and categories for your site. You can use "
+#~ "this on any post, page or even in a text widget."
+#~ msgstr ""
+#~ "Cria uma lista de todas as páginas e categorias do seu site. Você pode "
+#~ "usá-lo em qualquer post, página ou mesmo em um widget de texto."
+
+#~ msgid "Lets you print out a listing of only pages."
+#~ msgstr "Cria uma lista apenas das páginas."
+
+#~ msgid "number between 1 and 6, defines which html heading to use"
+#~ msgstr "número entre 1 e 6, define qual título HTML será usado"
+
+#~ msgid "text, title of the list"
+#~ msgstr "texto, título da lista"
+
+#~ msgid "true/false, shows or hides the list heading"
+#~ msgstr "true/false, exibe ou oculta o título da lista"
+
+#~ msgid "IDs of the pages or categories you wish to exclude"
+#~ msgstr "IDs das páginas ou categorias que não devem ser listadas"
+
+#~ msgid ""
+#~ "ID of the page or category you wish to exclude including its all "
+#~ "descendants"
+#~ msgstr ""
+#~ "IDs das páginas ou categorias que não devem ser listadas, incluindo suas "
+#~ "descendentes"
+
+#~ msgid "Similar to [sitemap_pages] but for categories."
+#~ msgstr "Parecido com [sitemap_pages], mas lista só categorias."
+
+#~ msgid ""
+#~ "This lets you print out an index of all published posts on your site.  By "
+#~ "default, posts are listed in alphabetical order grouped by their first "
+#~ "letters. There are CSS classes for each section, letter and list allowing "
+#~ "you to customise the appearance."
+#~ msgstr ""
+#~ "Cria uma lista de todos os posts publicados no seu site. Por padrão, "
+#~ "posts são listados em ordem alfabética, agrupados pela primeira letra. "
+#~ "Existem classes CSS para cada seção, letra e lista, permitindo que você "
+#~ "personalize a aparência."
+
+#~ msgid "text, either ASC or DESC"
+#~ msgstr "texto, somente ASC ou DESC"
+
+#~ msgid ""
+#~ "text, popular options include \"title\", \"date\", \"ID\", and \"rand\". "
+#~ "See %1$sWP_Query%2$s for a list."
+#~ msgstr ""
+#~ "texto, opções comuns são \"title\", \"date\", \"ID\", e \"rand\". Acesse "
+#~ "%1$sWP_Query%2$s para um lista."
+
+#~ msgid ""
+#~ "true/false (defaults to true), does not separate the lists by first "
+#~ "letter when set to false."
+#~ msgstr ""
+#~ "true/false (padrão em true), não agrupa os posts pela primeira letra "
+#~ "quando definido em false."
+
+#~ msgid "I have another question..."
+#~ msgstr "Tenho uma pergunta diferente..."
+
+#~ msgid ""
+#~ "Visit the %1$splugin homepage%2$s to ask your question - who knows, maybe "
+#~ "your question has already been answered. I'd really like to hear your "
+#~ "suggestions if you have any."
+#~ msgstr ""
+#~ "Acesse a %1$spágina do plugin%2$s para fazer sua pergunta - talvez sua "
+#~ "pergunta já tenha resposta. E se você tem sugestões, eu realmente "
+#~ "gostaria de ouvi-las."
+
+#~ msgid "For developers"
+#~ msgstr "Para desenvolvedores"
+
+#~ msgid "How do I customise my anchors?"
+#~ msgstr "Como eu personalizo minhas âncoras?"
+
+#~ msgid ""
+#~ "If you're still not happy with the anchors, you can modify them to suit "
+#~ "your needs through a custom function hooked into the "
+#~ "<code>toc_url_anchor_target</code> filter.  As an example, place the "
+#~ "below code snippet into your functions.php file to convert all anchors to "
+#~ "uppercase."
+#~ msgstr ""
+#~ "Se você não está satisfeito com as âncoras, você pode modifica-las para "
+#~ "atender suas necessidades através de uma função customizada através do "
+#~ "filtro <code>toc_url_anchor_target</code>. Por exemplo, coloque o código "
+#~ "abaixo no seu arquivo functions.php para transformar todas as âncoras em "
+#~ "maiúsculas:"
+
+#~ msgid ""
+#~ "Returns a HTML formatted string of the table of contents without the "
+#~ "surrounding UL or OL tags to allow the theme editor to supply their own "
+#~ "ID and/or classes to the outer list."
+#~ msgstr ""
+#~ "Retorna uma string HTML da tabela de conteúdos sem as tags UL ou OL "
+#~ "envolvendo-a. Isso permite que o desenvolvedor do tema use suas próprias "
+#~ "ID e/ou classes na lista."
+
+#~ msgid "Both parameters are optional:"
+#~ msgstr "Ambos os parâmetros são opcionais:"
+
+#~ msgid ""
+#~ "is the entire content with headings.  If blank, will default to the "
+#~ "current content found in $post (eg within \"the loop\")."
+#~ msgstr ""
+#~ "is the entire content with headings.  If blank, will default to the "
+#~ "current content found in $post (eg within \"the loop\")."
+
+#~ msgid ""
+#~ "is the URL to prefix the anchor with.  If a string was provided, it will "
+#~ "be used as is.  If set to \"true\" then will try to obtain the permalink "
+#~ "from the $post object."
+#~ msgstr ""
+#~ "is the URL to prefix the anchor with.  If a string was provided, it will "
+#~ "be used as is.  If set to \"true\" then will try to obtain the permalink "
+#~ "from the $post object."
+
+#~ msgid "These examples assume you are within \"the loop\":"
+#~ msgstr "Estes exemplos assumem que você está dentro do \"The Loop\":"
+
+#~ msgid "Obtain the index for the current page"
+#~ msgstr "Obter a tabela de conteúdos da página visualizada:"
+
+#~ msgid "Create a listing of all children and their headings"
+#~ msgstr "Criar uma lista de todos os descendentes com seus títulos:"
