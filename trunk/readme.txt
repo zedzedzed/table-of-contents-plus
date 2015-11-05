@@ -39,7 +39,7 @@ Collaborate, participate, fork this plugin on [Github](https://github.com/zedzed
 * Polish - [Jakub](http://notatki.4use.pl/)
 * Simplified Chinese - Jason
 * Slovak - Boris Gereg
-* Spanish - [Davidsaiz](https://twitter.com/davidsaiz)
+* Spanish - [David Saiz](https://davidsaiz.com/)
 * Ukrainian - [Michael Yunat](http://www.iphostmonitor.com/)
 
 Translations are more than welcome. If you have any advice in making it easier to translate, please let me know.
@@ -124,7 +124,7 @@ I will never ask for any form of reward or compensation.  Helping others achieve
 * Bump tested WordPress version to 4.3.1
 * Add 'enable' and 'disable' API functions so a developer can better control the execution.
 * Add Brazilian Portuguese translation thanks to [Blog de Niterói](https://twitter.com/BlogNiteroi/)
-* Add Spanish translation thanks to [@davidsaiz](https://twitter.com/davidsaiz)
+* Add Spanish translation thanks to [David Saiz](https://davidsaiz.com/)
 * Updated text domain to better support translation packs.
 
 = 1509 =
