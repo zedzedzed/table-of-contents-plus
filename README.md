@@ -11,6 +11,8 @@ Prefer to include the index in the sidebar? Go to Appearance > Widgets and drag 
 
 Custom post types are supported, however, auto insertion works only when the_content() has been used by the custom post type. Each post type will appear in the options panel, so enable the ones you want.
 
+Collaborate, participate, fork this plugin on [Github](https://github.com/zedzedzed/table-of-contents-plus/).
+
 ## Links
 * [WordPress plugin page](https://wordpress.org/plugins/table-of-contents-plus/)
 * [Plugin homepage](http://dublue.com/plugins/toc/)
