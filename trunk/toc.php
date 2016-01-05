@@ -1626,12 +1626,11 @@ if ( !class_exists( 'toc_widget' ) ) :
 					// before widget (defined by themes)
 					echo $before_widget;
 
-					// display the widget title if one was input (before and after defined by themes)
-					if ( !$title ) $title = $toc_options['heading_text'];
-					echo 
-						$before_title . $title . $after_title .
-						'<ul class="toc_widget_list' . $css_classes . '">' . $items . '</ul>'
-					;
+					// display the widget title if one was input (before and after titles defined by themes)
+					if ( $title ) echo $before_title . $title . $after_title;
+
+					// display the list
+					echo '<ul class="toc_widget_list' . $css_classes . '">' . $items . '</ul>';
 					
 					// after widget (defined by themes)
 					echo $after_widget;
@@ -1650,7 +1649,7 @@ if ( !class_exists( 'toc_widget' ) ) :
 			$instance = $old_instance;
 
 			// strip tags for title to remove HTML (important for text inputs)
-			$instance['title'] = strip_tags( $new_instance['title'] );
+			$instance['title'] = strip_tags( trim( $new_instance['title'] ) );
 			
 			// no need to strip tags for the following
 			//$instance['hide_inline'] = $new_instance['hide_inline'];
@@ -1670,7 +1669,7 @@ if ( !class_exists( 'toc_widget' ) ) :
 			$toc_options = $tic->get_options();
 		
 			$defaults = array( 
-				'title' => ''
+				'title' => $toc_options['heading_text']
 			);
 			$instance = wp_parse_args( (array)$instance, $defaults );
 
