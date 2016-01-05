@@ -2,8 +2,8 @@
 Contributors: conjur3r
 Tags: table of contents, indexes, toc, sitemap, cms, options, list, page listing, category listing
 Requires at least: 3.2
-Tested up to: 4.3.1
-Stable tag: 1509
+Tested up to: 4.4
+Stable tag: 1601
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -24,9 +24,11 @@ Prefer to include the index in the sidebar?  Go to Appearance > Widgets and drag
 
 Custom post types are supported, however, auto insertion works only when the_content() has been used by the custom post type.  Each post type will appear in the options panel, so enable the ones you want.
 
-Collaborate, participate, fork this plugin on [Github](https://github.com/zedzedzed/table-of-contents-plus/).
+Collaborate, participate, fork this plugin on [Github](https://github.com/zedzedzed/table-of-contents-plus/).  Reach out on Github or place them at [http://dublue.com/plugins/toc/](http://dublue.com/plugins/toc/)
 
 = Available Languages =
+This plugin is being migrated towards [Translation Packs](https://translate.wordpress.org/projects/wp-plugins/table-of-contents-plus) and older .mo and .po files are no longer being accepted.  When a translation reaches maturity, the bundled language files will be removed from the distribution in favour of the Translation Pack.
+
 * Australian English (default)
 * Brazilian Portuguese - [Blog de Niterói](https://twitter.com/BlogNiteroi/)
 * Danish - [Cupunu](http://cupunu.dk/)
@@ -41,10 +43,6 @@ Collaborate, participate, fork this plugin on [Github](https://github.com/zedzed
 * Slovak - Boris Gereg
 * Spanish - [David Saiz](https://davidsaiz.com/)
 * Ukrainian - [Michael Yunat](http://www.iphostmonitor.com/)
-
-Translations are more than welcome. If you have any advice in making it easier to translate, please let me know.
-
-If you have questions or suggestions, please place them at [http://dublue.com/plugins/toc/](http://dublue.com/plugins/toc/)
 
 
 == Screenshots ==
@@ -119,12 +117,13 @@ I will never ask for any form of reward or compensation.  Helping others achieve
 
 
 == Changelog ==
-= 15xx =
+= 1601 =
 * Released: xx
-* Bump tested WordPress version to 4.3.1
+* Bump tested WordPress version to 4.4
 * Add 'enable' and 'disable' API functions so a developer can better control the execution.
 * Add Brazilian Portuguese translation thanks to [Blog de Niterói](https://twitter.com/BlogNiteroi/)
 * Add Spanish translation thanks to [David Saiz](https://davidsaiz.com/)
+* TOC+ widget now adheres to a blank title if none provided. Thanks to [Dirk](http://dublue.com/plugins/toc/comment-page-11/#comment-5140) for the cue.
 * Updated text domain to better support translation packs.
 
 = 1509 =

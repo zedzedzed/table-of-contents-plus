@@ -7,11 +7,11 @@ Author: 		Michael Tran
 Author URI: 	http://dublue.com/
 Text Domain:	table-of-contents-plus
 Domain Path:	/languages
-Version: 		1509
+Version: 		1601
 License:		GPL2
 */
 
-/*  Copyright 2015  Michael Tran  (michael@dublue.com)
+/*  Copyright 2016  Michael Tran  (michael@dublue.com)
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License, version 2, as 
