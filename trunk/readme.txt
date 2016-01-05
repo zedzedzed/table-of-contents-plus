@@ -118,12 +118,13 @@ I will never ask for any form of reward or compensation.  Helping others achieve
 
 == Changelog ==
 = 1601 =
-* Released: xx
+* Released: 5 January 2016
 * Bump tested WordPress version to 4.4
 * Add 'enable' and 'disable' API functions so a developer can better control the execution.
 * Add Brazilian Portuguese translation thanks to [Blog de Niterói](https://twitter.com/BlogNiteroi/)
 * Add Spanish translation thanks to [David Saiz](https://davidsaiz.com/)
 * TOC+ widget now adheres to a blank title if none provided. Thanks to [Dirk](http://dublue.com/plugins/toc/comment-page-11/#comment-5140) for the cue.
+* Updated jQuery Smooth Scroll 1.5.5 to 1.6.0
 * Updated text domain to better support translation packs.
 
 = 1509 =
