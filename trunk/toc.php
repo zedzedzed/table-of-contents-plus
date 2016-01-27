@@ -320,57 +320,30 @@ if ( !class_exists( 'toc' ) ) :
 				$html = '<div class="toc_sitemap">';
 				if ( $this->options['sitemap_show_page_listing'] )
 					$html .=
-						'<h' . $this->options['sitemap_heading_type'] . ' class="toc_sitemap_pages">' . esc_html( $this->options['sitemap_pages'] ) . '</h' . $this->options['sitemap_heading_type'] . '>' .
+						'<h' . intval( $this->options['sitemap_heading_type'] ) . ' class="toc_sitemap_pages">' . esc_html( htmlspecialchars(  $this->options['sitemap_pages'] ) ) . '</h' . intval( $this->options['sitemap_heading_type'] ) . '>' .
 						'<ul class="toc_sitemap_pages_list">' .
 							wp_list_pages( array('title_li' => '', 'echo' => false ) ) .
 						'</ul>'
 					;
 				if ( $this->options['sitemap_show_category_listing'] )
 					$html .=
-						'<h' . $this->options['sitemap_heading_type'] . ' class="toc_sitemap_categories">' . esc_html( $this->options['sitemap_categories'] ) . '</h' . $this->options['sitemap_heading_type'] . '>' .
+						'<h' . $this->options['sitemap_heading_type'] . ' class="toc_sitemap_categories">' . esc_html( htmlspecialchars( $this->options['sitemap_categories'] ) ) . '</h' . intval( $this->options['sitemap_heading_type'] ) . '>' .
 						'<ul class="toc_sitemap_categories_list">' .
 							wp_list_categories( array( 'title_li' => '', 'echo' => false ) ) .
 						'</ul>'
 					;
 				$html .= '</div>';
 			}
-			
+
 			return $html;
 		}
-		
-		
+
+
 		function shortcode_sitemap_pages( $atts )
 		{
 			extract( shortcode_atts( array(
-				'heading' => $this->options['sitemap_heading_type'],
-				'label' => esc_html( $this->options['sitemap_pages'] ),
-				'no_label' => false,
-				'exclude' => '',
-				'exclude_tree' => ''
-				), $atts )
-			);
-
-			if ( $heading < 1 || $heading > 6 )		// h1 to h6 are valid
-				$heading = $this->options['sitemap_heading_type'];
-
-			$html = '<div class="toc_sitemap">';
-			if ( !$no_label ) $html .= '<h' . $heading . ' class="toc_sitemap_pages">' . $label . '</h' . $heading . '>';
-			$html .=
-					'<ul class="toc_sitemap_pages_list">' .
-						wp_list_pages( array('title_li' => '', 'echo' => false, 'exclude' => $exclude, 'exclude_tree' => $exclude_tree ) ) .
-					'</ul>' .
-				'</div>'
-			;
-			
-			return $html;
-		}
-		
-		
-		function shortcode_sitemap_categories( $atts )
-		{
-			extract( shortcode_atts( array(
 				'heading' => intval( $this->options['sitemap_heading_type'] ),
-				'label' => esc_attr( $this->options['sitemap_categories'] ),
+				'label' => esc_html( htmlspecialchars( $this->options[ 'sitemap_pages' ] ) ),
 				'no_label' => false,
 				'exclude' => '',
 				'exclude_tree' => ''
@@ -380,8 +353,37 @@ if ( !class_exists( 'toc' ) ) :
 			$no_label = ( $no_label ) ? true : false;
 			$label = esc_html( $label );
 			if ( $heading < 1 || $heading > 6 )		// h1 to h6 are valid
-				$heading = $this->options['sitemap_heading_type'];
-			
+				$heading = intval( $this->options['sitemap_heading_type'] );
+
+			$html = '<div class="toc_sitemap">';
+			if ( !$no_label ) $html .= '<h' . $heading . ' class="toc_sitemap_pages">' . $label . '</h' . $heading . '>';
+			$html .=
+					'<ul class="toc_sitemap_pages_list">' .
+						wp_list_pages( array('title_li' => '', 'echo' => false, 'exclude' => $exclude, 'exclude_tree' => $exclude_tree ) ) .
+					'</ul>' .
+				'</div>'
+			;
+
+			return $html;
+		}
+
+
+		function shortcode_sitemap_categories( $atts )
+		{
+			extract( shortcode_atts( array(
+				'heading' => intval( $this->options['sitemap_heading_type'] ),
+				'label' => esc_attr( htmlspecialchars( $this->options['sitemap_categories'] ) ),
+				'no_label' => false,
+				'exclude' => '',
+				'exclude_tree' => ''
+				), $atts )
+			);
+			$heading = intval( $heading );
+			$no_label = ( $no_label ) ? true : false;
+			$label = esc_html( $label );
+			if ( $heading < 1 || $heading > 6 )		// h1 to h6 are valid
+				$heading = intval( $this->options['sitemap_heading_type'] );
+
 			$html = '<div class="toc_sitemap">';
 			if ( !$no_label ) $html .= '<h' . $heading . ' class="toc_sitemap_categories">' . $label . '</h' . $heading . '>';
 			$html .=
@@ -390,11 +392,11 @@ if ( !class_exists( 'toc' ) ) :
 					'</ul>' .
 				'</div>'
 			;
-			
+
 			return $html;
 		}
-		
-		
+
+
 		function shortcode_sitemap_posts( $atts )
 		{
 			extract( shortcode_atts( array(
@@ -403,7 +405,7 @@ if ( !class_exists( 'toc' ) ) :
 				'separate' => true
 				), $atts )
 			);
-			
+
 			$articles = new WP_Query(array(
 				'post_type' => 'post',
 				'post_status' => 'publish',
@@ -411,12 +413,12 @@ if ( !class_exists( 'toc' ) ) :
 				'orderby' => $orderby,
 				'posts_per_page' => -1
 			));
-			
+
 			$html = $letter = '';
 
-			$separate = strtolower($separate);
+			$separate = strtolower( $separate );
 			if ( $separate == 'false' || $separate == 'no') $separate = false;
-			
+
 			while ( $articles->have_posts() ) {
 				$articles->the_post();
 				$title = strip_tags(get_the_title());
@@ -424,7 +426,7 @@ if ( !class_exists( 'toc' ) ) :
 				if ( $separate ) {
 					if ( $letter != strtolower($title[0]) ) {
 						if ( $letter ) $html .= '</ul></div>';
-						
+
 						$html .= '<div class="toc_sitemap_posts_section"><p class="toc_sitemap_posts_letter">' . strtolower($title[0]) . '</p><ul class="toc_sitemap_posts_list">';
 						$letter = strtolower($title[0]);
 					}
@@ -432,34 +434,34 @@ if ( !class_exists( 'toc' ) ) :
 
 				$html .= '<li><a href="' . esc_url( get_permalink( $articles->post->ID ) ) . '">' . $title . '</a></li>';
 			}
-			
+
 			if ( $html ) {
 				if ( $separate )
 					$html .= '</div>';
 				else
 					$html = '<div class="toc_sitemap_posts_section"><ul class="toc_sitemap_posts_list">' . $html . '</ul></div>';
 			}
-			
+
 			wp_reset_postdata();
-			
+
 			return $html;
 		}
-		
-		
+
+
 		/**
 		 * Register and load CSS and javascript files for frontend.
 		 */
 		function wp_enqueue_scripts()
 		{
 			$js_vars = array();
-			
+
 			// register our CSS and scripts
 			wp_register_style( 'toc-screen', $this->path . '/screen.min.css', array(), TOC_VERSION );
 			wp_register_script( 'toc-front', $this->path . '/front.min.js', array('jquery'), TOC_VERSION, true );
-			
+
 			// enqueue them!
 			if ( !$this->options['exclude_css'] ) wp_enqueue_style("toc-screen");
-			
+
 			if ( $this->options['smooth_scroll'] ) $js_vars['smooth_scroll'] = true;
 			wp_enqueue_script( 'toc-front' );
 			if ( $this->options['show_heading_text'] && $this->options['visibility'] ) {
@@ -471,7 +473,7 @@ if ( !class_exists( 'toc' ) ) :
 			}
 			if ( $this->options['smooth_scroll_offset'] != TOC_SMOOTH_SCROLL_OFFSET )
 				$js_vars['smooth_scroll_offset'] = esc_js($this->options['smooth_scroll_offset']);
-			
+
 			if ( count($js_vars) > 0 ) {
 				wp_localize_script(
 					'toc-front',
@@ -480,36 +482,36 @@ if ( !class_exists( 'toc' ) ) :
 				);
 			}
 		}
-		
-		
+
+
 		function plugins_loaded()
 		{
 			load_plugin_textdomain( 'table-of-contents-plus', false, dirname(plugin_basename(__FILE__)) . '/languages/' );
 		}
-		
-		
+
+
 		function admin_init()
 		{
 			wp_register_script( 'toc_admin_script', $this->path . '/admin.js' );
 			wp_register_style( 'toc_admin_style', $this->path . '/admin.css' );
 		}
-		
-		
+
+
 		function admin_menu()
 		{
 			$page = add_submenu_page(
-				'options-general.php', 
+				'options-general.php',
 				 esc_html__('TOC', 'table-of-contents-plus') . '+',
 				 esc_html__('TOC', 'table-of-contents-plus') . '+',
-				'manage_options', 
-				'toc', 
+				'manage_options',
+				'toc',
 				array(&$this, 'admin_options')
 			);
-			
+
 			add_action( 'admin_print_styles-' . $page, array(&$this, 'admin_options_head') );
 		}
-		
-		
+
+
 		function widgets_init()
 		{
 			register_widget('toc_widget');
@@ -535,8 +537,8 @@ if ( !class_exists( 'toc' ) ) :
 				}
 			}
 		}
-		
-		
+
+
 		/**
 		 * Load needed scripts and styles only on the toc administration interface.
 		 */
@@ -548,8 +550,8 @@ if ( !class_exists( 'toc' ) ) :
 			wp_enqueue_script( 'toc_admin_script' );
 			wp_enqueue_style( 'toc_admin_style' );
 		}
-		
-		
+
+
 		/**
 		 * Tries to convert $string into a valid hex colour.
 		 * Returns $default if $string is not a hex value, otherwise returns verified hex.
@@ -558,17 +560,17 @@ if ( !class_exists( 'toc' ) ) :
 		{
 
 			$return = $default;
-			
+
 			if ( $string ) {
 				// strip out non hex chars
 				$return = preg_replace( '/[^a-fA-F0-9]*/', '', $string );
-				
+
 				switch ( strlen($return) ) {
 					case 3:	// do next
 					case 6:
 						$return = '#' . $return;
 						break;
-					
+
 					default:
 						if ( strlen($return) > 6 )
 							$return = '#' . substr($return, 0, 6);	// if > 6 chars, then take the first 6
@@ -578,11 +580,11 @@ if ( !class_exists( 'toc' ) ) :
 							$return = $default;						// not valid, return $default
 				}
 			}
-			
+
 			return $return;
 		}
-		
-		
+
+
 		private function save_admin_options()
 		{
 			global $post_id;
@@ -597,34 +599,34 @@ if ( !class_exists( 'toc' ) ) :
 			// require an administrator level to save
 			if ( !current_user_can( 'manage_options', $post_id ) )
 				return false;
-			
+
 			// use stripslashes on free text fields that can have ' " \
-			// WordPress automatically slashes these characters as part of 
+			// WordPress automatically slashes these characters as part of
 			// wp-includes/load.php::wp_magic_quotes()
-			
+
 			$custom_background_colour = $this->hex_value( trim($_POST['custom_background_colour']), TOC_DEFAULT_BACKGROUND_COLOUR );
 			$custom_border_colour = $this->hex_value( trim($_POST['custom_border_colour']), TOC_DEFAULT_BORDER_COLOUR );
 			$custom_title_colour = $this->hex_value( trim($_POST['custom_title_colour']), TOC_DEFAULT_TITLE_COLOUR );
 			$custom_links_colour = $this->hex_value( trim($_POST['custom_links_colour']), TOC_DEFAULT_LINKS_COLOUR );
 			$custom_links_hover_colour = $this->hex_value( trim($_POST['custom_links_hover_colour']), TOC_DEFAULT_LINKS_HOVER_COLOUR );
 			$custom_links_visited_colour = $this->hex_value( trim($_POST['custom_links_visited_colour']), TOC_DEFAULT_LINKS_VISITED_COLOUR );
-			
+
 			if ( $restrict_path = sanitize_text_field($_POST['restrict_path']) ) {
 				if ( strpos($restrict_path, '/') !== 0 ) {
 					// restrict path did not start with a / so unset it
 					$restrict_path = '';
 				}
 			}
-			
+
 			$this->options = array_merge(
 				$this->options,
 				array(
-					'fragment_prefix' => sanitize_text_field($_POST['fragment_prefix']),
+					'fragment_prefix' => esc_html( wp_unslash( $_POST['fragment_prefix']) ),
 					'position' => intval($_POST['position']),
 					'start' => intval($_POST['start']),
 					'show_heading_text' => (isset($_POST['show_heading_text']) && $_POST['show_heading_text']) ? true : false,
-					'heading_text' => sanitize_text_field( trim($_POST['heading_text']) ),
-					'auto_insert_post_types' => wp_unslash( $_POST['auto_insert_post_types'] ),
+					'heading_text' => esc_html( wp_unslash( trim($_POST['heading_text']) ) ),
+					'auto_insert_post_types' => wp_unslash( (array) $_POST['auto_insert_post_types'] ),
 					'show_heirarchy' => (isset($_POST['show_heirarchy']) && $_POST['show_heirarchy']) ? true : false,
 					'ordered_list' => (isset($_POST['ordered_list']) && $_POST['ordered_list']) ? true : false,
 					'smooth_scroll' => (isset($_POST['smooth_scroll']) && $_POST['smooth_scroll']) ? true : false,
@@ -633,12 +635,12 @@ if ( !class_exists( 'toc' ) ) :
 					'visibility_show' => sanitize_text_field( trim($_POST['visibility_show']) ),
 					'visibility_hide' => sanitize_text_field( trim($_POST['visibility_hide']) ),
 					'visibility_hide_by_default' => (isset($_POST['visibility_hide_by_default']) && $_POST['visibility_hide_by_default']) ? true : false,
-					'width' => sanitize_text_field($_POST['width']),
+					'width' => intval($_POST['width']),
 					'width_custom' => floatval($_POST['width_custom']),
-					'width_custom_units' => sanitize_text_field($_POST['width_custom_units']),
+					'width_custom_units' => $this->esc_css_unit($_POST['width_custom_units']),
 					'wrapping' => intval($_POST['wrapping']),
 					'font_size' => floatval($_POST['font_size']),
-					'font_size_units' => sanitize_text_field($_POST['font_size_units']),
+					'font_size_units' => $this->esc_css_unit($_POST['font_size_units']),
 					'theme' => intval($_POST['theme']),
 					'custom_background_colour' =>  $custom_background_colour ,
 					'custom_border_colour' =>  $custom_border_colour,
@@ -651,28 +653,28 @@ if ( !class_exists( 'toc' ) ) :
 					'bullet_spacing' => (isset($_POST['bullet_spacing']) && $_POST['bullet_spacing']) ? true : false,
 					'include_homepage' => (isset($_POST['include_homepage']) && $_POST['include_homepage']) ? true : false,
 					'exclude_css' => (isset($_POST['exclude_css']) && $_POST['exclude_css']) ? true : false,
-					'heading_levels' => @(array)$_POST['heading_levels'],
-					'exclude' => sanitize_text_field( trim($_POST['exclude']) ),
+					'heading_levels' => wp_unslash( ( array) $_POST[ 'heading_levels' ] ),
+					'exclude' => wp_unslash( trim($_POST['exclude']) ),
 					'restrict_path' => $restrict_path,
 					'sitemap_show_page_listing' => (isset($_POST['sitemap_show_page_listing']) && $_POST['sitemap_show_page_listing']) ? true : false,
 					'sitemap_show_category_listing' => (isset($_POST['sitemap_show_category_listing']) && $_POST['sitemap_show_category_listing']) ? true : false,
 					'sitemap_heading_type' => intval($_POST['sitemap_heading_type']),
-					'sitemap_pages' => sanitize_text_field( trim($_POST['sitemap_pages']) ),
-					'sitemap_categories' => sanitize_text_field( trim($_POST['sitemap_categories']) )
+					'sitemap_pages'      => esc_html( wp_unslash( $_POST[ 'sitemap_pages' ] ) ),
+					'sitemap_categories' => esc_html( wp_unslash( $_POST[ 'sitemap_categories' ] ) )
 				)
 			);
-			
+
 			// update_option will return false if no changes were made
 			update_option( 'toc-options', $this->options );
-			
+
 			return true;
 		}
-		
-		
-		function admin_options() 
+
+
+		function admin_options()
 		{
 			$msg = '';
-		
+
 			if ( isset( $_GET['update'] ) ) {
 				if ( $this->save_admin_options() )
 					$msg = '<div id="message" class="updated fade"><p>' . esc_html__('Options saved.', 'table-of-contents-plus') . '</p></div>';
@@ -685,7 +687,7 @@ if ( !class_exists( 'toc' ) ) :
 <div id="icon-options-general" class="icon32"><br /></div>
 <h2>Table of Contents Plus</h2>
 <?php echo $msg; ?>
-<form method="post" action="<?php echo esc_attr('?page=' . $_GET['page'] . '&update'); ?>">
+<form method="post" action="<?php echo esc_attr('?page=' . sanitize_text_field( $_GET['page'] ) . '&update'); ?>">
 <?php wp_nonce_field( plugin_basename(__FILE__), 'toc-admin-options' ); ?>
 
 <ul id="tabbed-nav">
@@ -695,7 +697,7 @@ if ( !class_exists( 'toc' ) ) :
 </ul>
 <div class="tab_container">
 	<div id="tab1" class="tab_content">
-  
+
 <table class="form-table">
 <tbody>
 <tr>
@@ -720,7 +722,7 @@ if ( !class_exists( 'toc' ) ) :
 				echo '>' . $i . '</option>' . "\n";
 			}
 ?>
-		</select> <?php 
+		</select> <?php
 		/* translators: text follows drop down list of numbers */
 		esc_html_e('or more headings are present', 'table-of-contents-plus'); ?>
 	</td>
@@ -739,30 +741,30 @@ if ( !class_exists( 'toc' ) ) :
 ?>
 </tr>
 <tr>
-	<th><label for="show_heading_text"><?php 
+	<th><label for="show_heading_text"><?php
 	/* translators: this is the title of the table of contents */
 			esc_html_e('Heading text', 'table-of-contents-plus'); ?></label></th>
 	<td>
 		<input type="checkbox" value="1" id="show_heading_text" name="show_heading_text"<?php if ( $this->options['show_heading_text'] ) echo ' checked="checked"'; ?> /><label for="show_heading_text"> <?php esc_html_e('Show title on top of the table of contents', 'table-of-contents-plus'); ?></label><br />
 		<div class="more_toc_options<?php if ( !$this->options['show_heading_text'] ) echo ' disabled'; ?>">
-			<input type="text" class="regular-text" value="<?php echo esc_attr( $this->options['heading_text'] ); ?>" id="heading_text" name="heading_text" />
+			<input type="text" class="regular-text" value="<?php echo esc_attr( htmlentities( $this->options['heading_text'] ) ); ?>" id="heading_text" name="heading_text" />
 			<span class="description"><label for="heading_text"><?php esc_html_e('Eg: Contents, Table of Contents, Page Contents', 'table-of-contents-plus'); ?></label></span><br /><br />
-			
+
 			<input type="checkbox" value="1" id="visibility" name="visibility"<?php if ( $this->options['visibility'] ) echo ' checked="checked"'; ?> /><label for="visibility"> <?php esc_html_e( 'Allow the user to toggle the visibility of the table of contents', 'table-of-contents-plus'); ?></label><br />
 			<div class="more_toc_options<?php if ( !$this->options['visibility'] ) echo ' disabled'; ?>">
 				<table class="more_toc_options_table">
 				<tbody>
 				<tr>
 					<th><label for="visibility_show"><?php esc_html_e('Show text', 'table-of-contents-plus'); ?></label></th>
-					<td><input type="text" class="" value="<?php echo esc_attr( $this->options['visibility_show'] ); ?>" id="visibility_show" name="visibility_show" />
-					<span class="description"><label for="visibility_show"><?php 
+					<td><input type="text" class="" value="<?php echo esc_attr( htmlentities( $this->options['visibility_show'] ) ); ?>" id="visibility_show" name="visibility_show" />
+					<span class="description"><label for="visibility_show"><?php
 					/* translators: example text to display when you want to expand the table of contents */
 							esc_html_e('Eg: show', 'table-of-contents-plus'); ?></label></span></td>
 				</tr>
 				<tr>
 					<th><label for="visibility_hide"><?php esc_html_e('Hide text', 'table-of-contents-plus'); ?></label></th>
-					<td><input type="text" class="" value="<?php echo esc_attr( $this->options['visibility_hide'] ); ?>" id="visibility_hide" name="visibility_hide" />
-					<span class="description"><label for="visibility_hide"><?php 
+					<td><input type="text" class="" value="<?php echo esc_attr( htmlentities( $this->options['visibility_hide'] ) ); ?>" id="visibility_hide" name="visibility_hide" />
+					<span class="description"><label for="visibility_hide"><?php
 					/* translators: example text to display when you want to collapse the table of contents */
 							esc_html_e('Eg: hide', 'table-of-contents-plus'); ?></label></span></td>
 				</tr>
@@ -815,14 +817,14 @@ if ( !class_exists( 'toc' ) ) :
 				<option value="75%"<?php selected ( '75%' , $this->options['width'] ) ; ?>>75%</option>
 				<option value="100%"<?php selected ( '100%' , $this->options['width'] ) ; ?>>100%</option>
 			</optgroup>
-			<optgroup label="<?php 
+			<optgroup label="<?php
 			/* translators: other width */
 			esc_html_e('Other', 'table-of-contents-plus'); ?>">
 				<option value="User defined"<?php selected( 'User defined', $this->options[ 'width' ] ); ?>><?php esc_html_e( 'User defined', 'table-of-contents-plus' ); ?></option>
 			</optgroup>
 		</select>
 		<div class="more_toc_options<?php if ( 'User defined' !== $this->options['width'] ) echo ' disabled'; ?>">
-			<label for="width_custom"><?php 
+			<label for="width_custom"><?php
 			/* translators: ignore %s as it's some HTML label tags */
 			printf( esc_html__('Please enter a number and %s select its units, eg: 100px, 10em', 'table-of-contents-plus'), '</label><label for="width_custom_units">' ); ?></label><br />
 			<input type="text" class="regular-text" value="<?php echo esc_attr( floatval( $this->options['width_custom'] ) ); ?>" id="width_custom" name="width_custom" />
@@ -856,7 +858,7 @@ if ( !class_exists( 'toc' ) ) :
 	</td>
 </tr>
 <tr>
-	<th><?php 
+	<th><?php
 	/* translators: appearance / colour / look and feel options */
 	 esc_html_e('Presentation', 'table-of-contents-plus'); ?></th>
 	<td>
@@ -891,7 +893,7 @@ if ( !class_exists( 'toc' ) ) :
 			</label>
 		</div>
 		<div class="clear"></div>
-		
+
 		<div class="more_toc_options<?php if ( TOC_THEME_CUSTOM != $this->options['theme'] ) echo ' disabled'; ?>">
 			<table id="theme_custom" class="more_toc_options_table">
 			<tbody>
@@ -993,7 +995,7 @@ if ( !class_exists( 'toc' ) ) :
 		<td>
 			<input type="text" class="regular-text" value="<?php echo esc_attr( $this->options['restrict_path']); ?>" id="restrict_path" name="restrict_path" /><br />
 			<label for="restrict_path"><?php esc_html_e('Restrict generation of the table of contents to pages that match the required path. This path is from the root of your site and always begins with a forward slash.', 'table-of-contents-plus'); ?><br />
-			<span class="description"><?php 
+			<span class="description"><?php
 			/* translators: example URL path restriction */
 			_e('Eg: /wiki/, /corporate/annual-reports/', 'table-of-contents-plus'); ?></span></label>
 		</td>
@@ -1001,10 +1003,10 @@ if ( !class_exists( 'toc' ) ) :
 	<tr>
 		<th><label for="fragment_prefix"><?php esc_html_e('Default anchor prefix', 'table-of-contents-plus'); ?></label></th>
 		<td>
-			<input type="text" class="regular-text" value="<?php echo esc_attr( $this->options['fragment_prefix']); ?>" id="fragment_prefix" name="fragment_prefix" /><br />
+			<input type="text" class="regular-text" value="<?php echo esc_attr( htmlentities( $this->options['fragment_prefix'] ) ); ?>" id="fragment_prefix" name="fragment_prefix" /><br />
 			<label for="fragment_prefix"><?php esc_html_e('Anchor targets are restricted to alphanumeric characters as per HTML specification (see readme for more detail). The default anchor prefix will be used when no characters qualify. When left blank, a number will be used instead.', 'table-of-contents-plus'); ?><br />
 			<?php esc_html_e('This option normally applies to content written in character sets other than ASCII.', 'table-of-contents-plus'); ?><br />
-			<span class="description"><?php 
+			<span class="description"><?php
 			/* translators: example anchor prefixes when no ascii characters match */
 			 esc_html_e('Eg: i, toc_index, index, _', 'table-of-contents-plus'); ?></span></label>
 		</td>
@@ -1012,7 +1014,7 @@ if ( !class_exists( 'toc' ) ) :
 	</tbody>
 	</table>
 
-	<h4><?php 
+	<h4><?php
 	/* translators: advanced usage */
 	 esc_html_e('Usage', 'table-of-contents-plus'); ?></h4>
 	<p><?php printf( esc_html__('If you would like to fully customise the position of the table of contents, you can use the %s shortcode by placing it at the desired position of your post, page or custom post type. This method allows you to generate the table of contents despite having auto insertion disabled for its content type. Please visit the help tab for further information about this shortcode.', 'table-of-contents-plus'), '<code>[toc]</code>'); ?></p>
@@ -1021,7 +1023,7 @@ if ( !class_exists( 'toc' ) ) :
 
 	</div>
 	<div id="tab2" class="tab_content">
-	
+
 
 <p><?php printf( esc_html__('At its simplest, placing %s into a page will automatically create a sitemap of all pages and categories. This also works in a text widget.', 'table-of-contents-plus'), '<code>[sitemap]</code>'); ?></p>
 <table class="form-table">
@@ -1036,7 +1038,7 @@ if ( !class_exists( 'toc' ) ) :
 </tr>
 <tr>
 	<th><label for="sitemap_heading_type"><?php esc_html_e('Heading type', 'table-of-contents-plus'); ?></label></th>
-	<td><label for="sitemap_heading_type"><?php 
+	<td><label for="sitemap_heading_type"><?php
 	/* translators: the full line is supposed to read - Use [1-6 drop down list] to print out the titles */
 	 esc_html_e('Use', 'table-of-contents-plus'); ?> h</label><select name="sitemap_heading_type" id="sitemap_heading_type">
 <?php
@@ -1047,20 +1049,20 @@ if ( !class_exists( 'toc' ) ) :
 				echo '>' . $i . '</option>' . "\n";
 			}
 ?>
-		</select> <?php 
+		</select> <?php
 		/* translators: the full line is supposed to read - Use [h1-h6 drop down list] to print out the titles */
 		esc_html_e('to print out the titles', 'table-of-contents-plus'); ?>
 	</td>
 </tr>
 <tr>
 	<th><label for="sitemap_pages"><?php esc_html_e('Pages label', 'table-of-contents-plus'); ?></label></th>
-	<td><input type="text" class="regular-text" value="<?php echo esc_attr( $this->options['sitemap_pages'] ); ?>" id="sitemap_pages" name="sitemap_pages" />
+	<td><input type="text" class="regular-text" value="<?php echo esc_attr( htmlentities( $this->options['sitemap_pages'] ) ) ; ?>" id="sitemap_pages" name="sitemap_pages" />
 		<span class="description"><?php esc_html_e('Eg: Pages, Page List', 'table-of-contents-plus'); ?></span>
 	</td>
 </tr>
 <tr>
 	<th><label for="sitemap_categories"><?php esc_html_e('Categories label', 'table-of-contents-plus'); ?></label></th>
-	<td><input type="text" class="regular-text" value="<?php echo esc_attr( $this->options['sitemap_categories'] ); ?>" id="sitemap_categories" name="sitemap_categories" />
+	<td><input type="text" class="regular-text" value="<?php echo esc_attr( htmlentities( $this->options['sitemap_categories'] ) ); ?>" id="sitemap_categories" name="sitemap_categories" />
 		<span class="description"><?php esc_html_e('Eg: Categories, Category List', 'table-of-contents-plus'); ?></span>
 	</td>
 </tr>
