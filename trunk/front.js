@@ -138,7 +138,7 @@ jQuery(document).ready(function($) {
 	
 			$('span.toc_toggle a').click(function(event) {
 				event.preventDefault();
-				switch( $(this).html() ) {
+				switch( $(this).text() ) {
 					case $('<div/>').html(tocplus.visibility_hide).text():
 						$(this).html(tocplus.visibility_show);
 						if ( $.cookie ) {
