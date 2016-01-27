@@ -229,8 +229,8 @@ if ( !class_exists( 'toc' ) ) :
 		{
 			extract( shortcode_atts( array(
 				'label' => $this->options['heading_text'],
-				'label_show' => $this->options['visibility_show'],
-				'label_hide' => $this->options['visibility_hide'],
+				'label_show' => esc_html( htmlentities( $this->options['visibility_show'] ) ),
+				'label_hide' => esc_html( htmlentities( $this->options['visibility_hide'] ) ),
 				'no_label' => false,
 				'class' => false,
 				'wrapping' => $this->options['wrapping'],
@@ -466,8 +466,8 @@ if ( !class_exists( 'toc' ) ) :
 			wp_enqueue_script( 'toc-front' );
 			if ( $this->options['show_heading_text'] && $this->options['visibility'] ) {
 				$width = ( $this->options['width'] != 'User defined' ) ? $this->options['width'] : $this->options['width_custom'] . $this->options['width_custom_units'];
-				$js_vars['visibility_show'] = esc_js($this->options['visibility_show']);
-				$js_vars['visibility_hide'] = esc_js($this->options['visibility_hide']);
+				$js_vars['visibility_show'] = esc_html( htmlentities( $this->options['visibility_show'] ));
+				$js_vars['visibility_hide'] = esc_html( htmlentities( $this->options['visibility_hide'] ));
 				if ( $this->options['visibility_hide_by_default'] ) $js_vars['visibility_hide_by_default'] = true;
 				$js_vars['width'] = esc_js($width);
 			}
@@ -632,8 +632,8 @@ if ( !class_exists( 'toc' ) ) :
 					'smooth_scroll' => (isset($_POST['smooth_scroll']) && $_POST['smooth_scroll']) ? true : false,
 					'smooth_scroll_offset' => intval($_POST['smooth_scroll_offset']),
 					'visibility' => (isset($_POST['visibility']) && $_POST['visibility']) ? true : false,
-					'visibility_show' => sanitize_text_field( trim($_POST['visibility_show']) ),
-					'visibility_hide' => sanitize_text_field( trim($_POST['visibility_hide']) ),
+					'visibility_show' => esc_html( wp_unslash( $_POST[ 'visibility_show' ] ) ),
+					'visibility_hide' => esc_html( wp_unslash( $_POST[ 'visibility_hide' ] ) ),
 					'visibility_hide_by_default' => (isset($_POST['visibility_hide_by_default']) && $_POST['visibility_hide_by_default']) ? true : false,
 					'width' => intval($_POST['width']),
 					'width_custom' => floatval($_POST['width_custom']),
@@ -747,7 +747,7 @@ if ( !class_exists( 'toc' ) ) :
 	<td>
 		<input type="checkbox" value="1" id="show_heading_text" name="show_heading_text"<?php if ( $this->options['show_heading_text'] ) echo ' checked="checked"'; ?> /><label for="show_heading_text"> <?php esc_html_e('Show title on top of the table of contents', 'table-of-contents-plus'); ?></label><br />
 		<div class="more_toc_options<?php if ( !$this->options['show_heading_text'] ) echo ' disabled'; ?>">
-			<input type="text" class="regular-text" value="<?php echo esc_attr( htmlentities( $this->options['heading_text'] ) ); ?>" id="heading_text" name="heading_text" />
+			<input type="text" class="regular-text" value="<?php echo esc_attr( $this->options['heading_text'] ); ?>" id="heading_text" name="heading_text" />
 			<span class="description"><label for="heading_text"><?php esc_html_e('Eg: Contents, Table of Contents, Page Contents', 'table-of-contents-plus'); ?></label></span><br /><br />
 
 			<input type="checkbox" value="1" id="visibility" name="visibility"<?php if ( $this->options['visibility'] ) echo ' checked="checked"'; ?> /><label for="visibility"> <?php esc_html_e( 'Allow the user to toggle the visibility of the table of contents', 'table-of-contents-plus'); ?></label><br />
@@ -756,14 +756,14 @@ if ( !class_exists( 'toc' ) ) :
 				<tbody>
 				<tr>
 					<th><label for="visibility_show"><?php esc_html_e('Show text', 'table-of-contents-plus'); ?></label></th>
-					<td><input type="text" class="" value="<?php echo esc_attr( htmlentities( $this->options['visibility_show'] ) ); ?>" id="visibility_show" name="visibility_show" />
+					<td><input type="text" class="" value="<?php echo esc_attr( $this->options['visibility_show'] ); ?>" id="visibility_show" name="visibility_show" />
 					<span class="description"><label for="visibility_show"><?php
 					/* translators: example text to display when you want to expand the table of contents */
 							esc_html_e('Eg: show', 'table-of-contents-plus'); ?></label></span></td>
 				</tr>
 				<tr>
 					<th><label for="visibility_hide"><?php esc_html_e('Hide text', 'table-of-contents-plus'); ?></label></th>
-					<td><input type="text" class="" value="<?php echo esc_attr( htmlentities( $this->options['visibility_hide'] ) ); ?>" id="visibility_hide" name="visibility_hide" />
+					<td><input type="text" class="" value="<?php echo esc_attr( $this->options['visibility_hide'] ); ?>" id="visibility_hide" name="visibility_hide" />
 					<span class="description"><label for="visibility_hide"><?php
 					/* translators: example text to display when you want to collapse the table of contents */
 							esc_html_e('Eg: hide', 'table-of-contents-plus'); ?></label></span></td>
@@ -1056,13 +1056,13 @@ if ( !class_exists( 'toc' ) ) :
 </tr>
 <tr>
 	<th><label for="sitemap_pages"><?php esc_html_e('Pages label', 'table-of-contents-plus'); ?></label></th>
-	<td><input type="text" class="regular-text" value="<?php echo esc_attr( htmlentities( $this->options['sitemap_pages'] ) ) ; ?>" id="sitemap_pages" name="sitemap_pages" />
+	<td><input type="text" class="regular-text" value="<?php echo esc_attr( $this->options['sitemap_pages'] ) ; ?>" id="sitemap_pages" name="sitemap_pages" />
 		<span class="description"><?php esc_html_e('Eg: Pages, Page List', 'table-of-contents-plus'); ?></span>
 	</td>
 </tr>
 <tr>
 	<th><label for="sitemap_categories"><?php esc_html_e('Categories label', 'table-of-contents-plus'); ?></label></th>
-	<td><input type="text" class="regular-text" value="<?php echo esc_attr( htmlentities( $this->options['sitemap_categories'] ) ); ?>" id="sitemap_categories" name="sitemap_categories" />
+	<td><input type="text" class="regular-text" value="<?php echo esc_attr( $this->options['sitemap_categories'] ); ?>" id="sitemap_categories" name="sitemap_categories" />
 		<span class="description"><?php esc_html_e('Eg: Categories, Category List', 'table-of-contents-plus'); ?></span>
 	</td>
 </tr>
