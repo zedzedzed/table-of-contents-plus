@@ -41,7 +41,8 @@ This plugin is being migrated towards [Translation Packs](https://translate.word
 * Polish - [Jakub](http://notatki.4use.pl/)
 * Simplified Chinese - Jason
 * Slovak - Boris Gereg
-* Spanish - [David Saiz](https://davidsaiz.com/)
+* Spanish  -  Spanish [David Saiz](https://davidsaiz.com/)
+* Spanish - Venezuela [Jimmy Olano](http://www.ks7000.net.ve/)
 * Ukrainian - [Michael Yunat](http://www.iphostmonitor.com/)
 
 

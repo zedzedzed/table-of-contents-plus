@@ -1385,7 +1385,7 @@ if ( !class_exists( 'toc' ) ) :
 								),
 								array(
 									$matches[$i][1] . '<span id="' . $anchor . '">',
-									'</span></h' . $matches[$i][2] . '>'
+									'</span><a href="#toc_titulo">↑</a></h' . $matches[$i][2] . '>'
 								),
 								$matches[$i][0]
 							);
@@ -1526,7 +1526,8 @@ if ( !class_exists( 'toc' ) ) :
 							$toc_title = $this->options['heading_text'];
 							if ( strpos($toc_title, '%PAGE_TITLE%') !== false ) $toc_title = str_replace( '%PAGE_TITLE%', get_the_title(), $toc_title );
 							if ( strpos($toc_title, '%PAGE_NAME%') !== false ) $toc_title = str_replace( '%PAGE_NAME%', get_the_title(), $toc_title );
-							$html .= '<p class="toc_title">' . htmlentities( $toc_title, ENT_COMPAT, 'UTF-8' ) . '</p>';
+						// a quick way for return at TOC from every heading "toc_titulo"
+							$html .= '<p class="toc_title" id="toc_titulo">' . htmlentities( $toc_title, ENT_COMPAT, 'UTF-8' ) . '</p>';
 						}
 						$html .= '<ul class="toc_list">' . $items . '</ul></div>' . "\n";
 						
