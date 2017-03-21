@@ -237,7 +237,7 @@ if ( !class_exists( 'toc' ) ) :
 				'heading_levels' => $this->options['heading_levels'],
 				'exclude' => $this->options['exclude'],
 				'collapse' => false,
-				'no_numbers' => $this->options['ordered_list'],
+				'no_numbers' => false,
 				), $atts )
 			);
 
