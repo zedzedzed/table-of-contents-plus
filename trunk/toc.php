@@ -346,18 +346,30 @@ if ( !class_exists( 'toc' ) ) :
 				'label' => htmlentities( $this->options['sitemap_pages'], ENT_COMPAT, 'UTF-8' ),
 				'no_label' => false,
 				'exclude' => '',
-				'exclude_tree' => ''
+				'exclude_tree' => '',
+				'only_subpages' => false,
+				'sort_column' => 'menu_order' // By default we sort the entries by the given menu order within WP
 				), $atts )
 			);
 
 			if ( $heading < 1 || $heading > 6 )		// h1 to h6 are valid
 				$heading = $this->options['sitemap_heading_type'];
+			
+			// 0 is the default-value for the child_of attribute of wp_list_pages()
+			$only_subpages_of = 0;
+			
+			// If only subpages should be listed, we get the ID of the page here
+			if ($only_subpages) {
+				global $post;
+				$only_subpages_of = $post->ID; 
+			}
 
 			$html = '<div class="toc_sitemap">';
 			if ( !$no_label ) $html .= '<h' . $heading . ' class="toc_sitemap_pages">' . $label . '</h' . $heading . '>';
 			$html .=
 					'<ul class="toc_sitemap_pages_list">' .
-						wp_list_pages( array('title_li' => '', 'echo' => false, 'exclude' => $exclude, 'exclude_tree' => $exclude_tree ) ) .
+						wp_list_pages( array('title_li' => '', 'echo' => false, 'exclude' => $exclude, 'exclude_tree' => $exclude_tree,
+						'child_of' => $only_subpages_of, 'sort_column' => $sort_column ) ) .
 					'</ul>' .
 				'</div>'
 			;
