@@ -367,10 +367,13 @@ if ( !class_exists( 'toc' ) ) :
 			$html = '<div class="toc_sitemap">';
 			if ( !$no_label ) $html .= '<h' . $heading . ' class="toc_sitemap_pages">' . $label . '</h' . $heading . '>';
 			$html .=
-					'<ul class="toc_sitemap_pages_list">' .
-						wp_list_pages( array('title_li' => '', 'echo' => false, 'exclude' => $exclude, 'exclude_tree' => $exclude_tree,
-						'child_of' => $only_subpages_of, 'sort_column' => $sort_column ) ) .
-					'</ul>' .
+					'<ul class="toc_sitemap_pages_list">' . 
+						$only_subpages ? 
+							wp_list_pages( array('title_li' => '', 'echo' => false, 'exclude' => $exclude, 'exclude_tree' => $exclude_tree,
+									'child_of' => $only_subpages_of, 'sort_column' => $sort_column ) ) :
+							wp_list_pages( array('title_li' => '', 'echo' => false, 'exclude' => $exclude, 'exclude_tree' => $exclude_tree,
+									'sort_column' => $sort_column ) ).
+					'</ul>'.
 				'</div>'
 			;
 			
