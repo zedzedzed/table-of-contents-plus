@@ -7,11 +7,11 @@ Author: 		Michael Tran
 Author URI: 	http://dublue.com/
 Text Domain:	table-of-contents-plus
 Domain Path:	/languages
-Version: 		1601
+Version: 		2002
 License:		GPL2
 */
 
-/*  Copyright 2016  Michael Tran  (michael@dublue.com)
+/*  Copyright 2002  Michael Tran  (michael@dublue.com)
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License, version 2, as 
@@ -41,7 +41,7 @@ FOR CONSIDERATION:
 	- highlight target css
 */
 
-define( 'TOC_VERSION', '1509' );
+define( 'TOC_VERSION', '2002' );
 define( 'TOC_POSITION_BEFORE_FIRST_HEADING', 1 );
 define( 'TOC_POSITION_TOP', 2 );
 define( 'TOC_POSITION_BOTTOM', 3 );
@@ -1523,10 +1523,10 @@ if ( !class_exists( 'toc' ) ) :
 						// add container, toc title and list items
 						$html = '<div id="toc_container" class="' . $css_classes . '">';
 						if ( $this->options['show_heading_text'] ) {
-							$toc_title = $this->options['heading_text'];
+							$toc_title = htmlentities( $this->options['heading_text'], ENT_COMPAT, 'UTF-8' );
 							if ( strpos($toc_title, '%PAGE_TITLE%') !== false ) $toc_title = str_replace( '%PAGE_TITLE%', get_the_title(), $toc_title );
 							if ( strpos($toc_title, '%PAGE_NAME%') !== false ) $toc_title = str_replace( '%PAGE_NAME%', get_the_title(), $toc_title );
-							$html .= '<p class="toc_title">' . htmlentities( $toc_title, ENT_COMPAT, 'UTF-8' ) . '</p>';
+							$html .= '<p class="toc_title">' . $toc_title . '</p>';
 						}
 						$html .= '<ul class="toc_list">' . $items . '</ul></div>' . "\n";
 						

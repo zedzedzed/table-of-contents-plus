@@ -2,8 +2,8 @@
 Contributors: conjur3r
 Tags: table of contents, indexes, toc, sitemap, cms, options, list, page listing, category listing
 Requires at least: 3.2
-Tested up to: 4.4
-Stable tag: 1601
+Tested up to: 5.3 
+Stable tag: 2002
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -25,24 +25,6 @@ Prefer to include the index in the sidebar?  Go to Appearance > Widgets and drag
 Custom post types are supported, however, auto insertion works only when the_content() has been used by the custom post type.  Each post type will appear in the options panel, so enable the ones you want.
 
 Collaborate, participate, fork this plugin on [Github](https://github.com/zedzedzed/table-of-contents-plus/).  Reach out on Github or place them at [http://dublue.com/plugins/toc/](http://dublue.com/plugins/toc/)
-
-= Available Languages =
-This plugin is being migrated towards [Translation Packs](https://translate.wordpress.org/projects/wp-plugins/table-of-contents-plus) and older .mo and .po files are no longer being accepted.  When a translation reaches maturity, the bundled language files will be removed from the distribution in favour of the Translation Pack.
-
-* Australian English (default)
-* Brazilian Portuguese - [Blog de Niterói](https://twitter.com/BlogNiteroi/)
-* Danish - [Cupunu](http://cupunu.dk/)
-* Dutch - [Renee](http://101themes.com/)
-* French - Jean-Michel Duriez
-* German - [Ben](http://blog.bmarwell.de/)
-* Greek - [Dimitrios Kaisaris](http://www.foodblostarter.com/)
-* Hebrew - [Ahrale](http://atar4u.com/)
-* Japanese - [シカマル](http://ja.gravatar.com/deerboy01)
-* Polish - [Jakub](http://notatki.4use.pl/)
-* Simplified Chinese - Jason
-* Slovak - Boris Gereg
-* Spanish - [David Saiz](https://davidsaiz.com/)
-* Ukrainian - [Michael Yunat](http://www.iphostmonitor.com/)
 
 
 == Screenshots ==
@@ -117,21 +99,28 @@ I will never ask for any form of reward or compensation.  Helping others achieve
 
 
 == Changelog ==
+= 2002 =
+* Released: 9 February 2020
+* Fixed encoding when using %PAGE_TITLE% or %PAGE_NAME%
+* Bump tested WordPress version to 5.3
+* Removed all local translations as you can find more up to date ones at translate.wordpress.org
+* Removed translators links from readme
+
 = 1601 =
 * Released: 5 January 2016
 * Bump tested WordPress version to 4.4
 * Add 'enable' and 'disable' API functions so a developer can better control the execution.
-* Add Brazilian Portuguese translation thanks to [Blog de Niterói](https://twitter.com/BlogNiteroi/)
-* Add Spanish translation thanks to [David Saiz](https://davidsaiz.com/)
+* Add Brazilian Portuguese translation thanks to Blog de Niterói
+* Add Spanish translation thanks to David Saiz
 * TOC+ widget now adheres to a blank title if none provided. Thanks to [Dirk](http://dublue.com/plugins/toc/comment-page-11/#comment-5140) for the cue.
 * Updated jQuery Smooth Scroll 1.5.5 to 1.6.0
 * Updated text domain to better support translation packs.
 
 = 1509 =
 * Released: 4 September 2015
-* Added Hebrew translation thanks to [Ahrale](http://atar4u.com/)
-* Added Japaense translation thanks to [シカマル](http://ja.gravatar.com/deerboy01)
-* Added Greek translation thanks to [Dimitrios Kaisaris](http://www.foodblostarter.com/)
+* Added Hebrew translation thanks to Ahrale
+* Added Japaense translation thanks to シカマル
+* Added Greek translation thanks to Dimitrios Kaisaris
 * Updated jQuery Smooth Scroll 1.4.10 to 1.5.5
 * Supply both minified and unminified CSS and JS files, use minified versions.
 * Convert accented characters to ASCII in anchors.
@@ -143,7 +132,7 @@ I will never ask for any form of reward or compensation.  Helping others achieve
 
 = 1507 =
 * Released: 5 July 2015
-* Added Danish translation courtesy of [Cupunu](http://cupunu.dk/)
+* Added Danish translation courtesy of Cupunu
 * Simplified the translation duty by moving the help material to the plugin's website.
 * Updated translation file.
 
@@ -156,12 +145,12 @@ I will never ask for any form of reward or compensation.  Helping others achieve
 
 = 1408 =
 * Released: 1 August 2014
-* Added a human German translation courtesy [Ben](http://blog.bmarwell.de/)
+* Added a human German translation courtesy Ben
 * Added "class" attribute to the TOC shortcode to allow for custom CSS classes to be added to the container.  Thanks to Joe for [suggesting it](http://dublue.com/plugins/toc/comment-page-7/#comment-2803)
 
 = 1407 =
 * Released: 5 July 2014
-* Added Ukrainian translation courtesy [Michael Yunat](http://www.iphostmonitor.com/)
+* Added Ukrainian translation courtesy Michael Yunat
 * Added French translation courtesy Jean-Michel Duriez
 * Empty headings are now ignored, as suggested by [archon810](http://wordpress.org/support/topic/patch-ignore-empty-tags)
 * Removed German translation, may have been machine translated, [ref](http://wordpress.org/support/topic/excluding-headlines-special-characters)
@@ -185,7 +174,7 @@ I will never ask for any form of reward or compensation.  Helping others achieve
 = 1311 =
 * Released: 10 November 2013
 * Added third parameter to toc_get_index API function to enable eligibility check (eg apply minimum heading check, is post type enabled, etc). This has been switched off by default and only affects those using the API. Thanks [Jonon](http://dublue.com/plugins/toc/comment-page-5/#comment-1943) for your comment.
-* Added Dutch translation courtesy [Renee](http://101themes.com/)
+* Added Dutch translation courtesy Renee
 * Apply bullet option to TOC+ widget, thanks to [Thomas Pani for the patch](http://dublue.com/plugins/toc/comment-page-5/#comment-2040).
 
 = 1308 =
@@ -197,7 +186,7 @@ I will never ask for any form of reward or compensation.  Helping others achieve
 
 = 1303.1 =
 * Released: 22 March 2013
-* New: added Polish translation, curtesy [Jakub](http://notatki.4use.pl/).
+* New: added Polish translation, curtesy Jakub
 * Fixed: an issue in 1303 that ignored headings with the opening tag on the first line and the heading text on a new line.  Thanks to [richardsng](http://wordpress.org/support/topic/unable-to-display-the-full-toc) for the quick discovery.
 
 = 1303 =
@@ -207,7 +196,7 @@ I will never ask for any form of reward or compensation.  Helping others achieve
 * New: advanced option to lowercase all anchors.  The default is off.
 * New: advanced option to use hyphens rather than underscores in anchors.  The default is off.
 * New: shortcode to list all posts in alphabetical order grouped by first letter.
-* New: added Slovak translation, curtesy [Branco Radenovich](http://webhostinggeeks.com/user-reviews/).
+* New: added Slovak translation, curtesy Branco Radenovich.
 * Add version numbers to CSS/JS files to better support setups that cache these files heavily for timely invalidation.  Thanks to [boxcarpress](http://wordpress.org/support/topic/some-changes-we-made-that-you-might-consider) for the amendments.
 * Add CSS class 'contracted' to #toc_container when the table of contents is hidden. Thanks to [Sam](http://wordpress.org/support/topic/hide-link-not-working?replies=6#post-3968019) for suggesting it.
 * With smooth scroll enabled, do not use an offset if no admin bar is present and the offset value is default.  This means that public users do not have the offset space at the top.
@@ -239,7 +228,7 @@ I will never ask for any form of reward or compensation.  Helping others achieve
 = 1208 =
 * Released: 2 August 2012
 * New: advanced option to prevent the output of this plugin's CSS.  This option allows the site owner to incorporate styles in one of their existing style sheets.  Thanks to [Ivan](http://dublue.com/plugins/toc/comment-page-1/#comment-226) and [Swashata](http://dublue.com/plugins/toc/comment-page-3/#comment-3312) for suggesting it.
-* Added Simplified Chinese translation thanks to [icedream](http://www.tesfans.org/)
+* Added Simplified Chinese translation thanks to icedream
 * Make more translatable by adding a translation POT file in the languages folder.  Translations welcome!
 * Adjust multibyte string detection as reported by [johnnyvaughan](http://wordpress.org/support/topic/plugin-table-of-contents-plus-multibyte-string-detetction)
 * Support PHP 5.4.x installations.  Thanks to [Josh](http://dublue.com/plugins/toc/comment-page-3/#comment-3477) for raising it.
