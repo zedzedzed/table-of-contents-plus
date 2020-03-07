@@ -14,7 +14,7 @@ License:		GPL2
 /*  Copyright 2002  Michael Tran  (michael@dublue.com)
 
     This program is free software; you can redistribute it and/or modify
-    it under the terms of the GNU General Public License, version 2, as 
+    it under the terms of the GNU General Public License, version 2, as
     published by the Free Software Foundation.
 
     This program is distributed in the hope that it will be useful,
@@ -68,13 +68,13 @@ define( 'TOC_DEFAULT_LINKS_VISITED_COLOUR', '#' );
 
 if ( !class_exists( 'toc' ) ) :
 	class toc {
-		
+
 		private $path;		// eg /wp-content/plugins/toc
 		private $options;
 		private $show_toc;	// allows to override the display (eg through [no_toc] shortcode)
 		private $exclude_post_types;
 		private $collision_collector;	// keeps a track of used anchors for collision detecting
-		
+
 		function __construct()
 		{
 			$this->path = plugins_url( '', __FILE__ );
@@ -138,25 +138,26 @@ if ( !class_exists( 'toc' ) ) :
 			add_action( 'admin_menu', array(&$this, 'admin_menu') );
 			add_action( 'widgets_init', array(&$this, 'widgets_init') );
 			add_action( 'sidebar_admin_setup', array(&$this, 'sidebar_admin_setup') );
-			
+
 			add_filter( 'the_content', array(&$this, 'the_content'), 100 );	// run after shortcodes are interpretted (level 10)
 			add_filter( 'plugin_action_links', array(&$this, 'plugin_action_links'), 10, 2 );
 			add_filter( 'widget_text', 'do_shortcode' );
-			
+
 			add_shortcode( 'toc', array(&$this, 'shortcode_toc') );
 			add_shortcode( 'no_toc', array(&$this, 'shortcode_no_toc') );
 			add_shortcode( 'sitemap', array(&$this, 'shortcode_sitemap') );
 			add_shortcode( 'sitemap_pages', array(&$this, 'shortcode_sitemap_pages') );
 			add_shortcode( 'sitemap_categories', array(&$this, 'shortcode_sitemap_categories') );
 			add_shortcode( 'sitemap_posts', array(&$this, 'shortcode_sitemap_posts') );
+
+			add_filter( 'rank_math/researches/toc_plugins', array( &$this, 'rank_math_toc_plugins' ) );
 		}
-		
-		
+
 		function __destruct()
 		{
 		}
-		
-		
+
+
 		public function get_options()
 		{
 			return $this->options;
@@ -185,15 +186,15 @@ if ( !class_exists( 'toc' ) ) :
 		{
 			$this->show_toc = true;
 		}
-		
-		
+
+
 		public function set_show_toc_in_widget_only( $value = false )
 		{
 			if ( $value )
 				$this->options['show_toc_in_widget_only'] = true;
 			else
 				$this->options['show_toc_in_widget_only'] = false;
-			
+
 			update_option( 'toc-options', $this->options );
 		}
 
@@ -204,7 +205,7 @@ if ( !class_exists( 'toc' ) ) :
 				$this->options['show_toc_in_widget_only_post_types'] = $value;
 			else
 				$this->options['show_toc_in_widget_only_post_types'] = array();
-			
+
 			update_option( 'toc-options', $this->options );
 		}
 
@@ -213,8 +214,8 @@ if ( !class_exists( 'toc' ) ) :
 		{
 			return $this->exclude_post_types;
 		}
-		
-		
+
+
 		function plugin_action_links( $links, $file )
 		{
 			if ( $file == 'table-of-contents-plus/' . basename(__FILE__) ) {
@@ -223,8 +224,8 @@ if ( !class_exists( 'toc' ) ) :
 			}
 			return $links;
 		}
-		
-		
+
+
 		function shortcode_toc( $atts )
 		{
 			extract( shortcode_atts( array(
@@ -258,11 +259,11 @@ if ( !class_exists( 'toc' ) ) :
 					case 'left':
 						$this->options['wrapping'] = TOC_WRAPPING_LEFT;
 						break;
-						
+
 					case 'right':
 						$this->options['wrapping'] = TOC_WRAPPING_RIGHT;
 						break;
-						
+
 					default:
 						// do nothing
 				}
@@ -279,7 +280,7 @@ if ( !class_exists( 'toc' ) ) :
 			// if $heading_levels is an array, then it came from the global options
 			// and wasn't provided by per instance
 			if ( $heading_levels && !is_array($heading_levels) ) {
-				// make sure they are numbers between 1 and 6 and put into 
+				// make sure they are numbers between 1 and 6 and put into
 				// the $clean_heading_levels array if not already
 				$clean_heading_levels = array();
 				foreach (explode(',', $heading_levels) as $heading_level) {
@@ -291,30 +292,30 @@ if ( !class_exists( 'toc' ) ) :
 						}
 					}
 				}
-				
+
 				if ( count($clean_heading_levels) > 0 )
 					$this->options['heading_levels'] = $clean_heading_levels;
 			}
-		
+
 			if ( !is_search() && !is_archive() && !is_feed() )
 				return '<!--TOC-->';
 			else
 				return;
 		}
-		
-		
+
+
 		function shortcode_no_toc( $atts )
 		{
 			$this->show_toc = false;
 
 			return;
 		}
-		
-		
+
+
 		function shortcode_sitemap( $atts )
 		{
 			$html = '';
-			
+
 			// only do the following if enabled
 			if ( $this->options['sitemap_show_page_listing'] || $this->options['sitemap_show_category_listing'] ) {
 				$html = '<div class="toc_sitemap">';
@@ -334,11 +335,11 @@ if ( !class_exists( 'toc' ) ) :
 					;
 				$html .= '</div>';
 			}
-			
+
 			return $html;
 		}
-		
-		
+
+
 		function shortcode_sitemap_pages( $atts )
 		{
 			extract( shortcode_atts( array(
@@ -361,11 +362,11 @@ if ( !class_exists( 'toc' ) ) :
 					'</ul>' .
 				'</div>'
 			;
-			
+
 			return $html;
 		}
-		
-		
+
+
 		function shortcode_sitemap_categories( $atts )
 		{
 			extract( shortcode_atts( array(
@@ -376,10 +377,10 @@ if ( !class_exists( 'toc' ) ) :
 				'exclude_tree' => ''
 				), $atts )
 			);
-			
+
 			if ( $heading < 1 || $heading > 6 )		// h1 to h6 are valid
 				$heading = $this->options['sitemap_heading_type'];
-			
+
 			$html = '<div class="toc_sitemap">';
 			if ( !$no_label ) $html .= '<h' . $heading . ' class="toc_sitemap_categories">' . $label . '</h' . $heading . '>';
 			$html .=
@@ -388,11 +389,11 @@ if ( !class_exists( 'toc' ) ) :
 					'</ul>' .
 				'</div>'
 			;
-			
+
 			return $html;
 		}
-		
-		
+
+
 		function shortcode_sitemap_posts( $atts )
 		{
 			extract( shortcode_atts( array(
@@ -401,7 +402,7 @@ if ( !class_exists( 'toc' ) ) :
 				'separate' => true
 				), $atts )
 			);
-			
+
 			$articles = new WP_Query(array(
 				'post_type' => 'post',
 				'post_status' => 'publish',
@@ -409,12 +410,12 @@ if ( !class_exists( 'toc' ) ) :
 				'orderby' => $orderby,
 				'posts_per_page' => -1
 			));
-			
+
 			$html = $letter = '';
 
 			$separate = strtolower($separate);
 			if ( $separate == 'false' || $separate == 'no') $separate = false;
-			
+
 			while ( $articles->have_posts() ) {
 				$articles->the_post();
 				$title = strip_tags(get_the_title());
@@ -422,7 +423,7 @@ if ( !class_exists( 'toc' ) ) :
 				if ( $separate ) {
 					if ( $letter != strtolower($title[0]) ) {
 						if ( $letter ) $html .= '</ul></div>';
-						
+
 						$html .= '<div class="toc_sitemap_posts_section"><p class="toc_sitemap_posts_letter">' . strtolower($title[0]) . '</p><ul class="toc_sitemap_posts_list">';
 						$letter = strtolower($title[0]);
 					}
@@ -430,34 +431,34 @@ if ( !class_exists( 'toc' ) ) :
 
 				$html .= '<li><a href="' . get_permalink($articles->post->ID) . '">' . $title . '</a></li>';
 			}
-			
+
 			if ( $html ) {
 				if ( $separate )
 					$html .= '</div>';
 				else
 					$html = '<div class="toc_sitemap_posts_section"><ul class="toc_sitemap_posts_list">' . $html . '</ul></div>';
 			}
-			
+
 			wp_reset_postdata();
-			
+
 			return $html;
 		}
-		
-		
+
+
 		/**
 		 * Register and load CSS and javascript files for frontend.
 		 */
 		function wp_enqueue_scripts()
 		{
 			$js_vars = array();
-			
+
 			// register our CSS and scripts
 			wp_register_style( 'toc-screen', $this->path . '/screen.min.css', array(), TOC_VERSION );
 			wp_register_script( 'toc-front', $this->path . '/front.min.js', array('jquery'), TOC_VERSION, true );
-			
+
 			// enqueue them!
 			if ( !$this->options['exclude_css'] ) wp_enqueue_style("toc-screen");
-			
+
 			if ( $this->options['smooth_scroll'] ) $js_vars['smooth_scroll'] = true;
 			wp_enqueue_script( 'toc-front' );
 			if ( $this->options['show_heading_text'] && $this->options['visibility'] ) {
@@ -469,7 +470,7 @@ if ( !class_exists( 'toc' ) ) :
 			}
 			if ( $this->options['smooth_scroll_offset'] != TOC_SMOOTH_SCROLL_OFFSET )
 				$js_vars['smooth_scroll_offset'] = esc_js($this->options['smooth_scroll_offset']);
-			
+
 			if ( count($js_vars) > 0 ) {
 				wp_localize_script(
 					'toc-front',
@@ -478,36 +479,36 @@ if ( !class_exists( 'toc' ) ) :
 				);
 			}
 		}
-		
-		
+
+
 		function plugins_loaded()
 		{
 			load_plugin_textdomain( 'table-of-contents-plus', false, dirname(plugin_basename(__FILE__)) . '/languages/' );
 		}
-		
-		
+
+
 		function admin_init()
 		{
 			wp_register_script( 'toc_admin_script', $this->path . '/admin.js' );
 			wp_register_style( 'toc_admin_style', $this->path . '/admin.css' );
 		}
-		
-		
+
+
 		function admin_menu()
 		{
 			$page = add_submenu_page(
-				'options-general.php', 
-				__('TOC', 'table-of-contents-plus') . '+', 
-				__('TOC', 'table-of-contents-plus') . '+', 
-				'manage_options', 
-				'toc', 
+				'options-general.php',
+				__('TOC', 'table-of-contents-plus') . '+',
+				__('TOC', 'table-of-contents-plus') . '+',
+				'manage_options',
+				'toc',
 				array(&$this, 'admin_options')
 			);
-			
+
 			add_action( 'admin_print_styles-' . $page, array(&$this, 'admin_options_head') );
 		}
-		
-		
+
+
 		function widgets_init()
 		{
 			register_widget('toc_widget');
@@ -532,8 +533,8 @@ if ( !class_exists( 'toc' ) ) :
 				}
 			}
 		}
-		
-		
+
+
 		/**
 		 * Load needed scripts and styles only on the toc administration interface.
 		 */
@@ -545,8 +546,8 @@ if ( !class_exists( 'toc' ) ) :
 			wp_enqueue_script( 'toc_admin_script' );
 			wp_enqueue_style( 'toc_admin_style' );
 		}
-		
-		
+
+
 		/**
 		 * Tries to convert $string into a valid hex colour.
 		 * Returns $default if $string is not a hex value, otherwise returns verified hex.
@@ -554,17 +555,17 @@ if ( !class_exists( 'toc' ) ) :
 		private function hex_value( $string = '', $default = '#' )
 		{
 			$return = $default;
-			
+
 			if ( $string ) {
 				// strip out non hex chars
 				$return = preg_replace( '/[^a-fA-F0-9]*/', '', $string );
-				
+
 				switch ( strlen($return) ) {
 					case 3:	// do next
 					case 6:
 						$return = '#' . $return;
 						break;
-					
+
 					default:
 						if ( strlen($return) > 6 )
 							$return = '#' . substr($return, 0, 6);	// if > 6 chars, then take the first 6
@@ -574,11 +575,11 @@ if ( !class_exists( 'toc' ) ) :
 							$return = $default;						// not valid, return $default
 				}
 			}
-			
+
 			return $return;
 		}
-		
-		
+
+
 		private function save_admin_options()
 		{
 			global $post_id;
@@ -590,25 +591,25 @@ if ( !class_exists( 'toc' ) ) :
 			// require an administrator level to save
 			if ( !current_user_can( 'manage_options', $post_id ) )
 				return false;
-			
+
 			// use stripslashes on free text fields that can have ' " \
-			// WordPress automatically slashes these characters as part of 
+			// WordPress automatically slashes these characters as part of
 			// wp-includes/load.php::wp_magic_quotes()
-			
+
 			$custom_background_colour = $this->hex_value( trim($_POST['custom_background_colour']), TOC_DEFAULT_BACKGROUND_COLOUR );
 			$custom_border_colour = $this->hex_value( trim($_POST['custom_border_colour']), TOC_DEFAULT_BORDER_COLOUR );
 			$custom_title_colour = $this->hex_value( trim($_POST['custom_title_colour']), TOC_DEFAULT_TITLE_COLOUR );
 			$custom_links_colour = $this->hex_value( trim($_POST['custom_links_colour']), TOC_DEFAULT_LINKS_COLOUR );
 			$custom_links_hover_colour = $this->hex_value( trim($_POST['custom_links_hover_colour']), TOC_DEFAULT_LINKS_HOVER_COLOUR );
 			$custom_links_visited_colour = $this->hex_value( trim($_POST['custom_links_visited_colour']), TOC_DEFAULT_LINKS_VISITED_COLOUR );
-			
+
 			if ( $restrict_path = trim($_POST['restrict_path']) ) {
 				if ( strpos($restrict_path, '/') !== 0 ) {
 					// restrict path did not start with a / so unset it
 					$restrict_path = '';
 				}
 			}
-			
+
 			$this->options = array_merge(
 				$this->options,
 				array(
@@ -654,18 +655,18 @@ if ( !class_exists( 'toc' ) ) :
 					'sitemap_categories' => stripslashes( trim($_POST['sitemap_categories']) )
 				)
 			);
-			
+
 			// update_option will return false if no changes were made
 			update_option( 'toc-options', $this->options );
-			
+
 			return true;
 		}
-		
-		
-		function admin_options() 
+
+
+		function admin_options()
 		{
 			$msg = '';
-		
+
 			if ( isset( $_GET['update'] ) ) {
 				if ( $this->save_admin_options() )
 					$msg = '<div id="message" class="updated fade"><p>' . __('Options saved.', 'table-of-contents-plus') . '</p></div>';
@@ -688,7 +689,7 @@ if ( !class_exists( 'toc' ) ) :
 </ul>
 <div class="tab_container">
 	<div id="tab1" class="tab_content">
-  
+
 <table class="form-table">
 <tbody>
 <tr>
@@ -713,7 +714,7 @@ if ( !class_exists( 'toc' ) ) :
 				echo '>' . $i . '</option>' . "\n";
 			}
 ?>
-		</select> <?php 
+		</select> <?php
 		/* translators: text follows drop down list of numbers */
 		_e('or more headings are present', 'table-of-contents-plus'); ?>
 	</td>
@@ -732,7 +733,7 @@ if ( !class_exists( 'toc' ) ) :
 ?>
 </tr>
 <tr>
-	<th><label for="show_heading_text"><?php 
+	<th><label for="show_heading_text"><?php
 	/* translators: this is the title of the table of contents */
 	_e('Heading text', 'table-of-contents-plus'); ?></label></th>
 	<td>
@@ -740,7 +741,7 @@ if ( !class_exists( 'toc' ) ) :
 		<div class="more_toc_options<?php if ( !$this->options['show_heading_text'] ) echo ' disabled'; ?>">
 			<input type="text" class="regular-text" value="<?php echo htmlentities( $this->options['heading_text'], ENT_COMPAT, 'UTF-8' ); ?>" id="heading_text" name="heading_text" />
 			<span class="description"><label for="heading_text"><?php _e('Eg: Contents, Table of Contents, Page Contents', 'table-of-contents-plus'); ?></label></span><br /><br />
-			
+
 			<input type="checkbox" value="1" id="visibility" name="visibility"<?php if ( $this->options['visibility'] ) echo ' checked="checked"'; ?> /><label for="visibility"> <?php _e( 'Allow the user to toggle the visibility of the table of contents', 'table-of-contents-plus'); ?></label><br />
 			<div class="more_toc_options<?php if ( !$this->options['visibility'] ) echo ' disabled'; ?>">
 				<table class="more_toc_options_table">
@@ -748,14 +749,14 @@ if ( !class_exists( 'toc' ) ) :
 				<tr>
 					<th><label for="visibility_show"><?php _e('Show text', 'table-of-contents-plus'); ?></label></th>
 					<td><input type="text" class="" value="<?php echo htmlentities( $this->options['visibility_show'], ENT_COMPAT, 'UTF-8' ); ?>" id="visibility_show" name="visibility_show" />
-					<span class="description"><label for="visibility_show"><?php 
+					<span class="description"><label for="visibility_show"><?php
 					/* translators: example text to display when you want to expand the table of contents */
 					_e('Eg: show', 'table-of-contents-plus'); ?></label></span></td>
 				</tr>
 				<tr>
 					<th><label for="visibility_hide"><?php _e('Hide text', 'table-of-contents-plus'); ?></label></th>
 					<td><input type="text" class="" value="<?php echo htmlentities( $this->options['visibility_hide'], ENT_COMPAT, 'UTF-8' ); ?>" id="visibility_hide" name="visibility_hide" />
-					<span class="description"><label for="visibility_hide"><?php 
+					<span class="description"><label for="visibility_hide"><?php
 					/* translators: example text to display when you want to collapse the table of contents */
 					_e('Eg: hide', 'table-of-contents-plus'); ?></label></span></td>
 				</tr>
@@ -808,14 +809,14 @@ if ( !class_exists( 'toc' ) ) :
 				<option value="75%"<?php if ( '75%' == $this->options['width'] ) echo ' selected="selected"'; ?>>75%</option>
 				<option value="100%"<?php if ( '100%' == $this->options['width'] ) echo ' selected="selected"'; ?>>100%</option>
 			</optgroup>
-			<optgroup label="<?php 
+			<optgroup label="<?php
 			/* translators: other width */
 			_e('Other', 'table-of-contents-plus'); ?>">
 				<option value="User defined"<?php if ( 'User defined' == $this->options['width'] ) echo ' selected="selected"'; ?>><?php _e('User defined', 'table-of-contents-plus'); ?></option>
 			</optgroup>
 		</select>
 		<div class="more_toc_options<?php if ( 'User defined' != $this->options['width'] ) echo ' disabled'; ?>">
-			<label for="width_custom"><?php 
+			<label for="width_custom"><?php
 			/* translators: ignore %s as it's some HTML label tags */
 			printf( __('Please enter a number and %s select its units, eg: 100px, 10em', 'table-of-contents-plus'), '</label><label for="width_custom_units">' ); ?></label><br />
 			<input type="text" class="regular-text" value="<?php echo floatval($this->options['width_custom']); ?>" id="width_custom" name="width_custom" />
@@ -849,7 +850,7 @@ if ( !class_exists( 'toc' ) ) :
 	</td>
 </tr>
 <tr>
-	<th><?php 
+	<th><?php
 	/* translators: appearance / colour / look and feel options */
 	_e('Presentation', 'table-of-contents-plus'); ?></th>
 	<td>
@@ -884,7 +885,7 @@ if ( !class_exists( 'toc' ) ) :
 			</label>
 		</div>
 		<div class="clear"></div>
-		
+
 		<div class="more_toc_options<?php if ( TOC_THEME_CUSTOM != $this->options['theme'] ) echo ' disabled'; ?>">
 			<table id="theme_custom" class="more_toc_options_table">
 			<tbody>
@@ -986,7 +987,7 @@ if ( !class_exists( 'toc' ) ) :
 		<td>
 			<input type="text" class="regular-text" value="<?php echo htmlentities( $this->options['restrict_path'], ENT_COMPAT, 'UTF-8' ); ?>" id="restrict_path" name="restrict_path" /><br />
 			<label for="restrict_path"><?php _e('Restrict generation of the table of contents to pages that match the required path. This path is from the root of your site and always begins with a forward slash.', 'table-of-contents-plus'); ?><br />
-			<span class="description"><?php 
+			<span class="description"><?php
 			/* translators: example URL path restriction */
 			_e('Eg: /wiki/, /corporate/annual-reports/', 'table-of-contents-plus'); ?></span></label>
 		</td>
@@ -997,7 +998,7 @@ if ( !class_exists( 'toc' ) ) :
 			<input type="text" class="regular-text" value="<?php echo htmlentities( $this->options['fragment_prefix'], ENT_COMPAT, 'UTF-8' ); ?>" id="fragment_prefix" name="fragment_prefix" /><br />
 			<label for="fragment_prefix"><?php _e('Anchor targets are restricted to alphanumeric characters as per HTML specification (see readme for more detail). The default anchor prefix will be used when no characters qualify. When left blank, a number will be used instead.', 'table-of-contents-plus'); ?><br />
 			<?php _e('This option normally applies to content written in character sets other than ASCII.', 'table-of-contents-plus'); ?><br />
-			<span class="description"><?php 
+			<span class="description"><?php
 			/* translators: example anchor prefixes when no ascii characters match */
 			_e('Eg: i, toc_index, index, _', 'table-of-contents-plus'); ?></span></label>
 		</td>
@@ -1005,7 +1006,7 @@ if ( !class_exists( 'toc' ) ) :
 	</tbody>
 	</table>
 
-	<h4><?php 
+	<h4><?php
 	/* translators: advanced usage */
 	_e('Usage', 'table-of-contents-plus'); ?></h4>
 	<p><?php printf(__('If you would like to fully customise the position of the table of contents, you can use the %s shortcode by placing it at the desired position of your post, page or custom post type. This method allows you to generate the table of contents despite having auto insertion disabled for its content type. Please visit the help tab for further information about this shortcode.', 'table-of-contents-plus'), '<code>[toc]</code>'); ?></p>
@@ -1014,7 +1015,7 @@ if ( !class_exists( 'toc' ) ) :
 
 	</div>
 	<div id="tab2" class="tab_content">
-	
+
 
 <p><?php printf(__('At its simplest, placing %s into a page will automatically create a sitemap of all pages and categories. This also works in a text widget.', 'table-of-contents-plus'), '<code>[sitemap]</code>'); ?></p>
 <table class="form-table">
@@ -1029,7 +1030,7 @@ if ( !class_exists( 'toc' ) ) :
 </tr>
 <tr>
 	<th><label for="sitemap_heading_type"><?php _e('Heading type', 'table-of-contents-plus'); ?></label></th>
-	<td><label for="sitemap_heading_type"><?php 
+	<td><label for="sitemap_heading_type"><?php
 	/* translators: the full line is supposed to read - Use [1-6 drop down list] to print out the titles */
 	_e('Use', 'table-of-contents-plus'); ?> h</label><select name="sitemap_heading_type" id="sitemap_heading_type">
 <?php
@@ -1040,7 +1041,7 @@ if ( !class_exists( 'toc' ) ) :
 				echo '>' . $i . '</option>' . "\n";
 			}
 ?>
-		</select> <?php 
+		</select> <?php
 		/* translators: the full line is supposed to read - Use [h1-h6 drop down list] to print out the titles */
 		_e('to print out the titles', 'table-of-contents-plus'); ?>
 	</td>
@@ -1073,19 +1074,19 @@ if ( !class_exists( 'toc' ) ) :
 
 	</div>
 </div>
-	
+
 
 <p class="submit"><input type="submit" name="submit" class="button-primary" value="<?php _e('Update Options', 'table-of-contents-plus'); ?>" /></p>
 </form>
 </div>
 <?php
 		}
-		
-							
+
+
 		function wp_head()
 		{
 			$css = '';
-			
+
 			if ( !$this->options['exclude_css'] ) {
 				if ( $this->options['theme'] == TOC_THEME_CUSTOM || $this->options['width'] != 'Auto' ) {
 					$css .= 'div#toc_container {';
@@ -1101,10 +1102,10 @@ if ( !class_exists( 'toc' ) ) :
 					}
 					$css .= '}';
 				}
-				
+
 				if ( '95%' != $this->options['font_size'] . $this->options['font_size_units'] )
 					$css .= 'div#toc_container ul li {font-size: ' . $this->options['font_size'] . $this->options['font_size_units'] . ';}';
-	
+
 				if ( $this->options['theme'] == TOC_THEME_CUSTOM ) {
 					if ( $this->options['custom_title_colour'] != TOC_DEFAULT_TITLE_COLOUR )
 						$css .= 'div#toc_container p.toc_title {color: ' . $this->options['custom_title_colour'] . ';}';
@@ -1118,44 +1119,44 @@ if ( !class_exists( 'toc' ) ) :
 						$css .= 'div#toc_container p.toc_title a:visited,div#toc_container ul.toc_list a:visited {color: ' . $this->options['custom_links_visited_colour'] . ';}';
 				}
 			}
-			
+
 			if ( $css )
 				echo '<style type="text/css">' . $css . '</style>';
 		}
-		
-		
+
+
 		/**
 		 * Returns a clean url to be used as the destination anchor target
 		 */
 		private function url_anchor_target( $title )
 		{
 			$return = false;
-			
+
 			if ( $title ) {
 				$return = trim( strip_tags($title) );
 
-				// convert accented characters to ASCII 
+				// convert accented characters to ASCII
 				$return = remove_accents( $return );
-				
+
 				// replace newlines with spaces (eg when headings are split over multiple lines)
 				$return = str_replace( array("\r", "\n", "\n\r", "\r\n"), ' ', $return );
-				
+
 				// remove &amp;
 				$return = str_replace( '&amp;', '', $return );
-				
+
 				// remove non alphanumeric chars
 				$return = preg_replace( '/[^a-zA-Z0-9 \-_]*/', '', $return );
-				
+
 				// convert spaces to _
 				$return = str_replace(
 					array('  ', ' '),
 					'_',
 					$return
 				);
-				
+
 				// remove trailing - and _
 				$return = rtrim( $return, '-_' );
-				
+
 				// lowercase everything?
 				if ( $this->options['lowercase'] ) $return = strtolower($return);
 
@@ -1164,41 +1165,41 @@ if ( !class_exists( 'toc' ) ) :
 				if ( !$return ) {
 					$return = ( $this->options['fragment_prefix'] ) ? $this->options['fragment_prefix'] : '_';
 				}
-				
+
 				// hyphenate?
 				if ( $this->options['hyphenate'] ) {
 					$return = str_replace('_', '-', $return);
 					$return = str_replace('--', '-', $return);
 				}
 			}
-			
+
 			if ( array_key_exists($return, $this->collision_collector) ) {
 				$this->collision_collector[$return]++;
 				$return .= '-' . $this->collision_collector[$return];
 			}
 			else
 				$this->collision_collector[$return] = 1;
-			
+
 			return apply_filters( 'toc_url_anchor_target', $return );
 		}
-		
-		
+
+
 		private function build_hierarchy( &$matches )
 		{
 			$current_depth = 100;	// headings can't be larger than h6 but 100 as a default to be sure
 			$html = '';
 			$numbered_items = array();
 			$numbered_items_min = null;
-			
+
 			// reset the internal collision collection
 			$this->collision_collector = array();
-			
+
 			// find the minimum heading to establish our baseline
 			for ($i = 0; $i < count($matches); $i++) {
 				if ( $current_depth > $matches[$i][2] )
 					$current_depth = (int)$matches[$i][2];
 			}
-			
+
 			$numbered_items[$current_depth] = 0;
 			$numbered_items_min = $current_depth;
 
@@ -1206,7 +1207,7 @@ if ( !class_exists( 'toc' ) ) :
 
 				if ( $current_depth == (int)$matches[$i][2] )
 					$html .= '<li>';
-			
+
 				// start lists
 				if ( $current_depth != (int)$matches[$i][2] ) {
 					for ($current_depth; $current_depth < (int)$matches[$i][2]; $current_depth++) {
@@ -1214,7 +1215,7 @@ if ( !class_exists( 'toc' ) ) :
 						$html .= '<ul><li>';
 					}
 				}
-				
+
 				// list item
 				if ( in_array($matches[$i][2], $this->options['heading_levels']) ) {
 					$html .= '<a href="#' . $this->url_anchor_target( $matches[$i][0] ) . '">';
@@ -1225,14 +1226,14 @@ if ( !class_exists( 'toc' ) ) :
 							$number = ($numbered_items[$j]) ? $numbered_items[$j] : 0;
 							$html .= $number . '.';
 						}
-						
+
 						$html .= ($numbered_items[$current_depth] + 1) . '</span> ';
 						$numbered_items[$current_depth]++;
 					}
 					$html .= strip_tags($matches[$i][0]) . '</a>';
 				}
-				
-				
+
+
 				// end lists
 				if ( $i != count($matches) - 1 ) {
 					if ( $current_depth > (int)$matches[$i + 1][2] ) {
@@ -1241,7 +1242,7 @@ if ( !class_exists( 'toc' ) ) :
 							$numbered_items[$current_depth] = 0;
 						}
 					}
-					
+
 					if ( $current_depth == (int)@$matches[$i + 1][2] )
 						$html .= '</li>';
 				}
@@ -1256,8 +1257,8 @@ if ( !class_exists( 'toc' ) ) :
 
 			return $html;
 		}
-		
-		
+
+
 		/**
 		 * Returns a string with all items from the $find array replaced with their matching
 		 * items in the $replace array.  This does a one to one replacement (rather than
@@ -1274,7 +1275,7 @@ if ( !class_exists( 'toc' ) ) :
 				// check if multibyte strings are supported
 				if ( function_exists( 'mb_strpos' ) ) {
 					for ($i = 0; $i < count($find); $i++) {
-						$string = 
+						$string =
 							mb_substr( $string, 0, mb_strpos($string, $find[$i]) ) .	// everything befor $find
 							$replace[$i] .												// its replacement
 							mb_substr( $string, mb_strpos($string, $find[$i]) + mb_strlen($find[$i]) )	// everything after $find
@@ -1292,18 +1293,18 @@ if ( !class_exists( 'toc' ) ) :
 					}
 				}
 			}
-			
+
 			return $string;
 		}
-		
-		
+
+
 		/**
 		 * This function extracts headings from the html formatted $content.  It will pull out
 		 * only the required headings as specified in the options.  For all qualifying headings,
 		 * this function populates the $find and $replace arrays (both passed by reference)
 		 * with what to search and replace with.
-		 * 
-		 * Returns a html formatted string of list items for each qualifying heading.  This 
+		 *
+		 * Returns a html formatted string of list items for each qualifying heading.  This
 		 * is everything between and NOT including <ul> and </ul>
 		 */
 		public function extract_headings( &$find, &$replace, $content = '' )
@@ -1311,12 +1312,12 @@ if ( !class_exists( 'toc' ) ) :
 			$matches = array();
 			$anchor = '';
 			$items = false;
-			
+
 			// reset the internal collision collection as the_content may have been triggered elsewhere
 			// eg by themes or other plugins that need to read in content such as metadata fields in
 			// the head html tag, or to provide descriptions to twitter/facebook
 			$this->collision_collector = array();
-			
+
 			if ( is_array($find) && is_array($replace) && $content ) {
 				// get all headings
 				// the html spec allows for a maximum of 6 heading depths
@@ -1340,12 +1341,12 @@ if ( !class_exists( 'toc' ) ) :
 								// escape some regular expression characters
 								// others: http://www.php.net/manual/en/regexp.reference.meta.php
 								$excluded_headings[$j] = str_replace(
-									array('*'), 
-									array('.*'), 
+									array('*'),
+									array('.*'),
 									trim($excluded_headings[$j])
 								);
 							}
-	
+
 							$new_matches = array();
 							for ($i = 0; $i < count($matches); $i++) {
 								$found = false;
@@ -1401,15 +1402,15 @@ if ( !class_exists( 'toc' ) ) :
 						// build a hierarchical toc?
 						// we could have tested for $items but that var can be quite large in some cases
 						if ( $this->options['show_heirarchy'] ) $items = $this->build_hierarchy( $matches );
-						
+
 					}
 				}
 			}
-			
+
 			return $items;
 		}
-		
-		
+
+
 		/**
 		 * Returns true if the table of contents is eligible to be printed, false otherwise.
 		 */
@@ -1419,10 +1420,10 @@ if ( !class_exists( 'toc' ) ) :
 
 			// do not trigger the TOC when displaying an XML/RSS feed
 			if ( is_feed() ) return false;
-			
+
 			// if the shortcode was used, this bypasses many of the global options
 			if ( $shortcode_used !== false ) {
-				// shortcode is used, make sure it adheres to the exclude from 
+				// shortcode is used, make sure it adheres to the exclude from
 				// homepage option if we're on the homepage
 				if ( !$this->options['include_homepage'] && is_front_page() )
 					return false;
@@ -1431,7 +1432,7 @@ if ( !class_exists( 'toc' ) ) :
 			}
 			else {
 				if (
-					( in_array(get_post_type($post), $this->options['auto_insert_post_types']) && $this->show_toc && !is_search() && !is_archive() && !is_front_page() ) || 
+					( in_array(get_post_type($post), $this->options['auto_insert_post_types']) && $this->show_toc && !is_search() && !is_archive() && !is_front_page() ) ||
 					( $this->options['include_homepage'] && is_front_page() )
 				) {
 					if ( $this->options['restrict_path'] ) {
@@ -1447,8 +1448,8 @@ if ( !class_exists( 'toc' ) ) :
 					return false;
 			}
 		}
-		
-		
+
+
 		function the_content( $content )
 		{
 			global $post;
@@ -1457,12 +1458,12 @@ if ( !class_exists( 'toc' ) ) :
 			$find = $replace = array();
 
 			if ( $this->is_eligible($custom_toc_position) ) {
-				
+
 				$items = $this->extract_headings($find, $replace, $content);
 
 				if ( $items ) {
 					// do we display the toc within the content or has the user opted
-					// to only show it in the widget?  if so, then we still need to 
+					// to only show it in the widget?  if so, then we still need to
 					// make the find/replace call to insert the anchors
 					if ( $this->options['show_toc_in_widget_only'] && (in_array(get_post_type(), $this->options['show_toc_in_widget_only_post_types'])) ) {
 						$content = $this->mb_find_replace($find, $replace, $content);
@@ -1474,7 +1475,7 @@ if ( !class_exists( 'toc' ) ) :
 							case TOC_WRAPPING_LEFT:
 								$css_classes .= ' toc_wrap_left';
 								break;
-								
+
 							case TOC_WRAPPING_RIGHT:
 								$css_classes .= ' toc_wrap_right';
 								break;
@@ -1483,43 +1484,43 @@ if ( !class_exists( 'toc' ) ) :
 							default:
 								// do nothing
 						}
-						
+
 						// colour themes
 						switch ( $this->options['theme'] ) {
 							case TOC_THEME_LIGHT_BLUE:
 								$css_classes .= ' toc_light_blue';
 								break;
-							
+
 							case TOC_THEME_WHITE:
 								$css_classes .= ' toc_white';
 								break;
-								
+
 							case TOC_THEME_BLACK:
 								$css_classes .= ' toc_black';
 								break;
-							
+
 							case TOC_THEME_TRANSPARENT:
 								$css_classes .= ' toc_transparent';
 								break;
-						
+
 							case TOC_THEME_GREY:
 							default:
 								// do nothing
 						}
-						
+
 						// bullets?
 						if ( $this->options['bullet_spacing'] )
 							$css_classes .= ' have_bullets';
 						else
 							$css_classes .= ' no_bullets';
-						
+
 						if ( $this->options['css_container_class'] ) $css_classes .= ' ' . $this->options['css_container_class'];
 
 						$css_classes = trim($css_classes);
-						
+
 						// an empty class="" is invalid markup!
 						if ( !$css_classes ) $css_classes = ' ';
-						
+
 						// add container, toc title and list items
 						$html = '<div id="toc_container" class="' . $css_classes . '">';
 						if ( $this->options['show_heading_text'] ) {
@@ -1529,28 +1530,28 @@ if ( !class_exists( 'toc' ) ) :
 							$html .= '<p class="toc_title">' . $toc_title . '</p>';
 						}
 						$html .= '<ul class="toc_list">' . $items . '</ul></div>' . "\n";
-						
+
 						if ( $custom_toc_position !== false ) {
 							$find[] = '<!--TOC-->';
 							$replace[] = $html;
 							$content = $this->mb_find_replace($find, $replace, $content);
 						}
-						else {	
+						else {
 							if ( count($find) > 0 ) {
 								switch ( $this->options['position'] ) {
 									case TOC_POSITION_TOP:
 										$content = $html . $this->mb_find_replace($find, $replace, $content);
 										break;
-									
+
 									case TOC_POSITION_BOTTOM:
 										$content = $this->mb_find_replace($find, $replace, $content) . $html;
 										break;
-									
+
 									case TOC_POSITION_AFTER_FIRST_HEADING:
 										$replace[0] = $replace[0] . $html;
 										$content = $this->mb_find_replace($find, $replace, $content);
 										break;
-								
+
 									case TOC_POSITION_BEFORE_FIRST_HEADING:
 									default:
 										$replace[0] = $html . $replace[0];
@@ -1565,10 +1566,21 @@ if ( !class_exists( 'toc' ) ) :
 				// remove <!--TOC--> (inserted from shortcode) from content
 				$content = str_replace('<!--TOC-->', '', $content);
 			}
-		
+
 			return $content;
 		}
-		
+
+		/**
+		 * Filter to add plugins to the Rank Math SEO TOC list.
+		 *
+		 * @param array TOC plugins.
+		 */
+		public function rank_math_toc_plugins( $toc_plugins ) {
+			$toc_plugins['table-of-content-plus/toc.php'] = 'Table of Contents Plus';
+
+			return $toc_plugins;
+		}
+
 	} // end class
 endif;
 
@@ -1579,36 +1591,36 @@ if ( !class_exists( 'toc_widget' ) ) :
 
 		function __construct()
 		{
-			$widget_options = array( 
-				'classname' => 'toc_widget', 
-				'description' => __('Display the table of contents in the sidebar with this widget', 'table-of-contents-plus') 
+			$widget_options = array(
+				'classname' => 'toc_widget',
+				'description' => __('Display the table of contents in the sidebar with this widget', 'table-of-contents-plus')
 			);
-			$control_options = array( 
-				'width' => 250, 
-				'height' => 350, 
+			$control_options = array(
+				'width' => 250,
+				'height' => 350,
 				'id_base' => 'toc-widget'
 			);
 			parent::__construct( 'toc-widget', 'TOC+', $widget_options, $control_options );
 		}
-		
+
 
 		/**
 		 * Widget output to the public
 		 */
-		function widget( $args, $instance ) 
+		function widget( $args, $instance )
 		{
 			global $tic, $wp_query;
 			$items = $custom_toc_position = '';
 			$find = $replace = array();
-			
+
 			$toc_options = $tic->get_options();
 			$post = get_post( $wp_query->post->ID );
 			$custom_toc_position = strpos( $post->post_content, '[toc]' );	// at this point, shortcodes haven't run yet so we can't search for <!--TOC-->
-			
+
 			if ( $tic->is_eligible($custom_toc_position) ) {
-				
+
 				extract( $args );
-				
+
 				$items = $tic->extract_headings( $find, $replace, wptexturize($post->post_content) );
 				$title = ( array_key_exists('title', $instance) ) ? apply_filters('widget_title', $instance['title']) : '';
 				if ( strpos($title, '%PAGE_TITLE%') !== false ) $title = str_replace( '%PAGE_TITLE%', get_the_title(), $title );
@@ -1621,7 +1633,7 @@ if ( !class_exists( 'toc_widget' ) ) :
 					$css_classes .= ' have_bullets';
 				else
 					$css_classes .= ' no_bullets';
-				
+
 				if ( $items ) {
 					// before widget (defined by themes)
 					echo $before_widget;
@@ -1631,26 +1643,26 @@ if ( !class_exists( 'toc_widget' ) ) :
 
 					// display the list
 					echo '<ul class="toc_widget_list' . $css_classes . '">' . $items . '</ul>';
-					
+
 					// after widget (defined by themes)
 					echo $after_widget;
 				}
 			}
 		}
-		
+
 
 		/**
 		 * Update the widget settings
 		 */
-		function update( $new_instance, $old_instance ) 
+		function update( $new_instance, $old_instance )
 		{
 			global $tic;
-			
+
 			$instance = $old_instance;
 
 			// strip tags for title to remove HTML (important for text inputs)
 			$instance['title'] = strip_tags( trim( $new_instance['title'] ) );
-			
+
 			// no need to strip tags for the following
 			//$instance['hide_inline'] = $new_instance['hide_inline'];
 			$tic->set_show_toc_in_widget_only( $new_instance['hide_inline'] );
@@ -1658,7 +1670,7 @@ if ( !class_exists( 'toc_widget' ) ) :
 
 			return $instance;
 		}
-		
+
 
 		/**
 		 * Displays the widget settings on the widget panel.
@@ -1667,8 +1679,8 @@ if ( !class_exists( 'toc_widget' ) ) :
 		{
 			global $tic;
 			$toc_options = $tic->get_options();
-		
-			$defaults = array( 
+
+			$defaults = array(
 				'title' => $toc_options['heading_text']
 			);
 			$instance = wp_parse_args( (array)$instance, $defaults );
@@ -1680,7 +1692,7 @@ if ( !class_exists( 'toc_widget' ) ) :
 			</p>
 
 			<p>
-				<input class="checkbox" type="checkbox" <?php checked( $toc_options['show_toc_in_widget_only'], 1 ); ?> id="<?php echo $this->get_field_id( 'hide_inline' ); ?>" name="<?php echo $this->get_field_name( 'hide_inline' ); ?>" value="1" /> 
+				<input class="checkbox" type="checkbox" <?php checked( $toc_options['show_toc_in_widget_only'], 1 ); ?> id="<?php echo $this->get_field_id( 'hide_inline' ); ?>" name="<?php echo $this->get_field_name( 'hide_inline' ); ?>" value="1" />
 				<label for="<?php echo $this->get_field_id( 'hide_inline' ); ?>"> <?php _e('Show the table of contents only in the sidebar', 'table-of-contents-plus'); ?></label>
 			</p>
 
@@ -1708,7 +1720,7 @@ jQuery(document).ready(function($) {
 </script>
 <?php
 		}
-		
+
 	} // end class
 endif;
 
@@ -1721,7 +1733,7 @@ endif;
  *
  *		- $content is the entire content with headings.  If blank, will default to the current $post
  *
- * 		- $link is the URL to prefix the anchor with.  If provided a string, will use it as the prefix.  
+ * 		- $link is the URL to prefix the anchor with.  If provided a string, will use it as the prefix.
  *		If set to true then will try to obtain the permalink from the $post object.
  *
  *		- $apply_eligibility bool, defaults to false.  When set to true, will apply the check to
@@ -1731,16 +1743,16 @@ endif;
 function toc_get_index( $content = '', $prefix_url = '', $apply_eligibility = false )
 {
 	global $wp_query, $tic;
-	
+
 	$return = '';
 	$find = $replace = array();
 	$proceed = true;
-	
+
 	if ( !$content ) {
 		$post = get_post( $wp_query->post->ID );
 		$content = wptexturize($post->post_content);
 	}
-	
+
 	if ( $apply_eligibility ) {
 		if ( !$tic->is_eligible() ) {
 			$proceed = false;
@@ -1754,7 +1766,7 @@ function toc_get_index( $content = '', $prefix_url = '', $apply_eligibility = fa
 		$return = $tic->extract_headings( $find, $replace, $content );
 		if ( $prefix_url ) $return = str_replace('href="#', 'href="' . $prefix_url . '#', $return);
 	}
-	
+
 	return $return;
 }
 
