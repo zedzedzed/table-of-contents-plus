@@ -63,6 +63,7 @@ Lets you generate the table of contents at the preferred position.  Useful for s
 * "wrapping": text, either "left" or "right"
 * "heading_levels": numbers, this lets you select the heading levels you want included in the table of contents.  Separate multiple levels with a comma.  Example: include headings 3, 4 and 5 but exclude the others with `heading_levels="3,4,5"`
 * "class": text, enter CSS classes to be added to the container. Separate multiple classes with a space.
+* "start": number, show when this number of headers are present in the content.
 
 = [no_toc] =
 Allows you to disable the table of contents for the current post, page, or custom post type.
