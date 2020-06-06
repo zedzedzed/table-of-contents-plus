@@ -236,7 +236,8 @@ if ( !class_exists( 'toc' ) ) :
 				'wrapping' => $this->options['wrapping'],
 				'heading_levels' => $this->options['heading_levels'],
 				'exclude' => $this->options['exclude'],
-				'collapse' => false
+				'collapse' => false,
+				'start' => $this->options['start'],
 				), $atts )
 			);
 
@@ -272,6 +273,10 @@ if ( !class_exists( 'toc' ) ) :
 			if ( $collapse ) {
 				$this->options['visibility_hide_by_default'] = true;
 				$re_enqueue_scripts = true;
+			}
+
+			if ( is_numeric($start) ) {
+				$this->options['start'] = $start;
 			}
 
 			if ( $re_enqueue_scripts ) do_action( 'wp_enqueue_scripts' );
