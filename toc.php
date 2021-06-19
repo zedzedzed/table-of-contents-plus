@@ -11,7 +11,7 @@ Version: 		2002
 License:		GPL2
 */
 
-/*  Copyright 2002  Michael Tran  (michael@dublue.com)
+/*  Copyright 2021 Michael Tran (michael@dublue.com)
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License, version 2, as 
