@@ -2,7 +2,7 @@
 Contributors: conjur3r
 Tags: table of contents, indexes, toc, sitemap, cms, options, list, page listing, category listing
 Requires at least: 3.2
-Tested up to: 5.3 
+Tested up to: 5.7
 Stable tag: 2002
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
