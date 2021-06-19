@@ -1,4 +1,5 @@
-# table-of-contents-plus
+# Table of Contents Plus
+
 A powerful yet user friendly WordPress plugin that automatically creates a context specific index or table of contents (TOC) for long pages (and custom post types). More than just a table of contents plugin, this plugin can also output a sitemap listing pages and/or categories across your entire site.
 
 Built from the ground up and with Wikipedia in mind, the table of contents by default appears before the first heading on a page. This allows the author to insert lead-in content that may summarise or introduce the rest of the page. It also uses a unique numbering scheme that doesn't get lost through CSS differences across themes.
@@ -14,5 +15,6 @@ Custom post types are supported, however, auto insertion works only when the_con
 Collaborate, participate, fork this plugin on [Github](https://github.com/zedzedzed/table-of-contents-plus/).
 
 ## Links
+
 * [WordPress plugin page](https://wordpress.org/plugins/table-of-contents-plus/)
 * [Plugin homepage](http://dublue.com/plugins/toc/)
