@@ -8,19 +8,19 @@
     <!-- Scan only PHP files -->
     <arg name="extensions" value="php"/>
 
-	<!-- Show progress, show the error codes for each message (source). -->
-	<arg value="ps" />
+    <!-- Show progress, show the error codes for each message (source). -->
+    <arg value="ps" />
 
-	<!-- Check up to 8 files simultaneously. -->
-	<arg name="parallel" value="8" />
+    <!-- Check up to 8 files simultaneously. -->
+    <arg name="parallel" value="8" />
 
-	<!-- Include the WordPress-Core standard. -->
-	<rule ref="WordPress-Core">
-		<exclude name="Generic.Arrays.DisallowShortArraySyntax.Found"/>
-		<exclude name="WordPress.PHP.DisallowShortTernary.Found"/>
-	</rule>
+    <!-- Include the WordPress-Core standard. -->
+    <rule ref="WordPress-Core">
+        <exclude name="Generic.Arrays.DisallowShortArraySyntax.Found"/>
+        <exclude name="WordPress.PHP.DisallowShortTernary.Found"/>
+    </rule>
 
-	<rule ref="Internal.NoCodeFound">
-		<severity>0</severity>
-	</rule>
+    <rule ref="Internal.NoCodeFound">
+        <severity>0</severity>
+    </rule>
 </ruleset>
