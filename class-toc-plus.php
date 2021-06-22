@@ -97,6 +97,7 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 			add_action( 'admin_menu', [ $this, 'admin_menu' ] );
 			add_action( 'widgets_init', [ $this, 'widgets_init' ] );
 			add_action( 'sidebar_admin_setup', [ $this, 'sidebar_admin_setup' ] );
+			add_action( 'init', [ $this, 'init' ] );
 
 			add_filter( 'the_content', [ $this, 'the_content' ], 100 );  // run after shortcodes are interpretted (level 10)
 			add_filter( 'plugin_action_links', [ $this, 'plugin_action_links' ], 10, 2 );
@@ -516,6 +517,17 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 						}
 					}
 				}
+			}
+		}
+
+
+		function init() {
+			// Add compatibility with Rank Math SEO
+			if ( class_exists( 'RankMath' ) ) {
+				add_filter( 'rank_math/researches/toc_plugins', function( $toc_plugins ) {
+					$toc_plugins['table-of-contents-plus/toc.php'] = 'Table of Contents Plus';
+					return $toc_plugins;
+				} );
 			}
 		}
 

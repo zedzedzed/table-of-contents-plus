@@ -99,6 +99,13 @@ I will never ask for any form of reward or compensation.  Helping others achieve
 
 
 == Changelog ==
+= 2106 =
+* Released: x June 2021
+* Add compatibility with Rank Math SEO
+* Bump tested WordPress version to 5.7
+* Add PHP coding style
+* Adhere to majority of coding tips
+
 = 2002 =
 * Released: 9 February 2020
 * Fixed encoding when using %PAGE_TITLE% or %PAGE_NAME%
