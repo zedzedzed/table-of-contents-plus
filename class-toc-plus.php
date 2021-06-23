@@ -1,6 +1,6 @@
 <?php
 
-define( 'TOC_VERSION', '2002' );
+define( 'TOC_VERSION', '2106' );
 define( 'TOC_POSITION_BEFORE_FIRST_HEADING', 1 );
 define( 'TOC_POSITION_TOP', 2 );
 define( 'TOC_POSITION_BOTTOM', 3 );

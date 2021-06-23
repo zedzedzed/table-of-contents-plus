@@ -7,7 +7,7 @@
  * Author URI:  http://dublue.com/
  * Text Domain: table-of-contents-plus
  * Domain Path: /languages
- * Version:     2002
+ * Version:     2106
  * License:     GPL2
  */
 
