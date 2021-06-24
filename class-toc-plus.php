@@ -1624,6 +1624,11 @@ if ( ! class_exists( 'toc_widget' ) ) :
 		 */
 		function widget( $args, $instance ) {
 			global $toc_plus, $wp_query;
+
+            if ($wp_query->post === NULL) {
+                return;
+            }
+
 			$items               = '';
 			$custom_toc_position = '';
 			$find                = [];
