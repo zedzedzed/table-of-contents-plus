@@ -1641,7 +1641,7 @@ if ( ! class_exists( 'toc_widget' ) ) :
 
 				extract( $args );
 
-				$items = $toc_plus->extract_headings( $find, $replace, wptexturize( $post->post_content ) );
+				$items = $toc_plus->extract_headings( $find, $replace, wptexturize( do_shortcode( $post->post_content ) ) );
 				$title = ( array_key_exists( 'title', $instance ) ) ? apply_filters( 'widget_title', $instance['title'] ) : '';
 				if ( false !== strpos( $title, '%PAGE_TITLE%' ) ) {
 					$title = str_replace( '%PAGE_TITLE%', get_the_title(), $title );
