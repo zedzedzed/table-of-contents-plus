@@ -2,7 +2,7 @@
 Contributors: conjur3r
 Tags: table of contents, indexes, toc, sitemap, cms, options, list, page listing, category listing
 Requires at least: 3.2
-Tested up to: 5.7
+Tested up to: 6.1.1
 Stable tag: 2106
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -99,6 +99,12 @@ I will never ask for any form of reward or compensation.  Helping others achieve
 
 
 == Changelog ==
+= trunk =
+* Released: x
+* Fixed XSS in toc shortcode, class property (thanks to wpscan)
+* Fixed XSS in sitemap_pages and sitemap_categories shortcodes, label properties
+* Bump tested version to 6.1.1
+
 = 2106 =
 * Released: 23 June 2021
 * Add compatibility with Rank Math SEO
