@@ -309,7 +309,7 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 				shortcode_atts(
 					[
 						'heading'      => $this->options['sitemap_heading_type'],
-						'label'        => htmlentities( $this->options['sitemap_pages'], ENT_COMPAT, 'UTF-8' ),
+						'label'        => $this->options['sitemap_pages'],
 						'no_label'     => false,
 						'exclude'      => '',
 						'exclude_tree' => '',
@@ -318,13 +318,15 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 				)
 			);
 
+			$heading = intval( $heading );	// make sure it's an integer
+
 			if ( $heading < 1 || $heading > 6 ) {  // h1 to h6 are valid
 				$heading = $this->options['sitemap_heading_type'];
 			}
 
 			$html = '<div class="toc_sitemap">';
 			if ( ! $no_label ) {
-				$html .= '<h' . $heading . ' class="toc_sitemap_pages">' . $label . '</h' . $heading . '>';
+				$html .= '<h' . $heading . ' class="toc_sitemap_pages">' . htmlentities( $label, ENT_COMPAT, 'UTF-8' ) . '</h' . $heading . '>';
 			}
 			$html .=
 					'<ul class="toc_sitemap_pages_list">' .
@@ -341,7 +343,7 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 				shortcode_atts(
 					[
 						'heading'      => $this->options['sitemap_heading_type'],
-						'label'        => htmlentities( $this->options['sitemap_categories'], ENT_COMPAT, 'UTF-8' ),
+						'label'        => $this->options['sitemap_categories'],
 						'no_label'     => false,
 						'exclude'      => '',
 						'exclude_tree' => '',
@@ -350,13 +352,15 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 				)
 			);
 
+			$heading = intval( $heading );	// make sure it's an integer
+
 			if ( $heading < 1 || $heading > 6 ) {  // h1 to h6 are valid
 				$heading = $this->options['sitemap_heading_type'];
 			}
 
 			$html = '<div class="toc_sitemap">';
 			if ( ! $no_label ) {
-				$html .= '<h' . $heading . ' class="toc_sitemap_categories">' . $label . '</h' . $heading . '>';
+				$html .= '<h' . $heading . ' class="toc_sitemap_categories">' . htmlentities( $label, ENT_COMPAT, 'UTF-8' ) . '</h' . $heading . '>';
 			}
 			$html .=
 					'<ul class="toc_sitemap_categories_list">' .
