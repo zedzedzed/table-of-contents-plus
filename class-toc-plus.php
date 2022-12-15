@@ -1547,7 +1547,7 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 						}
 
 						// add container, toc title and list items
-						$html = '<div id="toc_container" class="' . $css_classes . '">';
+						$html = '<div id="toc_container" class="' . htmlentities( $css_classes, ENT_COMPAT, 'UTF-8' ) . '">';
 						if ( $this->options['show_heading_text'] ) {
 							$toc_title = htmlentities( $this->options['heading_text'], ENT_COMPAT, 'UTF-8' );
 							if ( false !== strpos( $toc_title, '%PAGE_TITLE%' ) ) {
