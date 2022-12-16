@@ -3,7 +3,7 @@ Contributors: conjur3r
 Tags: table of contents, indexes, toc, sitemap, cms, options, list, page listing, category listing
 Requires at least: 3.2
 Tested up to: 6.1.1
-Stable tag: 2106
+Stable tag: 2212
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -105,15 +105,15 @@ I will never ask for any form of reward or compensation.  Helping others achieve
 
 
 == Changelog ==
-= trunk =
-* Released: x
+= 2212 =
+* Released: 16 December 2022
 * Bump tested version to 6.1.1
 * When using the TOC+ widget, execute shortcodes beforehand (props endcoreCL)
 * When using the TOC+ widget, abort early when no post for edge cases (props jonas-hoebenreich)
 * Add start property to toc shortcode to override the minimum number of headings needed to display (props woutervanvliet)
 * Add no_numbers property to toc shortcode to disable leading heading indexes (props TedAvery)
 * Fixed XSS vulnerability in toc shortcode, class property (thanks to wpscan)
-* Fixed XSS vulnerabilities in sitemap_pages and sitemap_categories shortcodes, label properties
+* Fixed XSS vulnerabilities in sitemap_pages and sitemap_categories shortcodes, label property
 
 = 2106 =
 * Released: 23 June 2021
