@@ -190,6 +190,7 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 						'heading_levels' => $this->options['heading_levels'],
 						'exclude'        => $this->options['exclude'],
 						'collapse'       => false,
+						'start'          => $this->options['start'],
 					],
 					$atts
 				)
@@ -235,6 +236,10 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 			if ( $collapse ) {
 				$this->options['visibility_hide_by_default'] = true;
 				$re_enqueue_scripts = true;
+			}
+
+			if ( is_numeric( $start ) ) {
+				$this->options['start'] = $start;
 			}
 
 			if ( $re_enqueue_scripts ) {

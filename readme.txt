@@ -58,11 +58,13 @@ When attributes are left out for the shortcodes below, they will fallback to the
 
 = [toc] =
 Lets you generate the table of contents at the preferred position.  Useful for sites that only require a TOC on a small handful of pages.  Supports the following attributes:
+
 * "label": text, title of the table of contents
 * "no_label": true/false, shows or hides the title
 * "wrapping": text, either "left" or "right"
 * "heading_levels": numbers, this lets you select the heading levels you want included in the table of contents.  Separate multiple levels with a comma.  Example: include headings 3, 4 and 5 but exclude the others with `heading_levels="3,4,5"`
 * "class": text, enter CSS classes to be added to the container. Separate multiple classes with a space.
+* "start": number, show when this number of headings are present in the content.
 
 = [no_toc] =
 Allows you to disable the table of contents for the current post, page, or custom post type.
@@ -72,6 +74,7 @@ Produces a listing of all pages and categories for your site. You can use this o
 
 = [sitemap_pages] =
 Lets you print out a listing of only pages. The following attributes are accepted:
+
 * "heading": number between 1 and 6, defines which html heading to use
 * "label": text, title of the list
 * "no_label": true/false, shows or hides the list heading
@@ -83,10 +86,13 @@ Same as `[sitemap_pages]` but for categories.
 
 = [sitemap_posts] =
 This lets you print out an index of all published posts on your site.  By default, posts are listed in alphabetical order grouped by their first letters.  The following attributes are accepted:
+
 * "order": text, either ASC or DESC
 * "orderby": text, popular options include "title", "date", "ID", and "rand". See [WP_Query](https://codex.wordpress.org/Class_Reference/WP_Query#Order_.26_Orderby_Parameters) for a list.
 * "separate": true/false (defaults to true), does not separate the lists by first letter when set to false.
+
 Use the following CSS classes to customise the appearance of your listing:
+
 * toc_sitemap_posts_section
 * toc_sitemap_posts_letter
 * toc_sitemap_posts_list
@@ -104,6 +110,7 @@ I will never ask for any form of reward or compensation.  Helping others achieve
 * Bump tested version to 6.1.1
 * When using the TOC+ widget, execute shortcodes beforehand (props endcoreCL)
 * When using the TOC+ widget, abort early when no post for edge cases (props jonas-hoebenreich)
+* Add start property to toc shortcode to override the minimum number of headings needed to display (props woutervanvliet)
 * Fixed XSS vulnerability in toc shortcode, class property (thanks to wpscan)
 * Fixed XSS vulnerabilities in sitemap_pages and sitemap_categories shortcodes, label properties
 
