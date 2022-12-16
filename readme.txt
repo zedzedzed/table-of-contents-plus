@@ -111,6 +111,7 @@ I will never ask for any form of reward or compensation.  Helping others achieve
 * When using the TOC+ widget, execute shortcodes beforehand (props endcoreCL)
 * When using the TOC+ widget, abort early when no post for edge cases (props jonas-hoebenreich)
 * Add start property to toc shortcode to override the minimum number of headings needed to display (props woutervanvliet)
+* Add no_numbers property to toc shortcode to disable leading heading indexes (props TedAvery)
 * Fixed XSS vulnerability in toc shortcode, class property (thanks to wpscan)
 * Fixed XSS vulnerabilities in sitemap_pages and sitemap_categories shortcodes, label properties
 
