@@ -177,47 +177,45 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 		}
 
 
-		public function shortcode_toc( $atts ) {
-			extract(
-				shortcode_atts(
-					[
-						'label'          => $this->options['heading_text'],
-						'label_show'     => $this->options['visibility_show'],
-						'label_hide'     => $this->options['visibility_hide'],
-						'no_label'       => false,
-						'class'          => false,
-						'wrapping'       => $this->options['wrapping'],
-						'heading_levels' => $this->options['heading_levels'],
-						'exclude'        => $this->options['exclude'],
-						'collapse'       => false,
-						'no_numbers'     => false,
-						'start'          => $this->options['start'],
-					],
-					$atts
-				)
+		public function shortcode_toc( $attributes ) {
+			$atts = shortcode_atts(
+				[
+					'label'          => $this->options['heading_text'],
+					'label_show'     => $this->options['visibility_show'],
+					'label_hide'     => $this->options['visibility_hide'],
+					'no_label'       => false,
+					'class'          => false,
+					'wrapping'       => $this->options['wrapping'],
+					'heading_levels' => $this->options['heading_levels'],
+					'exclude'        => $this->options['exclude'],
+					'collapse'       => false,
+					'no_numbers'     => false,
+					'start'          => $this->options['start'],
+				],
+				$attributes
 			);
 
 			$re_enqueue_scripts = false;
 
-			if ( $no_label ) {
+			if ( $atts['no_label'] ) {
 				$this->options['show_heading_text'] = false;
 			}
-			if ( $label ) {
-				$this->options['heading_text'] = html_entity_decode( $label );
+			if ( $atts['label'] ) {
+				$this->options['heading_text'] = html_entity_decode( $atts['label'] );
 			}
-			if ( $label_show ) {
-				$this->options['visibility_show'] = html_entity_decode( $label_show );
-				$re_enqueue_scripts = true;
+			if ( $atts['label_show'] ) {
+				$this->options['visibility_show'] = html_entity_decode( $atts['label_show'] );
+				$re_enqueue_scripts               = true;
 			}
-			if ( $label_hide ) {
-				$this->options['visibility_hide'] = html_entity_decode( $label_hide );
-				$re_enqueue_scripts = true;
+			if ( $atts['label_hide'] ) {
+				$this->options['visibility_hide'] = html_entity_decode( $atts['label_hide'] );
+				$re_enqueue_scripts               = true;
 			}
-			if ( $class ) {
-				$this->options['css_container_class'] = $class;
+			if ( $atts['class'] ) {
+				$this->options['css_container_class'] = $atts['class'];
 			}
-			if ( $wrapping ) {
-				switch ( strtolower( trim( $wrapping ) ) ) {
+			if ( $atts['wrapping'] ) {
+				switch ( strtolower( trim( $atts['wrapping'] ) ) ) {
 					case 'left':
 						$this->options['wrapping'] = TOC_WRAPPING_LEFT;
 						break;
@@ -231,29 +229,29 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 				}
 			}
 
-			if ( $exclude ) {
-				$this->options['exclude'] = $exclude;
+			if ( $atts['exclude'] ) {
+				$this->options['exclude'] = $atts['exclude'];
 			}
-			if ( $collapse ) {
+			if ( $atts['collapse'] ) {
 				$this->options['visibility_hide_by_default'] = true;
-				$re_enqueue_scripts = true;
+				$re_enqueue_scripts                          = true;
 			}
 
-			if ( $no_numbers ) {
+			if ( $atts['no_numbers'] ) {
 				$this->options['ordered_list'] = false;
 			}
 
-			if ( is_numeric( $start ) ) {
-				$this->options['start'] = $start;
+			if ( is_numeric( $atts['start'] ) ) {
+				$this->options['start'] = $atts['start'];
 			}
 
 			if ( $re_enqueue_scripts ) {
 				do_action( 'wp_enqueue_scripts' );
 			}
 
-			// if $heading_levels is an array, then it came from the global options
+			// if $atts['heading_levels'] is an array, then it came from the global options
 			// and wasn't provided by per instance
-			if ( $heading_levels && ! is_array( $heading_levels ) ) {
+			if ( $atts['heading_levels'] && ! is_array( $atts['heading_levels'] ) ) {
 				// make sure they are numbers between 1 and 6 and put into
 				// the $clean_heading_levels array if not already
 				$clean_heading_levels = [];
@@ -275,7 +273,7 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 			if ( ! is_search() && ! is_archive() && ! is_feed() ) {
 				return '<!--TOC-->';
 			} else {
-				return;
+				return '';
 			}
 		}
 
@@ -283,7 +281,7 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 		public function shortcode_no_toc( $atts ) {
 			$this->show_toc = false;
 
-			return;
+			return '';
 		}
 
 
@@ -324,29 +322,27 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 		}
 
 
-		public function shortcode_sitemap_pages( $atts ) {
-			extract(
-				shortcode_atts(
-					[
-						'heading'      => $this->options['sitemap_heading_type'],
-						'label'        => $this->options['sitemap_pages'],
-						'no_label'     => false,
-						'exclude'      => '',
-						'exclude_tree' => '',
-					],
-					$atts
-				)
+		public function shortcode_sitemap_pages( $attributes ) {
+			$atts = shortcode_atts(
+				[
+					'heading'      => $this->options['sitemap_heading_type'],
+					'label'        => $this->options['sitemap_pages'],
+					'no_label'     => false,
+					'exclude'      => '',
+					'exclude_tree' => '',
+				],
+				$attributes
 			);
 
-			$heading = intval( $heading );  // make sure it's an integer
+			$atts['heading'] = intval( $atts['heading'] );  // make sure it's an integer
 
-			if ( $heading < 1 || $heading > 6 ) {  // h1 to h6 are valid
-				$heading = $this->options['sitemap_heading_type'];
+			if ( $atts['heading'] < 1 || $atts['heading'] > 6 ) {  // h1 to h6 are valid
+				$atts['heading'] = $this->options['sitemap_heading_type'];
 			}
 
 			$html = '<div class="toc_sitemap">';
-			if ( ! $no_label ) {
-				$html .= '<h' . $heading . ' class="toc_sitemap_pages">' . htmlentities( $label, ENT_COMPAT, 'UTF-8' ) . '</h' . $heading . '>';
+			if ( ! $atts['no_label'] ) {
+				$html .= '<h' . $atts['heading'] . ' class="toc_sitemap_pages">' . htmlentities( $atts['label'], ENT_COMPAT, 'UTF-8' ) . '</h' . $atts['heading'] . '>';
 			}
 			$html .=
 					'<ul class="toc_sitemap_pages_list">' .
@@ -354,8 +350,8 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 							[
 								'title_li'     => '',
 								'echo'         => false,
-								'exclude'      => $exclude,
-								'exclude_tree' => $exclude_tree,
+								'exclude'      => $atts['exclude'],
+								'exclude_tree' => $atts['exclude_tree'],
 							]
 						) .
 					'</ul>' .
@@ -365,29 +361,27 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 		}
 
 
-		public function shortcode_sitemap_categories( $atts ) {
-			extract(
-				shortcode_atts(
-					[
-						'heading'      => $this->options['sitemap_heading_type'],
-						'label'        => $this->options['sitemap_categories'],
-						'no_label'     => false,
-						'exclude'      => '',
-						'exclude_tree' => '',
-					],
-					$atts
-				)
+		public function shortcode_sitemap_categories( $attributes ) {
+			$atts = shortcode_atts(
+				[
+					'heading'      => $this->options['sitemap_heading_type'],
+					'label'        => $this->options['sitemap_categories'],
+					'no_label'     => false,
+					'exclude'      => '',
+					'exclude_tree' => '',
+				],
+				$attributes
 			);
 
-			$heading = intval( $heading );  // make sure it's an integer
+			$atts['heading'] = intval( $atts['heading'] );  // make sure it's an integer
 
-			if ( $heading < 1 || $heading > 6 ) {  // h1 to h6 are valid
-				$heading = $this->options['sitemap_heading_type'];
+			if ( $atts['heading'] < 1 || $atts['heading'] > 6 ) {  // h1 to h6 are valid
+				$atts['heading'] = $this->options['sitemap_heading_type'];
 			}
 
 			$html = '<div class="toc_sitemap">';
-			if ( ! $no_label ) {
-				$html .= '<h' . $heading . ' class="toc_sitemap_categories">' . htmlentities( $label, ENT_COMPAT, 'UTF-8' ) . '</h' . $heading . '>';
+			if ( ! $atts['no_label'] ) {
+				$html .= '<h' . $atts['heading'] . ' class="toc_sitemap_categories">' . htmlentities( $atts['label'], ENT_COMPAT, 'UTF-8' ) . '</h' . $atts['heading'] . '>';
 			}
 			$html .=
 					'<ul class="toc_sitemap_categories_list">' .
@@ -395,8 +389,8 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 							[
 								'title_li'     => '',
 								'echo'         => false,
-								'exclude'      => $exclude,
-								'exclude_tree' => $exclude_tree,
+								'exclude'      => $atts['exclude'],
+								'exclude_tree' => $atts['exclude_tree'],
 							]
 						) .
 					'</ul>' .
@@ -406,24 +400,22 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 		}
 
 
-		public function shortcode_sitemap_posts( $atts ) {
-			extract(
-				shortcode_atts(
-					[
-						'order'    => 'ASC',
-						'orderby'  => 'title',
-						'separate' => true,
-					],
-					$atts
-				)
+		public function shortcode_sitemap_posts( $attributes ) {
+			$atts = shortcode_atts(
+				[
+					'order'    => 'ASC',
+					'orderby'  => 'title',
+					'separate' => true,
+				],
+				$attributes
 			);
 
 			$articles = new WP_Query(
 				[
 					'post_type'      => 'post',
 					'post_status'    => 'publish',
-					'order'          => $order,
-					'orderby'        => $orderby,
+					'order'          => $atts['order'],
+					'orderby'        => $atts['orderby'],
 					'posts_per_page' => -1,
 				]
 			);
@@ -431,22 +423,22 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 			$html   = '';
 			$letter = '';
 
-			$separate = strtolower( $separate );
-			if ( 'false' == $separate || 'no' == $separate ) {
-				$separate = false;
+			$atts['separate'] = strtolower( $atts['separate'] );
+			if ( 'false' === $atts['separate'] || 'no' === $atts['separate'] ) {
+				$atts['separate'] = false;
 			}
 
 			while ( $articles->have_posts() ) {
 				$articles->the_post();
-				$title = strip_tags( get_the_title() );
+				$title = wp_strip_all_tags( get_the_title() );
 
-				if ( $separate ) {
-					if ( strtolower( $title[0] ) != $letter ) {
+				if ( $atts['separate'] ) {
+					if ( strtolower( $title[0] ) !== $letter ) {
 						if ( $letter ) {
 							$html .= '</ul></div>';
 						}
 
-						$html .= '<div class="toc_sitemap_posts_section"><p class="toc_sitemap_posts_letter">' . strtolower( $title[0] ) . '</p><ul class="toc_sitemap_posts_list">';
+						$html  .= '<div class="toc_sitemap_posts_section"><p class="toc_sitemap_posts_letter">' . strtolower( $title[0] ) . '</p><ul class="toc_sitemap_posts_list">';
 						$letter = strtolower( $title[0] );
 					}
 				}
@@ -455,7 +447,7 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 			}
 
 			if ( $html ) {
-				if ( $separate ) {
+				if ( $atts['separate'] ) {
 					$html .= '</div>';
 				} else {
 					$html = '<div class="toc_sitemap_posts_section"><ul class="toc_sitemap_posts_list">' . $html . '</ul></div>';
@@ -1677,9 +1669,6 @@ if ( ! class_exists( 'toc_widget' ) ) :
 			$custom_toc_position = strpos( $post->post_content, '[toc]' );  // at this point, shortcodes haven't run yet so we can't search for <!--TOC-->
 
 			if ( $toc_plus->is_eligible( $custom_toc_position ) ) {
-
-				extract( $args );
-
 				$items = $toc_plus->extract_headings( $find, $replace, wptexturize( do_shortcode( $post->post_content ) ) );
 				$title = ( array_key_exists( 'title', $instance ) ) ? apply_filters( 'widget_title', $instance['title'] ) : '';
 				if ( false !== strpos( $title, '%PAGE_TITLE%' ) ) {
@@ -1700,18 +1689,18 @@ if ( ! class_exists( 'toc_widget' ) ) :
 
 				if ( $items ) {
 					// before widget (defined by themes)
-					echo $before_widget;
+					echo $args['before_widget'];
 
 					// display the widget title if one was input (before and after titles defined by themes)
 					if ( $title ) {
-						echo $before_title . $title . $after_title;
+						echo $args['before_title'] . $title . $args['after_title'];
 					}
 
 					// display the list
 					echo '<ul class="toc_widget_list' . $css_classes . '">' . $items . '</ul>';
 
 					// after widget (defined by themes)
-					echo $after_widget;
+					echo $args['after_widget'];
 				}
 			}
 		}
