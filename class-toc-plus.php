@@ -297,14 +297,24 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 					$html .=
 						'<h' . $this->options['sitemap_heading_type'] . ' class="toc_sitemap_pages">' . htmlentities( $this->options['sitemap_pages'], ENT_COMPAT, 'UTF-8' ) . '</h' . $this->options['sitemap_heading_type'] . '>' .
 						'<ul class="toc_sitemap_pages_list">' .
-							wp_list_pages( [ 'title_li' => '', 'echo' => false ] ) .
+							wp_list_pages(
+								[
+									'title_li' => '',
+									'echo'     => false,
+								]
+							) .
 						'</ul>';
 				}
 				if ( $this->options['sitemap_show_category_listing'] ) {
 					$html .=
 						'<h' . $this->options['sitemap_heading_type'] . ' class="toc_sitemap_categories">' . htmlentities( $this->options['sitemap_categories'], ENT_COMPAT, 'UTF-8' ) . '</h' . $this->options['sitemap_heading_type'] . '>' .
 						'<ul class="toc_sitemap_categories_list">' .
-							wp_list_categories( [ 'title_li' => '', 'echo' => false ] ) .
+							wp_list_categories(
+								[
+									'title_li' => '',
+									'echo'     => false,
+								]
+							) .
 						'</ul>';
 				}
 				$html .= '</div>';
@@ -340,7 +350,14 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 			}
 			$html .=
 					'<ul class="toc_sitemap_pages_list">' .
-						wp_list_pages( [ 'title_li' => '', 'echo' => false, 'exclude' => $exclude, 'exclude_tree' => $exclude_tree ] ) .
+						wp_list_pages(
+							[
+								'title_li'     => '',
+								'echo'         => false,
+								'exclude'      => $exclude,
+								'exclude_tree' => $exclude_tree,
+							]
+						) .
 					'</ul>' .
 				'</div>';
 
@@ -374,7 +391,14 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 			}
 			$html .=
 					'<ul class="toc_sitemap_categories_list">' .
-						wp_list_categories( [ 'title_li' => '', 'echo' => false, 'exclude' => $exclude, 'exclude_tree' => $exclude_tree ] ) .
+						wp_list_categories(
+							[
+								'title_li'     => '',
+								'echo'         => false,
+								'exclude'      => $exclude,
+								'exclude_tree' => $exclude_tree,
+							]
+						) .
 					'</ul>' .
 				'</div>';
 
