@@ -169,9 +169,9 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 
 
 		public function plugin_action_links( $links, $file ) {
-			if ( 'table-of-contents-plus/' . basename( __FILE__ ) == $file ) {
+			if ( 'table-of-contents-plus/toc.php' === $file ) {
 				$settings_link = '<a href="options-general.php?page=toc">' . __( 'Settings', 'table-of-contents-plus' ) . '</a>';
-				$links = array_merge( [ $settings_link ], $links );
+				$links         = array_merge( [ $settings_link ], $links );
 			}
 			return $links;
 		}
@@ -338,7 +338,7 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 				)
 			);
 
-			$heading = intval( $heading );	// make sure it's an integer
+			$heading = intval( $heading );  // make sure it's an integer
 
 			if ( $heading < 1 || $heading > 6 ) {  // h1 to h6 are valid
 				$heading = $this->options['sitemap_heading_type'];
@@ -379,7 +379,7 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 				)
 			);
 
-			$heading = intval( $heading );	// make sure it's an integer
+			$heading = intval( $heading );  // make sure it's an integer
 
 			if ( $heading < 1 || $heading > 6 ) {  // h1 to h6 are valid
 				$heading = $this->options['sitemap_heading_type'];
@@ -516,8 +516,8 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 
 
 		public function admin_init() {
-			wp_register_script( 'toc_admin_script', $this->path . '/admin.js' );
-			wp_register_style( 'toc_admin_style', $this->path . '/admin.css' );
+			wp_register_script( 'toc_admin_script', $this->path . '/admin.js', [], TOC_VERSION, true );
+			wp_register_style( 'toc_admin_style', $this->path . '/admin.css', [], TOC_VERSION );
 		}
 
 
@@ -709,13 +709,13 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 				}
 			}
 
-?>
+			?>
 <div id='toc' class='wrap'>
 <div id="icon-options-general" class="icon32"><br /></div>
 <h2>Table of Contents Plus</h2>
-<?php echo $msg; ?>
+			<?php echo $msg; ?>
 <form method="post" action="<?php echo htmlentities( '?page=' . $_GET['page'] . '&update' ); ?>">
-<?php wp_nonce_field( plugin_basename( __FILE__ ), 'toc-admin-options' ); ?>
+			<?php wp_nonce_field( plugin_basename( __FILE__ ), 'toc-admin-options' ); ?>
 
 <ul id="tabbed-nav">
 	<li><a href="#tab1"><?php _e( 'Main Options', 'table-of-contents-plus' ); ?></a></li>
@@ -742,13 +742,13 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 	<th><label for="start"><?php _e( 'Show when', 'table-of-contents-plus' ); ?></label></th>
 	<td>
 		<select name="start" id="start">
-<?php
-			for ($i = TOC_MIN_START; $i <= TOC_MAX_START; $i++) {
+			<?php
+			for ( $i = TOC_MIN_START; $i <= TOC_MAX_START; $i++ ) {
 				echo '<option value="' . $i . '"';
 				if ( $i == $this->options['start'] ) echo ' selected="selected"';
 				echo '>' . $i . '</option>' . "\n";
 			}
-?>
+			?>
 		</select> <?php
 		/* translators: text follows drop down list of numbers */
 		_e( 'or more headings are present', 'table-of-contents-plus' ); ?>
