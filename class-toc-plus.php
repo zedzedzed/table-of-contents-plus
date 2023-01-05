@@ -34,7 +34,7 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 		private $exclude_post_types;
 		private $collision_collector;  // keeps a track of used anchors for collision detecting
 
-		function __construct() {
+		public function __construct() {
 			$this->path                = plugins_url( '', __FILE__ );
 			$this->show_toc            = true;
 			$this->exclude_post_types  = [ 'attachment', 'revision', 'nav_menu_item', 'safecss' ];
@@ -112,7 +112,7 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 		}
 
 
-		function __destruct() {}
+		public function __destruct() {}
 
 
 		public function get_options() {
@@ -168,7 +168,7 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 		}
 
 
-		function plugin_action_links( $links, $file ) {
+		public function plugin_action_links( $links, $file ) {
 			if ( 'table-of-contents-plus/' . basename( __FILE__ ) == $file ) {
 				$settings_link = '<a href="options-general.php?page=toc">' . __( 'Settings', 'table-of-contents-plus' ) . '</a>';
 				$links = array_merge( [ $settings_link ], $links );
@@ -177,7 +177,7 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 		}
 
 
-		function shortcode_toc( $atts ) {
+		public function shortcode_toc( $atts ) {
 			extract(
 				shortcode_atts(
 					[
@@ -280,14 +280,14 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 		}
 
 
-		function shortcode_no_toc( $atts ) {
+		public function shortcode_no_toc( $atts ) {
 			$this->show_toc = false;
 
 			return;
 		}
 
 
-		function shortcode_sitemap( $atts ) {
+		public function shortcode_sitemap( $atts ) {
 			$html = '';
 
 			// only do the following if enabled
@@ -314,7 +314,7 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 		}
 
 
-		function shortcode_sitemap_pages( $atts ) {
+		public function shortcode_sitemap_pages( $atts ) {
 			extract(
 				shortcode_atts(
 					[
@@ -348,7 +348,7 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 		}
 
 
-		function shortcode_sitemap_categories( $atts ) {
+		public function shortcode_sitemap_categories( $atts ) {
 			extract(
 				shortcode_atts(
 					[
@@ -382,7 +382,7 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 		}
 
 
-		function shortcode_sitemap_posts( $atts ) {
+		public function shortcode_sitemap_posts( $atts ) {
 			extract(
 				shortcode_atts(
 					[
@@ -447,7 +447,7 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 		/**
 		 * Register and load CSS and javascript files for frontend.
 		 */
-		function wp_enqueue_scripts() {
+		public function wp_enqueue_scripts() {
 			$js_vars = [];
 
 			// register our CSS and scripts
@@ -486,18 +486,18 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 		}
 
 
-		function plugins_loaded() {
+		public function plugins_loaded() {
 			load_plugin_textdomain( 'table-of-contents-plus', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 		}
 
 
-		function admin_init() {
+		public function admin_init() {
 			wp_register_script( 'toc_admin_script', $this->path . '/admin.js' );
 			wp_register_style( 'toc_admin_style', $this->path . '/admin.css' );
 		}
 
 
-		function admin_menu() {
+		public function admin_menu() {
 			$page = add_submenu_page(
 				'options-general.php',
 				__( 'TOC', 'table-of-contents-plus' ) . '+',
@@ -511,7 +511,7 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 		}
 
 
-		function widgets_init() {
+		public function widgets_init() {
 			register_widget( 'toc_widget' );
 		}
 
@@ -519,7 +519,7 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 		/**
 		 * Remove widget options on widget deletion
 		 */
-		function sidebar_admin_setup() {
+		public function sidebar_admin_setup() {
 			// this action is loaded at the start of the widget screen
 			// so only do the following only when a form action has been initiated
 			if ( 'post' == strtolower( $_SERVER['REQUEST_METHOD'] ) ) {
@@ -535,7 +535,7 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 		}
 
 
-		function init() {
+		public function init() {
 			// Add compatibility with Rank Math SEO
 			if ( class_exists( 'RankMath' ) ) {
 				add_filter( 'rank_math/researches/toc_plugins', function( $toc_plugins ) {
@@ -549,7 +549,7 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 		/**
 		 * Load needed scripts and styles only on the toc administration interface.
 		 */
-		function admin_options_head() {
+		public function admin_options_head() {
 			wp_enqueue_style( 'farbtastic' );
 			wp_enqueue_script( 'farbtastic' );
 			wp_enqueue_script( 'jquery' );
@@ -674,7 +674,7 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 		}
 
 
-		function admin_options() {
+		public function admin_options() {
 			$msg = '';
 
 			if ( isset( $_GET['update'] ) ) {
@@ -1098,7 +1098,7 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 		}
 
 
-		function wp_head() {
+		public function wp_head() {
 			$css = '';
 
 			if ( ! $this->options['exclude_css'] ) {
@@ -1483,7 +1483,7 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 		}
 
 
-		function the_content( $content ) {
+		public function the_content( $content ) {
 			global $post;
 			$items               = '';
 			$css_classes         = '';
@@ -1619,7 +1619,7 @@ endif;
 if ( ! class_exists( 'toc_widget' ) ) :
 	class toc_widget extends WP_Widget {
 
-		function __construct() {
+		public function __construct() {
 			$widget_options  = [
 				'classname'   => 'toc_widget',
 				'description' => __( 'Display the table of contents in the sidebar with this widget', 'table-of-contents-plus' ),
@@ -1636,7 +1636,7 @@ if ( ! class_exists( 'toc_widget' ) ) :
 		/**
 		 * Widget output to the public
 		 */
-		function widget( $args, $instance ) {
+		public function widget( $args, $instance ) {
 			global $toc_plus, $wp_query;
 
 			if ( is_null( $wp_query->post ) ) {
@@ -1696,7 +1696,7 @@ if ( ! class_exists( 'toc_widget' ) ) :
 		/**
 		 * Update the widget settings
 		 */
-		function update( $new_instance, $old_instance ) {
+		public function update( $new_instance, $old_instance ) {
 			global $toc_plus;
 
 			$instance = $old_instance;
@@ -1716,7 +1716,7 @@ if ( ! class_exists( 'toc_widget' ) ) :
 		/**
 		 * Displays the widget settings on the widget panel.
 		 */
-		function form( $instance ) {
+		public function form( $instance ) {
 			global $toc_plus;
 			$toc_options = $toc_plus->get_options();
 
