@@ -1,6 +1,6 @@
 <?php
 
-if ( ! class_exists( 'toc_widget' ) ) :
+if ( ! class_exists( 'TOC_Widget' ) ) :
 	class TOC_Widget extends WP_Widget {
 
 		public function __construct() {
