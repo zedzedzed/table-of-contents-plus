@@ -130,7 +130,7 @@ jQuery(document).ready(function($) {
 			if ( invert )
 				visibility_text = (visibility_text == tocplus.visibility_hide) ? tocplus.visibility_show : tocplus.visibility_hide;
 				
-			$('#toc_container p.toc_title').append(' <span class="toc_toggle">[<a href="#">' + visibility_text + '</a>]</span>');
+			$('#toc_container p.toc_title').append(' <span class="toc_toggle"><span class="toc_brackets">[</span><a href="#">' + visibility_text + '</a><span class="toc_brackets">]</span></span>');
 			if ( visibility_text == tocplus.visibility_show ) {
 				$('ul.toc_list').hide();
 				$('#toc_container').addClass('contracted').shrinkTOCWidth();
