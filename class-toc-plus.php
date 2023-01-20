@@ -1366,10 +1366,9 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 			$this->collision_collector = [];
 
 			if ( is_array( $find ) && is_array( $replace ) && $content ) {
-				
 				// filter the content
-				$content = apply_filters( 'toc_url_extract_heading_content', $content );
-				
+				$content = apply_filters( 'toc_extract_headings', $content );
+
 				// get all headings
 				// the html spec allows for a maximum of 6 heading depths
 				if ( preg_match_all( '/(<h([1-6]{1})[^>]*>).*<\/h\2>/msuU', $content, $matches, PREG_SET_ORDER ) ) {
