@@ -718,7 +718,7 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 <div id="icon-options-general" class="icon32"><br></div>
 <h2>Table of Contents Plus</h2>
 			<?php echo wp_kses_post( $msg ); ?>
-<form method="post" action="<?php echo esc_url( '?page=' . $_GET['page'] . '&update' ); ?>">
+<form method="post" action="<?php echo esc_url( '?page=' . $_GET['page'] . '&update' ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended ?>">
 			<?php wp_nonce_field( plugin_basename( __FILE__ ), 'toc-admin-options' ); ?>
 
 <ul id="tabbed-nav">
@@ -1239,7 +1239,7 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 			$return = false;
 
 			if ( $title ) {
-				$return = trim( strip_tags( $title ) );
+				$return = trim( wp_strip_all_tags( $title ) );
 
 				// convert accented characters to ASCII
 				$return = remove_accents( $return );
@@ -1340,7 +1340,7 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 						$html .= ( $numbered_items[ $current_depth ] + 1 ) . '</span> ';
 						$numbered_items[ $current_depth ]++;
 					}
-					$html .= strip_tags( $matches[ $i ][0] ) . '</a>';
+					$html .= wp_strip_all_tags( $matches[ $i ][0] ) . '</a>';
 				}
 
 				// end lists
@@ -1467,7 +1467,7 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 								$found                   = false;
 								$count_excluded_headings = count( $excluded_headings );
 								for ( $j = 0; $j < $count_excluded_headings; $j++ ) {
-									if ( @preg_match( '/^' . $excluded_headings[ $j ] . '$/imU', strip_tags( $matches[ $i ][0] ) ) ) {
+									if ( @preg_match( '/^' . $excluded_headings[ $j ] . '$/imU', wp_strip_all_tags( $matches[ $i ][0] ) ) ) {
 										$found = true;
 										break;
 									}
@@ -1486,7 +1486,7 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 					$new_matches   = [];
 					$count_matches = count( $matches );
 					for ( $i = 0; $i < $count_matches; $i++ ) {
-						if ( trim( strip_tags( $matches[ $i ][0] ) ) !== false ) {
+						if ( trim( wp_strip_all_tags( $matches[ $i ][0] ) ) !== false ) {
 							$new_matches[] = $matches[ $i ];
 						}
 					}
@@ -1519,7 +1519,7 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 								if ( $this->options['ordered_list'] ) {
 									$items .= count( $replace ) . ' ';
 								}
-								$items .= strip_tags( $matches[ $i ][0] ) . '</a></li>';
+								$items .= wp_strip_all_tags( $matches[ $i ][0] ) . '</a></li>';
 							}
 						}
 
