@@ -109,7 +109,7 @@ I will never ask for any form of reward or compensation.  Helping others achieve
 * Released: xxx
 * Added `toc_brackets` CSS class to square brackets around show/hide text
 * Added a filter to the `toc_extract_headings` function (props Raymond Radet)
-* Apply WordPress-Extra coding standard
+* Refactor using WordPress-Extra coding standard
 
 = 2212 =
 * Released: 16 December 2022
