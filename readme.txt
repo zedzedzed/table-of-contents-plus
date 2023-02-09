@@ -3,7 +3,7 @@ Contributors: conjur3r
 Tags: table of contents, indexes, toc, sitemap, cms, options, list, page listing, category listing
 Requires at least: 3.2
 Tested up to: 6.1.1
-Stable tag: 2212
+Stable tag: 2302
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -105,6 +105,12 @@ I will never ask for any form of reward or compensation.  Helping others achieve
 
 
 == Changelog ==
+= 2302 =
+* Released: 9 February 2023
+* Added `toc_brackets` CSS class to square brackets around show/hide text
+* Added a filter to the `toc_extract_headings` function (props Raymond Radet)
+* Refactor using WordPress-Extra coding standard
+
 = 2212 =
 * Released: 16 December 2022
 * Bump tested version to 6.1.1
