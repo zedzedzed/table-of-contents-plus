@@ -325,6 +325,7 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 
 
 		public function shortcode_sitemap_pages( $attributes ) {
+			global $post;
 			$atts = shortcode_atts(
 				[
 					'heading'      => $this->options['sitemap_heading_type'],
@@ -332,6 +333,7 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 					'no_label'     => false,
 					'exclude'      => '',
 					'exclude_tree' => '',
+					'child_of'     => $this->options['child_of']
 				],
 				$attributes
 			);
@@ -340,6 +342,17 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 
 			if ( $atts['heading'] < 1 || $atts['heading'] > 6 ) {  // h1 to h6 are valid
 				$atts['heading'] = $this->options['sitemap_heading_type'];
+			}
+
+			// -- [ sitemap_pages child_of="current" ]
+			if ( $child_of == "current" ) {
+				$args_child_of = $post->ID;
+			}
+			else if ( is_numeric($child_of) ) {
+				// -- [ sitemap_pages child_of="1234" ]
+				$args_child_of = $child_of;
+			} else {
+				//$child_of = 0;
 			}
 
 			$html = '<div class="toc_sitemap">';
@@ -354,6 +367,8 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 								'echo'         => false,
 								'exclude'      => $atts['exclude'],
 								'exclude_tree' => $atts['exclude_tree'],
+								'hierarchical' => true,
+								'child_of' => $args_child_of
 							]
 						) .
 					'</ul>' .
