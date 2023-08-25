@@ -326,6 +326,7 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 
 		public function shortcode_sitemap_pages( $attributes ) {
 			global $post;
+			$args_child_of = 0;
 			$atts = shortcode_atts(
 				[
 					'heading'      => $this->options['sitemap_heading_type'],
@@ -338,14 +339,21 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 				$attributes
 			);
 
+			// -- debugging
+			//echo 'debug: child_of:   ' . $child_of . ' ' . "\n";    // true
+			//echo 'debug: current ID: ' . $post->ID . ' end ' . "\n";  // 2311
+
+
 			$atts['heading'] = intval( $atts['heading'] );  // make sure it's an integer
 
 			if ( $atts['heading'] < 1 || $atts['heading'] > 6 ) {  // h1 to h6 are valid
 				$atts['heading'] = $this->options['sitemap_heading_type'];
 			}
 
+
+
 			// -- [ sitemap_pages child_of="current" ]
-			if ( $child_of == "current" ) {
+			if ( $atts['child_of'] == "current" ) {
 				$args_child_of = $post->ID;
 			}
 			else if ( is_numeric($child_of) ) {
@@ -354,6 +362,7 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 			} else {
 				//$child_of = 0;
 			}
+			//echo "debug: intval args_child_of:" . intval($args_child_of) . "\n";
 
 			$html = '<div class="toc_sitemap">';
 			if ( ! $atts['no_label'] ) {
@@ -368,7 +377,7 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 								'exclude'      => $atts['exclude'],
 								'exclude_tree' => $atts['exclude_tree'],
 								'hierarchical' => true,
-								'child_of' => $args_child_of
+								'child_of' =>  intval($args_child_of)   // 1017 must be integer here
 							]
 						) .
 					'</ul>' .
