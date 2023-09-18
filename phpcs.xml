@@ -12,16 +12,25 @@
     <arg value="ps" />
 
     <!-- Check up to 8 files simultaneously. -->
-    <arg name="parallel" value="8" />
+    <arg name="parallel" value="8"/>
+
+    <!-- Exclude the Composer Vendor directory. -->
+    <exclude-pattern>/vendor/*</exclude-pattern>
+
+    <!-- Exclude minified Javascript files. -->
+    <exclude-pattern>*.min.js</exclude-pattern>
 
     <!-- Include the WordPress-Extra standard. -->
     <rule ref="WordPress-Extra">
-        <exclude name="Generic.Arrays.DisallowShortArraySyntax.Found"/>
+        <exclude name="Universal.Arrays.DisallowShortArraySyntax.Found"/>
         <exclude name="Generic.ControlStructures.InlineControlStructure.NotAllowed"/>
         <exclude name="Squiz.PHP.EmbeddedPhp.ContentBeforeEnd"/>
         <exclude name="Squiz.PHP.EmbeddedPhp.ContentBeforeOpen"/>
         <exclude name="WordPress.PHP.DisallowShortTernary.Found"/>
     </rule>
+
+    <!-- Let's also check that everything is properly documented. -->
+    <!--<rule ref="WordPress-Docs"/>-->
 
     <rule ref="Internal.NoCodeFound">
         <severity>0</severity>
