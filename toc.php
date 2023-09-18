@@ -32,7 +32,4 @@ https://github.com/zedzedzed/table-of-contents-plus/blob/main/LICENSE.md
  * http://www.iconfinder.com/search/?q=iconset%3Aoxygen
  */
 
-require_once __DIR__ . '/class-toc-plus.php';
-
-// do the magic
-$toc_plus = new TOC_Plus();
+require_once __DIR__ . '/includes/init.php';
