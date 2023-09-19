@@ -315,7 +315,7 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 				$atts['heading'] = $this->options['sitemap_heading_type'];
 			}
 
-			if ( strtolower( $atts['child_of'] ) === "current" ) {
+			if ( 'current' === strtolower( $atts['child_of'] ) ) {
 				$atts['child_of'] = get_the_ID();
 			} elseif ( is_numeric( $atts['child_of'] ) ) {
 				$atts['child_of'] = intval( $atts['child_of'] );
