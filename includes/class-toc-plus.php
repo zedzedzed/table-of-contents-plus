@@ -1,30 +1,5 @@
 <?php
 
-define( 'TOC_VERSION', '2302' );
-define( 'TOC_POSITION_BEFORE_FIRST_HEADING', 1 );
-define( 'TOC_POSITION_TOP', 2 );
-define( 'TOC_POSITION_BOTTOM', 3 );
-define( 'TOC_POSITION_AFTER_FIRST_HEADING', 4 );
-define( 'TOC_MIN_START', 2 );
-define( 'TOC_MAX_START', 10 );
-define( 'TOC_SMOOTH_SCROLL_OFFSET', 30 );
-define( 'TOC_WRAPPING_NONE', 0 );
-define( 'TOC_WRAPPING_LEFT', 1 );
-define( 'TOC_WRAPPING_RIGHT', 2 );
-define( 'TOC_THEME_GREY', 1 );
-define( 'TOC_THEME_LIGHT_BLUE', 2 );
-define( 'TOC_THEME_WHITE', 3 );
-define( 'TOC_THEME_BLACK', 4 );
-define( 'TOC_THEME_TRANSPARENT', 99 );
-define( 'TOC_THEME_CUSTOM', 100 );
-define( 'TOC_DEFAULT_BACKGROUND_COLOUR', '#f9f9f9' );
-define( 'TOC_DEFAULT_BORDER_COLOUR', '#aaaaaa' );
-define( 'TOC_DEFAULT_TITLE_COLOUR', '#' );
-define( 'TOC_DEFAULT_LINKS_COLOUR', '#' );
-define( 'TOC_DEFAULT_LINKS_HOVER_COLOUR', '#' );
-define( 'TOC_DEFAULT_LINKS_VISITED_COLOUR', '#' );
-
-
 if ( ! class_exists( 'TOC_Plus' ) ) :
 	class TOC_Plus {
 
@@ -35,7 +10,6 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 		private $collision_collector;  // keeps a track of used anchors for collision detecting
 
 		public function __construct() {
-			$this->path                = plugins_url( '', __FILE__ );
 			$this->show_toc            = true;
 			$this->exclude_post_types  = [ 'attachment', 'revision', 'nav_menu_item', 'safecss' ];
 			$this->collision_collector = [];
@@ -108,8 +82,6 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 			add_shortcode( 'sitemap_pages', [ $this, 'shortcode_sitemap_pages' ] );
 			add_shortcode( 'sitemap_categories', [ $this, 'shortcode_sitemap_categories' ] );
 			add_shortcode( 'sitemap_posts', [ $this, 'shortcode_sitemap_posts' ] );
-
-			include_once 'class-toc-widget.php';
 		}
 
 
@@ -121,8 +93,8 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 		}
 
 
-		public function set_option( $array ) {
-			$this->options = array_merge( $this->options, $array );
+		public function set_option( $options ) {
+			$this->options = array_merge( $this->options, $options );
 		}
 
 
@@ -343,7 +315,7 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 				$atts['heading'] = $this->options['sitemap_heading_type'];
 			}
 
-			if ( strtolower( $atts['child_of'] ) === "current" ) {
+			if ( 'current' === strtolower( $atts['child_of'] ) ) {
 				$atts['child_of'] = get_the_ID();
 			} elseif ( is_numeric( $atts['child_of'] ) ) {
 				$atts['child_of'] = intval( $atts['child_of'] );
@@ -480,8 +452,8 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 			$js_vars = [];
 
 			// register our CSS and scripts
-			wp_register_style( 'toc-screen', $this->path . '/screen.min.css', [], TOC_VERSION );
-			wp_register_script( 'toc-front', $this->path . '/front.min.js', [ 'jquery' ], TOC_VERSION, true );
+			wp_register_style( 'toc-screen', TOC_PLUGIN_PATH . '/screen.min.css', [], TOC_VERSION );
+			wp_register_script( 'toc-front', TOC_PLUGIN_PATH . '/front.min.js', [ 'jquery' ], TOC_VERSION, true );
 
 			// enqueue them!
 			if ( ! $this->options['exclude_css'] ) {
@@ -527,8 +499,8 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 
 
 		public function admin_init() {
-			wp_register_script( 'toc_admin_script', $this->path . '/admin.js', [], TOC_VERSION, true );
-			wp_register_style( 'toc_admin_style', $this->path . '/admin.css', [], TOC_VERSION );
+			wp_register_script( 'toc_admin_script', TOC_PLUGIN_PATH . '/admin.js', [], TOC_VERSION, true );
+			wp_register_style( 'toc_admin_style', TOC_PLUGIN_PATH . '/admin.css', [], TOC_VERSION );
 		}
 
 
@@ -573,7 +545,7 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 			if ( class_exists( 'RankMath' ) ) {
 				add_filter(
 					'rank_math/researches/toc_plugins',
-					function( $toc_plugins ) {
+					function ( $toc_plugins ) {
 						$toc_plugins['table-of-contents-plus/toc.php'] = 'Table of Contents Plus';
 						return $toc_plugins;
 					}
@@ -595,15 +567,15 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 
 
 		/**
-		 * Tries to convert $string into a valid hex colour.
-		 * Returns $default if $string is not a hex value, otherwise returns verified hex.
+		 * Tries to convert $input into a valid hex colour.
+		 * Returns $default if $input is not a hex value, otherwise returns verified hex.
 		 */
-		private function hex_value( $string = '', $default = '#' ) {
+		private function hex_value( $input = '', $default = '#' ) {
 			$return = $default;
 
-			if ( $string ) {
+			if ( $input ) {
 				// strip out non hex chars
-				$return = preg_replace( '/[^a-fA-F0-9]*/', '', $string );
+				$return = preg_replace( '/[^a-fA-F0-9]*/', '', $input );
 
 				switch ( strlen( $return ) ) {
 					case 3:  // do next
@@ -630,7 +602,10 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 			global $post_id;
 
 			// security check
-			if ( isset( $_POST['toc-admin-options'] ) && ! wp_verify_nonce( $_POST['toc-admin-options'], plugin_basename( __FILE__ ) ) ) {
+			if ( ! isset( $_POST['toc-admin-options'] ) ) {
+				return false;
+			}
+			if ( ! wp_verify_nonce( $_POST['toc-admin-options'], plugin_basename( __FILE__ ) ) ) {
 				return false;
 			}
 
@@ -915,32 +890,32 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 		[
 			'id'   => TOC_THEME_GREY,
 			'name' => __( 'Grey (default)', 'table-of-contents-plus' ),
-			'url'  => $this->path . '/images/grey.png',
+			'url'  => TOC_PLUGIN_PATH . '/images/grey.png',
 		],
 		[
 			'id'   => TOC_THEME_LIGHT_BLUE,
 			'name' => __( 'Light blue', 'table-of-contents-plus' ),
-			'url'  => $this->path . '/images/blue.png',
+			'url'  => TOC_PLUGIN_PATH . '/images/blue.png',
 		],
 		[
 			'id'   => TOC_THEME_WHITE,
 			'name' => __( 'White', 'table-of-contents-plus' ),
-			'url'  => $this->path . '/images/white.png',
+			'url'  => TOC_PLUGIN_PATH . '/images/white.png',
 		],
 		[
 			'id'   => TOC_THEME_BLACK,
 			'name' => __( 'Black', 'table-of-contents-plus' ),
-			'url'  => $this->path . '/images/black.png',
+			'url'  => TOC_PLUGIN_PATH . '/images/black.png',
 		],
 		[
 			'id'   => TOC_THEME_TRANSPARENT,
 			'name' => __( 'Transparent', 'table-of-contents-plus' ),
-			'url'  => $this->path . '/images/transparent.png',
+			'url'  => TOC_PLUGIN_PATH . '/images/transparent.png',
 		],
 		[
 			'id'   => TOC_THEME_CUSTOM,
 			'name' => __( 'Custom', 'table-of-contents-plus' ),
-			'url'  => $this->path . '/images/custom.png',
+			'url'  => TOC_PLUGIN_PATH . '/images/custom.png',
 		],
 	];
 
@@ -1006,7 +981,7 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 					esc_attr( $custom_theme_prop['id'] ),
 					esc_html( $custom_theme_prop['name'] ),
 					esc_attr( $custom_theme_prop['value'] ),
-					esc_url( $this->path )
+					esc_url( TOC_PLUGIN_PATH )
 				);
 			}
 
@@ -1719,50 +1694,3 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 	} // end class
 endif;
 
-
-
-/**
- * Returns a HTML formatted string of the table of contents without the surrounding UL or OL
- * tags to enable the theme editor to supply their own ID and/or classes to the outer list.
- *
- * There are three optional parameters you can feed this function with:
- *
- *  - $content is the entire content with headings.  If blank, will default to the current $post
- *
- *  - $link is the URL to prefix the anchor with.  If provided a string, will use it as the prefix.
- *    If set to true then will try to obtain the permalink from the $post object.
- *
- *  - $apply_eligibility bool, defaults to false.  When set to true, will apply the check to
- *    see if bit of content has the prerequisites needed for a TOC, eg minimum number of headings
- *    enabled post type, etc.
- */
-function toc_get_index( $content = '', $prefix_url = '', $apply_eligibility = false ) {
-	global $wp_query, $toc_plus;
-
-	$return  = '';
-	$find    = [];
-	$replace = [];
-	$proceed = true;
-
-	if ( ! $content ) {
-		$post    = get_post( $wp_query->post->ID );
-		$content = wptexturize( $post->post_content );
-	}
-
-	if ( $apply_eligibility ) {
-		if ( ! $toc_plus->is_eligible() ) {
-			$proceed = false;
-		}
-	} else {
-		$toc_plus->set_option( [ 'start' => 0 ] );
-	}
-
-	if ( $proceed ) {
-		$return = $toc_plus->extract_headings( $find, $replace, $content );
-		if ( $prefix_url ) {
-			$return = str_replace( 'href="#', 'href="' . $prefix_url . '#', $return );
-		}
-	}
-
-	return $return;
-}
