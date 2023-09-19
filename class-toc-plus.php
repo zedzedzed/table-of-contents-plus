@@ -332,6 +332,7 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 					'no_label'     => false,
 					'exclude'      => '',
 					'exclude_tree' => '',
+					'child_of'     => 0,
 				],
 				$attributes
 			);
@@ -340,6 +341,14 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 
 			if ( $atts['heading'] < 1 || $atts['heading'] > 6 ) {  // h1 to h6 are valid
 				$atts['heading'] = $this->options['sitemap_heading_type'];
+			}
+
+			if ( strtolower( $atts['child_of'] ) === "current" ) {
+				$atts['child_of'] = get_the_ID();
+			} elseif ( is_numeric( $atts['child_of'] ) ) {
+				$atts['child_of'] = intval( $atts['child_of'] );
+			} else {
+				$atts['child_of'] = 0;
 			}
 
 			$html = '<div class="toc_sitemap">';
@@ -354,6 +363,8 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 								'echo'         => false,
 								'exclude'      => $atts['exclude'],
 								'exclude_tree' => $atts['exclude_tree'],
+								'hierarchical' => true,
+								'child_of'     => $atts['child_of'],
 							]
 						) .
 					'</ul>' .
