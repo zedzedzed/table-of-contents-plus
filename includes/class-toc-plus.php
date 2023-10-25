@@ -1528,6 +1528,11 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 		public function is_eligible( $shortcode_used = false ) {
 			global $post;
 
+			// do not trigger the TOC on REST Requests
+			if ( defined( 'REST_REQUEST' ) && REST_REQUEST ) {
+				return false;
+			}
+			
 			// do not trigger the TOC when displaying an XML/RSS feed
 			if ( is_feed() ) {
 				return false;
