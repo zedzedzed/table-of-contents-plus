@@ -72,7 +72,7 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 			add_action( 'sidebar_admin_setup', [ $this, 'sidebar_admin_setup' ] );
 			add_action( 'init', [ $this, 'init' ] );
 
-			add_filter( 'the_content', [ $this, 'the_content' ], 100 );  // run after shortcodes are interpretted (level 10)
+			add_filter( 'the_content', [ $this, 'the_content' ], 100 );  // run after shortcodes are interpreted (level 10)
 			add_filter( 'plugin_action_links', [ $this, 'plugin_action_links' ], 10, 2 );
 			add_filter( 'widget_text', 'do_shortcode' );
 
