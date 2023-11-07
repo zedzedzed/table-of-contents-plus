@@ -2,8 +2,8 @@
 Contributors: conjur3r
 Tags: table of contents, indexes, toc, sitemap, cms, options, list, page listing, category listing
 Requires at least: 3.2
-Tested up to: 6.3.1
-Stable tag: 2309
+Tested up to: 6.4
+Stable tag: 2311
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -47,8 +47,6 @@ The normal plugin install process applies, that is search for `table of contents
 That's it!  The table of contents will appear on pages with at least four or more headings.
 
 You can change the default settings and more under Settings > TOC+
-
-This plugin requires PHP 5.
 
 
 == Shortcodes ==
@@ -106,6 +104,12 @@ I will never ask for any form of reward or compensation.  Helping others achieve
 
 
 == Changelog ==
+= 2311 =
+* Released: 7 November 2023
+* Bump tested WordPress version to 6.4
+* Do not trigger on REST requests (props steffenster)
+* Update include mechanism in init.php (props maciejmackowiak)
+
 = 2309 =
 * Released: 19 September 2023
 * Bump tested version to 6.3.1
