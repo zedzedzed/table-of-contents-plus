@@ -478,6 +478,14 @@ msgstr ""
 msgid "Update Options"
 msgstr ""
 
+#: toc.php:1085
+msgid "REST request output"
+msgstr ""
+
+#: toc.php:1086
+msgid "Enable TOC in REST API Responses: This option allows the table of contents to be included in the output of REST API requests. By default, the TOC is not added to REST API responses. Checking this box will override the default setting and ensure that the TOC is included in the output when posts are fetched through REST API requests."
+msgstr ""
+
 #: toc.php:1563
 msgid "Display the table of contents in the sidebar with this widget"
 msgstr ""

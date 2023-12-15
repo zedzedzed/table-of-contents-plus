@@ -59,6 +59,7 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 				'sitemap_categories'                 => 'Categories',
 				'show_toc_in_widget_only'            => false,
 				'show_toc_in_widget_only_post_types' => [ 'page' ],
+				'rest_toc_output'                    => false,
 			];
 
 			$options       = get_option( 'toc-options', $defaults );
@@ -677,6 +678,7 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 					'sitemap_heading_type'          => intval( $_POST['sitemap_heading_type'] ),
 					'sitemap_pages'                 => stripslashes( trim( $_POST['sitemap_pages'] ) ),
 					'sitemap_categories'            => stripslashes( trim( $_POST['sitemap_categories'] ) ),
+					'rest_toc_output'               => ( isset( $_POST['rest_toc_output'] ) && $_POST['rest_toc_output'] ) ? true : false,
 				]
 			);
 
@@ -1078,6 +1080,10 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 			/* translators: example anchor prefixes when no ascii characters match */
 			esc_html_e( 'Eg: i, toc_index, index, _', 'table-of-contents-plus' ); ?></span></label>
 		</td>
+	</tr>
+	<tr>
+		<th><label for="rest_toc_output"><?php esc_html_e( 'REST request output', 'table-of-contents-plus' ); ?></label></th>
+		<td><input type="checkbox" value="1" id="rest_toc_output" name="rest_toc_output"<?php if ( $this->options['rest_toc_output'] ) echo ' checked="checked"'; ?> /><label for="rest_toc_output"> <?php esc_html_e( 'Enable TOC in REST API Responses: This option allows the table of contents to be included in the output of REST API requests. By default, the TOC is not added to REST API responses. Checking this box will override the default setting and ensure that the TOC is included in the output when posts are fetched through REST API requests.', 'table-of-contents-plus' ); ?></label></td>
 	</tr>
 	</tbody>
 	</table>
@@ -1528,9 +1534,14 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 		public function is_eligible( $shortcode_used = false ) {
 			global $post;
 
-			// do not trigger the TOC on REST Requests
-			if ( defined( 'REST_REQUEST' ) && REST_REQUEST ) {
-				return false;
+			// Do not trigger the TOC on REST Requests unless explicitly enabled
+			// This ensures that the TOC is not included in REST API responses by default.
+			// If the TOC inclusion in REST API responses is desired, 
+			// it must be specifically activated via the plugin settings.
+			if ( !$this->options['rest_toc_output'] ) {
+				if ( defined( 'REST_REQUEST' ) && REST_REQUEST ) {
+					return false;
+				}
 			}
 			
 			// do not trigger the TOC when displaying an XML/RSS feed
