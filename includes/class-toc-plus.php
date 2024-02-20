@@ -712,7 +712,7 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 <ul id="tabbed-nav">
 	<li><a href="#tab1"><?php esc_html_e( 'Main Options', 'table-of-contents-plus' ); ?></a></li>
 	<li><a href="#tab2"><?php esc_html_e( 'Sitemap', 'table-of-contents-plus' ); ?></a></li>
-	<li class="url"><a href="http://dublue.com/plugins/toc/#Help"><?php esc_html_e( 'Help', 'table-of-contents-plus' ); ?></a></li>
+	<li class="url"><a href="https://zedzedzed.github.io/docs/tocplus.html"><?php esc_html_e( 'Help', 'table-of-contents-plus' ); ?></a></li>
 </ul>
 <div class="tab_container">
 	<div id="tab1" class="tab_content">
