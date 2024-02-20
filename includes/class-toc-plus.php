@@ -1082,8 +1082,8 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 		</td>
 	</tr>
 	<tr>
-		<th><label for="rest_toc_output"><?php esc_html_e( 'REST request output', 'table-of-contents-plus' ); ?></label></th>
-		<td><input type="checkbox" value="1" id="rest_toc_output" name="rest_toc_output"<?php if ( $this->options['rest_toc_output'] ) echo ' checked="checked"'; ?> /><label for="rest_toc_output"> <?php esc_html_e( 'Enable TOC in REST API Responses: This option allows the table of contents to be included in the output of REST API requests. By default, the TOC is not added to REST API responses. Checking this box will override the default setting and ensure that the TOC is included in the output when posts are fetched through REST API requests.', 'table-of-contents-plus' ); ?></label></td>
+		<th><label for="rest_toc_output"><?php esc_html_e( 'Include in REST requests', 'table-of-contents-plus' ); ?></label></th>
+		<td><input type="checkbox" value="1" id="rest_toc_output" name="rest_toc_output"<?php if ( $this->options['rest_toc_output'] ) echo ' checked="checked"'; ?> /><label for="rest_toc_output"> <?php esc_html_e( 'Allow the table of contents to be included in the output of REST API requests.', 'table-of-contents-plus' ); ?></label></td>
 	</tr>
 	</tbody>
 	</table>
@@ -1534,11 +1534,11 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 		public function is_eligible( $shortcode_used = false ) {
 			global $post;
 
-			// Do not trigger the TOC on REST Requests unless explicitly enabled
+			// Do not trigger the TOC on REST Requests unless explicitly enabled.
 			// This ensures that the TOC is not included in REST API responses by default.
 			// If the TOC inclusion in REST API responses is desired, 
 			// it must be specifically activated via the plugin settings.
-			if ( !$this->options['rest_toc_output'] ) {
+			if ( ! $this->options['rest_toc_output'] ) {
 				if ( defined( 'REST_REQUEST' ) && REST_REQUEST ) {
 					return false;
 				}
