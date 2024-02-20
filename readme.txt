@@ -367,11 +367,6 @@ I will never ask for any form of reward or compensation.  Helping others achieve
 * First world release (functional & feature packed)
 
 
-== Frequently Asked Questions ==
-
-Check out the FAQs / Scenarios at [http://dublue.com/plugins/toc/#Scenarios_FAQs](http://dublue.com/plugins/toc/#Scenarios_FAQs)
-
-
 == Upgrade Notice ==
 
 Update folder with the latest files.  All previous options will be saved.
