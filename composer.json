@@ -1,5 +1,6 @@
 {
     "name": "dublue/table-of-contents-plus",
+    "type": "wordpress-plugin",
     "authors": [
         {
             "name": "Michael Tran"
