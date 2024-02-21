@@ -29,15 +29,13 @@ if ( ! class_exists( 'TOC_Widget' ) ) :
 
 			$html                = '';
 			$items               = '';
-			$custom_toc_position = '';
 			$find                = [];
 			$replace             = [];
 
 			$toc_options         = $toc_plus->get_options();
 			$post                = get_post( $wp_query->post->ID );
-			$custom_toc_position = strpos( $post->post_content, '[toc]' );  // at this point, shortcodes haven't run yet so we can't search for <!--TOC-->
 
-			if ( $toc_plus->is_eligible( $custom_toc_position ) ) {
+			if ( $toc_plus->is_eligible() ) {
 				$items = $toc_plus->extract_headings( $find, $replace, wptexturize( do_shortcode( $post->post_content ) ) );
 				$title = ( array_key_exists( 'title', $instance ) ) ? apply_filters( 'widget_title', $instance['title'] ) : '';
 				if ( false !== strpos( $title, '%PAGE_TITLE%' ) ) {
