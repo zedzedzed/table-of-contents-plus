@@ -108,6 +108,7 @@ I will never ask for any form of reward or compensation.  Helping others achieve
 * Released: February 2024
 * Added option to generate TOC in REST requests, disabled by default (props ballpumpe)
 * Composer improvements (props mohjak)
+* Do not output CSS/JS on pages not eligible
 * Update POT translation file
 * Update links to help
 

@@ -220,6 +220,8 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 			}
 
 			if ( $re_enqueue_scripts ) {
+				// the shortcode has provided potentially new labels and we need to
+				// supply these new values to js_vars by enqueing scripts again
 				do_action( 'wp_enqueue_scripts' );
 			}
 
@@ -450,6 +452,11 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 		 * Register and load CSS and javascript files for frontend.
 		 */
 		public function wp_enqueue_scripts() {
+			// Do not output CSS / JS if the TOC is not going to be displayed on the current page
+			if ( ! $this->is_eligible() ) {
+				return;
+			}
+
 			$js_vars = [];
 
 			// register our CSS and scripts
@@ -1531,8 +1538,10 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 		/**
 		 * Returns true if the table of contents is eligible to be printed, false otherwise.
 		 */
-		public function is_eligible( $shortcode_used = false ) {
+		public function is_eligible() {
 			global $post;
+
+			$custom_toc_position = strpos( $post->content, '[TOC]' );
 
 			// Do not trigger the TOC on REST Requests unless explicitly enabled.
 			// This ensures that the TOC is not included in REST API responses by default.
@@ -1550,7 +1559,7 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 			}
 
 			// if the shortcode was used, this bypasses many of the global options
-			if ( false !== $shortcode_used ) {
+			if ( false !== $custom_toc_position ) {
 				// shortcode is used, make sure it adheres to the exclude from
 				// homepage option if we're on the homepage
 				if ( ! $this->options['include_homepage'] && is_front_page() ) {
@@ -1588,7 +1597,7 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 			$replace             = [];
 			$custom_toc_position = strpos( $content, '<!--TOC-->' );
 
-			if ( $this->is_eligible( $custom_toc_position ) ) {
+			if ( $this->is_eligible() ) {
 
 				$items = $this->extract_headings( $find, $replace, $content );
 

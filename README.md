@@ -17,3 +17,4 @@ Collaborate, participate, fork this plugin on [Github](https://github.com/zedzed
 ## Links
 
 * [WordPress plugin page](https://wordpress.org/plugins/table-of-contents-plus/)
+* [Plugin homepage](http://dublue.com/plugins/toc/)
