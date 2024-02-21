@@ -441,12 +441,6 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 		 * Register CSS and javascript files for frontend.
 		 */
 		public function wp_enqueue_scripts() {
-			// Do not output CSS / JS if the TOC is not going to be displayed on the current page
-			if ( ! $this->is_eligible() ) {
-				return;
-			}
-
-			// register our CSS and scripts
 			wp_register_style( 'toc-screen', TOC_PLUGIN_PATH . '/screen.min.css', [], TOC_VERSION );
 			wp_register_script( 'toc-front', TOC_PLUGIN_PATH . '/front.min.js', [ 'jquery' ], TOC_VERSION, true );
 		}
