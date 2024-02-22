@@ -3,7 +3,7 @@ Contributors: conjur3r
 Tags: table of contents, indexes, toc, sitemap, cms, options, list, page listing, category listing
 Requires at least: 3.2
 Tested up to: 6.4
-Stable tag: 2402
+Stable tag: 2402.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -104,8 +104,12 @@ I will never ask for any form of reward or compensation.  Helping others achieve
 
 
 == Changelog ==
+= 2402.1 =
+* Released: 22 February 2024
+* Fixed check for shortcode use (#164)
+
 = 2402 =
-* Released: February 2024
+* Released: 21 February 2024
 * Added option to generate TOC in REST requests, disabled by default (props ballpumpe)
 * Composer improvements (props mohjak)
 * Do not output CSS/JS on pages not eligible
