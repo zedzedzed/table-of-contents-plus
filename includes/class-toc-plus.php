@@ -1530,7 +1530,7 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 		public function is_eligible() {
 			global $post;
 
-			$custom_toc_position = strpos( $post->content, '[TOC]' );
+			$custom_toc_position = has_shortcode( $post->post_content, 'toc' );
 
 			// Do not trigger the TOC on REST Requests unless explicitly enabled.
 			// This ensures that the TOC is not included in REST API responses by default.
