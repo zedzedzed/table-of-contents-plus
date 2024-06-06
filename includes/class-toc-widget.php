@@ -27,13 +27,12 @@ if ( ! class_exists( 'TOC_Widget' ) ) :
 				return;
 			}
 
-			$html                = '';
-			$items               = '';
-			$find                = [];
-			$replace             = [];
-
-			$toc_options         = $toc_plus->get_options();
-			$post                = get_post( $wp_query->post->ID );
+			$html        = '';
+			$items       = '';
+			$find        = [];
+			$replace     = [];
+			$toc_options = $toc_plus->get_options();
+			$post        = get_post( $wp_query->post->ID );
 
 			if ( $toc_plus->is_eligible() ) {
 				$items = $toc_plus->extract_headings( $find, $replace, wptexturize( do_shortcode( $post->post_content ) ) );

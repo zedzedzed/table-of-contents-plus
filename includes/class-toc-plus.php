@@ -169,6 +169,8 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 				$attributes
 			);
 
+			$re_enqueue_scripts = false;
+
 			if ( $atts['no_label'] ) {
 				$this->options['show_heading_text'] = false;
 			}
@@ -177,9 +179,11 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 			}
 			if ( $atts['label_show'] ) {
 				$this->options['visibility_show'] = wp_kses_post( html_entity_decode( $atts['label_show'] ) );
+				$re_enqueue_scripts               = true;
 			}
 			if ( $atts['label_hide'] ) {
 				$this->options['visibility_hide'] = wp_kses_post( html_entity_decode( $atts['label_hide'] ) );
+				$re_enqueue_scripts               = true;
 			}
 			if ( $atts['class'] ) {
 				$this->options['css_container_class'] = wp_kses_post( html_entity_decode( $atts['class'] ) );
@@ -204,6 +208,7 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 			}
 			if ( $atts['collapse'] ) {
 				$this->options['visibility_hide_by_default'] = true;
+				$re_enqueue_scripts                          = true;
 			}
 
 			if ( $atts['no_numbers'] ) {
@@ -212,6 +217,11 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 
 			if ( is_numeric( $atts['start'] ) ) {
 				$this->options['start'] = $atts['start'];
+			}
+
+			if ( $re_enqueue_scripts ) {
+				wp_deregister_script( 'toc-front' );
+				do_action( 'wp_enqueue_scripts' );
 			}
 
 			// if $atts['heading_levels'] is an array, then it came from the global options
@@ -438,19 +448,13 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 
 
 		/**
-		 * Register CSS and javascript files for frontend.
+		 * Register and load CSS and javascript files for frontend.
 		 */
 		public function wp_enqueue_scripts() {
+			$js_vars = [];
+
 			wp_register_style( 'toc-screen', TOC_PLUGIN_PATH . '/screen.min.css', [], TOC_VERSION );
 			wp_register_script( 'toc-front', TOC_PLUGIN_PATH . '/front.min.js', [ 'jquery' ], TOC_VERSION, true );
-		}
-
-
-		/** 
-		 * Output CSS and JS files for frontend.
-		 */
-		private function do_wp_enqueue_scripts() {
-			$js_vars = [];
 
 			// enqueue them!
 			if ( ! $this->options['exclude_css'] ) {
@@ -469,8 +473,8 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 			wp_enqueue_script( 'toc-front' );
 			if ( $this->options['show_heading_text'] && $this->options['visibility'] ) {
 				$width                      = ( 'User defined' !== $this->options['width'] ) ? $this->options['width'] : $this->options['width_custom'] . $this->options['width_custom_units'];
-				$js_vars['visibility_show'] = esc_js( $this->options['visibility_show'] );
-				$js_vars['visibility_hide'] = esc_js( $this->options['visibility_hide'] );
+				$js_vars['visibility_show'] = esc_js( wp_kses_post ( $this->options['visibility_show'] ) );
+				$js_vars['visibility_hide'] = esc_js( wp_kses_post( $this->options['visibility_hide'] ) );
 				if ( $this->options['visibility_hide_by_default'] ) {
 					$js_vars['visibility_hide_by_default'] = true;
 				}
@@ -1259,7 +1263,7 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 				// if blank, then prepend with the fragment prefix
 				// blank anchors normally appear on sites that don't use the latin charset
 				if ( ! $return ) {
-					$return = ( $this->options['fragment_prefix'] ) ? $this->options['fragment_prefix'] : '_';
+					$return = ( $this->options['fragment_prefix'] ) ? wp_kses_post ( $this->options['fragment_prefix'] ) : '_';
 				}
 
 				// hyphenate?
@@ -1587,8 +1591,6 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 			$custom_toc_position = strpos( $content, '<!--TOC-->' );
 
 			if ( $this->is_eligible() ) {
-
-				$this->do_wp_enqueue_scripts();
 
 				$items = $this->extract_headings( $find, $replace, $content );
 
