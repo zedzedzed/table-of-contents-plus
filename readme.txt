@@ -105,7 +105,7 @@ I will never ask for any form of reward or compensation.  Helping others achieve
 
 == Changelog ==
 = 2406 =
-* Released: 6 June 2024
+* Released: 16 June 2024
 * Revert 'Do not output CSS/JS on pages not eligible' introduced in 2402 as it broke some clever edge cases
 * Fixed XSS issue requiring editor or higher privileges for show/hide text (thanks to wpscan)
 
