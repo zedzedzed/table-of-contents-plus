@@ -2,8 +2,8 @@
 Contributors: conjur3r
 Tags: table of contents, indexes, toc, sitemap, cms, options, list, page listing, category listing
 Requires at least: 3.2
-Tested up to: 6.5.4
-Stable tag: 2406
+Tested up to: 6.6.1
+Stable tag: 2408
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -104,6 +104,10 @@ I will never ask for any form of reward or compensation.  Helping others achieve
 
 
 == Changelog ==
+= 2408 =
+* Released: xx August 2024
+* Redo XSS issue reported by wpscan
+
 = 2406 =
 * Released: 16 June 2024
 * Revert 'Do not output CSS/JS on pages not eligible' introduced in 2402 as it broke some clever edge cases

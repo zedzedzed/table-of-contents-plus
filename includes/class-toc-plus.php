@@ -473,8 +473,8 @@ if ( ! class_exists( 'TOC_Plus' ) ) :
 			wp_enqueue_script( 'toc-front' );
 			if ( $this->options['show_heading_text'] && $this->options['visibility'] ) {
 				$width                      = ( 'User defined' !== $this->options['width'] ) ? $this->options['width'] : $this->options['width_custom'] . $this->options['width_custom_units'];
-				$js_vars['visibility_show'] = esc_js( wp_kses_post( $this->options['visibility_show'] ) );
-				$js_vars['visibility_hide'] = esc_js( wp_kses_post( $this->options['visibility_hide'] ) );
+				$js_vars['visibility_show'] = esc_js( wp_kses_post( html_entity_decode( $this->options['visibility_show'] ) ) );
+				$js_vars['visibility_hide'] = esc_js( wp_kses_post( html_entity_decode( $this->options['visibility_hide'] ) ) );
 				if ( $this->options['visibility_hide_by_default'] ) {
 					$js_vars['visibility_hide_by_default'] = true;
 				}

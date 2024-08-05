@@ -7,7 +7,7 @@
  * Author URI:  https://zedzedzed.github.io/docs/tocplus.html
  * Text Domain: table-of-contents-plus
  * Domain Path: /languages
- * Version:     2406
+ * Version:     2408
  * License:     GPL2
  */
 
